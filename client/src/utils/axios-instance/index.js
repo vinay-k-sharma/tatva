@@ -1,8 +1,9 @@
 import axios from 'axios'
-
+import { WEBAPI_ENDPOINT } from '../../config'
 export const API = axios.create({
-    baseURL:'http://localhost:3006',
-    timeout:5000,
+    baseURL:WEBAPI_ENDPOINT,
+    timeout: 1000000,
+    timeoutErrorMessage: "Server timeout",
 })
 export const registerUser = async(userObj) => {
     try{
@@ -37,3 +38,64 @@ export const getUsers = async () => {
       };
     }
   };
+  export const getSkinCare = async () => {
+    try {
+      const res  = await API.get('skinCare_products')
+      return {
+        data : res.data
+      }
+    }
+    catch(error){
+      return {
+        data:[],
+        error: error.message
+      }
+    }
+  }
+  export const addSkinCare = async (product) => {
+    try {
+      const res = await API.post("skinCare_products", product);
+      return {
+        data: res.data,
+      };
+    } catch (error) {
+      return {
+        success: false,
+        data: null,
+        error: error.message,
+      };
+    }
+  };
+  export const getSkinCareById = async (id) => {
+    try {
+      const res = await API.get(`skinCare_products/${id}`);
+      return {
+        success: true,
+        data: res.data,
+        error: null,
+      };
+    } catch (error) {
+      return {
+        success: false,
+        data: null,
+        error: error.message,
+      };
+    }
+  };
+  export const DeleteSkinCareById = async (id) => {
+    try {
+      const res = await API.delete(`skinCare_products/${id}`);
+      return {
+        success: true,
+        data: res.data,
+        error: null,
+      };
+    } catch (error) {
+      return {
+        success: false,
+        data: null,
+        error: error.message,
+      };
+    }
+  };
+  
