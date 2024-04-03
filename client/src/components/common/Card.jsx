@@ -1,6 +1,9 @@
 import React from 'react';
-
-const Card = ({ data }) => {
+import { FaHeart } from "react-icons/fa";
+import { CiCircleRemove } from "react-icons/ci";
+const Card = ({ data,handleLikesDislikes,isProductLiked,wishListFlag,removeFromWishlist }) => {
+    
+      
   return (
     <div className=" mt-5 mx-auto grid gap-4 lg:gap-10  w-fit grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:lg:grid-cols-3 overflow-hidden ">
       {data.map(product => (
@@ -14,10 +17,27 @@ const Card = ({ data }) => {
             )}
             {/* relative m-10 flex w-full max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md */}
           </a>
+        
           <div className="mt-4 px-5 pb-5">
+            <div className='flex flex-row justify-between'>
             <a href="#">
               <h5 className="text-xl tracking-tight text-slate-900">{product.name}</h5>
             </a>
+            { !wishListFlag ? (
+            <button className=" h-10 w-10 md:w-11 lg:w-11 max-h-10 right-2 m-2   ">
+            <FaHeart
+              className={`text-2xl  ${
+                isProductLiked(product) ? "text-red-500" : "text-neutral-300"
+              }`}
+              onClick={() => handleLikesDislikes(product)}
+            />
+          </button>) : (
+            <button >
+            <CiCircleRemove className='h-10 w-10 md:w-11 lg:w-11 max-h-10 right-2 m-2 ' onClick={()=> removeFromWishlist(product.id)}/>
+            </button>
+          )
+            }
+            </div>
             <div className="mt-2 mb-5 flex items-center justify-between">
               <p>
                 <span className="text-3xl font-bold text-slate-900">${product.price}</span>

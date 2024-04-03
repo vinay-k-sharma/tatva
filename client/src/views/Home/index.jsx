@@ -1,8 +1,7 @@
 import React,{useState,useEffect} from 'react'
 import {useDispatch,useSelector} from 'react-redux'
 import { fetchProductsRequest } from '../../redux/actions/productActions'
-import Card from './Card'
-import MyCarousel from './Carousel'
+import SkinCareProducts from './SkinCareProducts'
 const Home = () => {
   const products = useSelector((state)=>state.product.products)
   const [productData,setProductData] = useState([])
@@ -15,13 +14,9 @@ const Home = () => {
   },[products])
   console.log(productData)
   return (
-    <div>
-      <MyCarousel data={productData} />
-       {/* <MyCarousel data={productData}  >
-        
-       </MyCarousel> */}
-      <Card data={productData}/>
-    </div>
+    <>
+      <SkinCareProducts data={productData}/>
+    </>
   )
 }
 
