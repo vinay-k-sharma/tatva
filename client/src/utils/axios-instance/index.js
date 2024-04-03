@@ -38,6 +38,22 @@ export const getUsers = async () => {
       };
     }
   };
+  export const updateUser = async (updatedUser) => {
+    try {
+      const res = await API.patch(`users/${updatedUser.id}`, updatedUser);
+      return {
+        success: true,
+        data: res.data,
+        error: null,
+      };
+    } catch (error) {
+      return {
+        success: false,
+        data: [],
+        error: error.message,
+      };
+    }
+  };
   export const getSkinCare = async () => {
     try {
       const res  = await API.get('skinCare_products')

@@ -128,7 +128,28 @@
       "name": "vinay",
       "email": "vinaysharma352044@gmail.com",
       "password": "vinaysharma",
-      "confirm_password": "vinaysharma"
+      "favouriteProducts": [
+        {
+          "id": "1",
+          "name": "Lipstick",
+          "description": "A creamy lipstick for long-lasting color and hydration",
+          "price": 18,
+          "discount": 3,
+          "rating": 4.5,
+          "stock": 75,
+          "brand": "VelvetLips",
+          "category": "makeup",
+          "sub_category": "lips",
+          "total_sold": 45,
+          "reviews": "Love this lipstick! Beautiful color and lasts all day.",
+          "thumbnail": "https://ayuga.in/cdn/shop/collections/Giftbox_WebBanner_1900x780_f3f8a07f-2b8c-42c7-8dc8-2c67cc19d1f1_1800x.jpg?v=1711111349",
+          "images": [
+            "https://example.com/product-images/lipstick/image1.jpg",
+            "https://example.com/product-images/lipstick/image2.jpg",
+            "https://example.com/product-images/lipstick/image3.jpg"
+          ]
+        }
+      ]
     },
     {
       "id": "3",
