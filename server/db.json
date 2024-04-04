@@ -15,9 +15,9 @@
       "reviews": "Love this lipstick! Beautiful color and lasts all day.",
       "thumbnail": "https://ayuga.in/cdn/shop/collections/Giftbox_WebBanner_1900x780_f3f8a07f-2b8c-42c7-8dc8-2c67cc19d1f1_1800x.jpg?v=1711111349",
       "images": [
-        "https://example.com/product-images/lipstick/image1.jpg",
-        "https://example.com/product-images/lipstick/image2.jpg",
-        "https://example.com/product-images/lipstick/image3.jpg"
+        "https://theskinstore.in/cdn/shop/files/desktop-banner2_01-08-22_1400x.png?v=1659364308",
+        "https://theskinstore.in/cdn/shop/files/10-5-2022-desktop_1c27b611-91b4-4489-bb01-e969cca1f1ce_1400x.jpg?v=1704137181",
+        "https://theskinstore.in/cdn/shop/files/desktop-banner-29-11-2022_1400x.png?v=1669714576"
       ]
     },
     {
@@ -35,9 +35,9 @@
       "reviews": "Best mascara ever! Adds volume and length to my lashes.",
       "thumbnail": "https://theskinstore.in/cdn/shop/files/desktop-banner2_01-08-22_1400x.png?v=1659364308",
       "images": [
-        "https://example.com/product-images/mascara/image1.jpg",
-        "https://example.com/product-images/mascara/image2.jpg",
-        "https://example.com/product-images/mascara/image3.jpg"
+        "https://theskinstore.in/cdn/shop/files/desktop-banner2_01-08-22_1400x.png?v=1659364308",
+        "https://theskinstore.in/cdn/shop/files/desktop-banner2_01-08-22_1400x.png?v=1659364308",
+        "https://theskinstore.in/cdn/shop/products/iS-Clinical-Eclipse-SPF50_500x.jpg?v=1610171008"
       ]
     },
     {
@@ -128,7 +128,48 @@
       "name": "vinay",
       "email": "vinaysharma352044@gmail.com",
       "password": "vinaysharma",
-      "favouriteProducts": []
+      "favouriteProducts": [
+        {
+          "id": "5",
+          "name": "Facial Cleanser",
+          "description": "A gentle facial cleanser for clean and clear skin",
+          "price": 12,
+          "discount": 2,
+          "rating": 4.4,
+          "stock": 75,
+          "brand": "ClearSkin",
+          "category": "bath",
+          "sub_category": "face wash",
+          "total_sold": 35,
+          "reviews": "Love this cleanser! Removes dirt and makeup without drying out my skin.",
+          "thumbnail": "https://ayuga.in/cdn/shop/collections/Giftbox_WebBanner_1900x780_f3f8a07f-2b8c-42c7-8dc8-2c67cc19d1f1_1800x.jpg?v=1711111349",
+          "images": [
+            "https://example.com/product-images/facial_cleanser/image1.jpg",
+            "https://example.com/product-images/facial_cleanser/image2.jpg",
+            "https://example.com/product-images/facial_cleanser/image3.jpg"
+          ]
+        },
+        {
+          "id": "1",
+          "name": "Lipstick",
+          "description": "A creamy lipstick for long-lasting color and hydration",
+          "price": 18,
+          "discount": 3,
+          "rating": 4.5,
+          "stock": 75,
+          "brand": "VelvetLips",
+          "category": "makeup",
+          "sub_category": "lips",
+          "total_sold": 45,
+          "reviews": "Love this lipstick! Beautiful color and lasts all day.",
+          "thumbnail": "https://ayuga.in/cdn/shop/collections/Giftbox_WebBanner_1900x780_f3f8a07f-2b8c-42c7-8dc8-2c67cc19d1f1_1800x.jpg?v=1711111349",
+          "images": [
+            "https://theskinstore.in/cdn/shop/files/desktop-banner2_01-08-22_1400x.png?v=1659364308",
+            "https://theskinstore.in/cdn/shop/files/10-5-2022-desktop_1c27b611-91b4-4489-bb01-e969cca1f1ce_1400x.jpg?v=1704137181",
+            "https://theskinstore.in/cdn/shop/files/desktop-banner-29-11-2022_1400x.png?v=1669714576"
+          ]
+        }
+      ]
     },
     {
       "id": "3",
