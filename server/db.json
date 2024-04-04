@@ -12,6 +12,8 @@
       "category": "makeup",
       "sub_category": "lips",
       "total_sold": 45,
+      "featured": "true",
+      "quantity":"0",
       "reviews": "Love this lipstick! Beautiful color and lasts all day.",
       "thumbnail": "https://ayuga.in/cdn/shop/collections/Giftbox_WebBanner_1900x780_f3f8a07f-2b8c-42c7-8dc8-2c67cc19d1f1_1800x.jpg?v=1711111349",
       "images": [
@@ -29,6 +31,8 @@
       "rating": 4.4,
       "stock": 65,
       "brand": "LashBoost",
+      "featured": "true",
+      "quantity":"0",
       "category": "makeup",
       "sub_category": "eyes",
       "total_sold": 30,
@@ -49,6 +53,8 @@
       "rating": 4.3,
       "stock": 70,
       "brand": "PrecisionLine",
+      "featured": "true",
+      "quantity":"0",
       "category": "makeup",
       "sub_category": "eyes",
       "total_sold": 35,
@@ -69,6 +75,8 @@
       "rating": 4.6,
       "stock": 85,
       "brand": "FreshClean",
+      "featured": "true",
+      "quantity":"0",
       "category": "bath",
       "sub_category": "soaps",
       "total_sold": 40,
@@ -89,6 +97,8 @@
       "rating": 4.4,
       "stock": 75,
       "brand": "ClearSkin",
+      "featured": "false",
+      "quantity":"0",
       "category": "bath",
       "sub_category": "face wash",
       "total_sold": 35,
@@ -147,26 +157,6 @@
             "https://example.com/product-images/facial_cleanser/image1.jpg",
             "https://example.com/product-images/facial_cleanser/image2.jpg",
             "https://example.com/product-images/facial_cleanser/image3.jpg"
-          ]
-        },
-        {
-          "id": "1",
-          "name": "Lipstick",
-          "description": "A creamy lipstick for long-lasting color and hydration",
-          "price": 18,
-          "discount": 3,
-          "rating": 4.5,
-          "stock": 75,
-          "brand": "VelvetLips",
-          "category": "makeup",
-          "sub_category": "lips",
-          "total_sold": 45,
-          "reviews": "Love this lipstick! Beautiful color and lasts all day.",
-          "thumbnail": "https://ayuga.in/cdn/shop/collections/Giftbox_WebBanner_1900x780_f3f8a07f-2b8c-42c7-8dc8-2c67cc19d1f1_1800x.jpg?v=1711111349",
-          "images": [
-            "https://theskinstore.in/cdn/shop/files/desktop-banner2_01-08-22_1400x.png?v=1659364308",
-            "https://theskinstore.in/cdn/shop/files/10-5-2022-desktop_1c27b611-91b4-4489-bb01-e969cca1f1ce_1400x.jpg?v=1704137181",
-            "https://theskinstore.in/cdn/shop/files/desktop-banner-29-11-2022_1400x.png?v=1669714576"
           ]
         }
       ]
