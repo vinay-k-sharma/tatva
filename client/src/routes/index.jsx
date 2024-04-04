@@ -14,6 +14,7 @@ const Cart = React.lazy(()=> import("../views/Cart"))
 const Admin = React.lazy(()=> import("../views/Admin"))
 const Wishlist = React.lazy(()=> import("../views/Whishlist"))
 const Profile = React.lazy(()=> import("../views/Profile"))
+const ProductDetails = React.lazy(()=> import("../views/ProductDetails"))
 export const Router = () => {
     const role = useSelector((state)=>state.role)
     console.log(role.user)
@@ -28,6 +29,10 @@ export const Router = () => {
                 {
                     path:'/contact',
                     element:<Contact/>
+                },
+                {
+                    path:'/products/:productID',
+                    element:<ProductDetails/>
                 },
                 {
                     element:(

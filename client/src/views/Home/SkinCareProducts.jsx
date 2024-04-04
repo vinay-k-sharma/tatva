@@ -4,7 +4,7 @@ import {useDispatch,useSelector} from 'react-redux'
 import MyCarousel from '../../components/common/Carousel'
 import { setRole } from '../../redux/actions/roleAction'
 import { updateUser } from '../../utils/axios-instance'
-
+import LogicalCarousel from './LogicalCarousel'
 const SkinCareProducts = ({data}) => {
     const user = useSelector((state)=>state.role.user)
     const dispatch = useDispatch()
@@ -42,12 +42,13 @@ const SkinCareProducts = ({data}) => {
     }
   return (
     <>
-      <MyCarousel data={data} />
+      <MyCarousel data={data} handleLikesDislikes={handleLikesDislikes} isProductLiked={isProductLiked}/>
        {/* <MyCarousel data={productData}  >
         
        </MyCarousel> */}
+       <LogicalCarousel  data={data} handleLikesDislikes={handleLikesDislikes} isProductLiked={isProductLiked}/>
       <Card data={data} handleLikesDislikes={handleLikesDislikes} isProductLiked={isProductLiked} />
-
+      
     </>
   )
 }
