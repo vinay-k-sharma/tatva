@@ -33,7 +33,7 @@ switch(action.type) {
             carts:data
         }
 
-        case "REMOVE_ONE":
+        case "REMOVE_ONE_PRODUCT":
             const decrement_item = state.carts.findIndex((item) => item.id === action.payload.id)
 
             if(state.carts[decrement_item].quantity>=1){

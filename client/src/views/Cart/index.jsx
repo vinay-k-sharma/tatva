@@ -1,13 +1,136 @@
-import React from 'react'
-import { useSelector } from 'react-redux'
+import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { CiCircleRemove } from "react-icons/ci";
+import { FaHeart } from "react-icons/fa";
+import { IoIosRemove } from "react-icons/io";
+import { IoIosAdd } from "react-icons/io";
+import { DELETE, REMOVE_ONE, ADD } from '../../redux/actions/cartActions';
+import { updateUser } from '../../utils/axios-instance';
+import { setRole } from '../../redux/actions/roleAction';
+import EmptyCart from './EmptyCart';
 const Cart = () => {
-  const cartItems = useSelector((state)=>state.cart.carts)
-  console.log(cartItems) //receiving all the cart items here
-  return (
-    <div>
-        Cart page
-    </div>
-  )
-}
+  const cartItems = useSelector((state) => state.cart.carts);
+  const user = useSelector((state) => state.role.user);
+  const dispatch = useDispatch()
+  const removeWhole = (id) => {
+    dispatch(DELETE(id))
+  }  
+  const removeOne = (product) => {
+    dispatch(REMOVE_ONE(product))
+  }
+  const add = (product) => {
+    dispatch(ADD(product))
+  }
+  const subtotal = cartItems.reduce((acc, item) => {
+    return acc + (item.price - item.discount) * item.quantity;
+  }, 0);
+  const isProductLiked = (product) => {
+    if (user && user.favouriteProducts) {
+      return user.favouriteProducts.some(
+        (favProduct) => favProduct.id === product.id
+      );
+    }
+    return false;
+  };
 
-export default Cart
+  const handleLikesDislikes = async (product) => {
+    if (user) {
+      const isLiked = user.favouriteProducts.filter(
+        (item) => item.id === product.id
+      );
+
+      if (isLiked.length === 0) {
+        user.favouriteProducts.push(product);
+        try {
+          await updateUser(user);
+          dispatch(setRole("user", user));
+        } catch (error) {
+          console.log(error);
+        }
+      } else {
+        const updatedLikedProducts = user.favouriteProducts.filter(
+          (item) => item.id != product.id
+        );
+        const updatedUser = {
+          ...user,
+          favouriteProducts: updatedLikedProducts,
+        };
+        await updateUser(updatedUser);
+        dispatch(setRole("user", updatedUser));
+      }
+    }
+  };
+  return cartItems.length > 0 ?(
+    
+    <div >
+      <div className="grid grid-rows-1">
+        {cartItems.map((item) => (
+          <div key={item.id} className="">
+            <div className="flex items-start max-sm:flex-col gap-8 py-6">
+              <div className="h-52 shrink-0">
+                <img src={item.thumbnail} className="w-full h-full object-contain rounded-md" alt={item.name} />
+              </div>
+              <div className="flex items-start gap-6 max-md:flex-col w-full">
+                <div>
+                  <h3 className="text-xl font-extrabold text-[#333] mb-6">{item.name}</h3>
+                  <div>
+                    <h6 className="text-md text-gray-500">Description: <span className="ml-2">{item.description}</span></h6>
+                    <h6 className="text-md text-gray-500 mt-2">Brand: <span className="ml-2">{item.brand}</span></h6>
+                  </div>
+                  <div className="mt-6 flex flex-wrap gap-6">
+                    <button  onClick={()=>removeWhole(item.id)} >
+                      <CiCircleRemove className='text-3xl'/>
+                     
+                    </button>
+                    <button >
+                    <FaHeart
+              className={`text-2xl  ${
+                isProductLiked(item) ? "text-red-500" : "text-neutral-300"
+              }`}
+              onClick={() => handleLikesDislikes(item)}
+            />
+                      
+                    </button>
+                  </div>
+                </div>
+                <div className="md:ml-auto md:text-right">
+                  <div className="flex">
+                    <button   className="bg-transparent py-2 font-semibold text-[#333]">
+                     <IoIosRemove onClick={item.quantity<=1? ()=>removeWhole(item.id): ()=>removeOne(item)}/>
+                    </button>
+                    <button type="button" className="bg-transparent mx-4 px-4 py-2 font-semibold text-[#333] text-md border">
+                      {item.quantity}
+                    </button>
+                    <button onClick={()=>add(item)} type="button" className="bg-transparent py-2 font-semibold text-[#333]">
+                      <IoIosAdd/>
+                    </button>
+                  </div>
+                  <div className="mt-6">
+                    <h4 className="text-lg font-bold text-[#333]"><strike className="text-gray-500 mr-2 font-medium">{item.quantity*item.price}</strike></h4>
+                    <h4 className="text-lg font-bold text-[#333] mt-2">{item.quantity*(item.price-item.discount)}</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+        <div className="shadow-md p-6">
+          <h3 className="text-xl font-extrabold text-[#333] border-b pb-4">Order Summary</h3>
+          <ul className="text-[#333] divide-y mt-6">
+            <li className="flex flex-wrap gap-4 text-md py-4">Subtotal <span className="ml-auto font-bold">${subtotal}</span></li>
+            <li className="flex flex-wrap gap-4 text-md py-4">Shipping <span className="ml-auto font-bold">$4.00</span></li>
+            <li className="flex flex-wrap gap-4 text-md py-4">Tax <span className="ml-auto font-bold">$4.00</span></li>
+            <li className="flex flex-wrap gap-4 text-md py-4 font-bold">Total <span className="ml-auto">${subtotal+4+4}</span></li>
+          </ul>
+          <button type="button" className="mt-6 text-md px-6 py-2.5 w-full bg-[#D88552]  text-white rounded">Check out</button>
+          <div className="mt-10">
+          
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  ) : (<EmptyCart/>)
+};
+
+export default Cart;
