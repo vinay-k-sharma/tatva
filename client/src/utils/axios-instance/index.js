@@ -116,7 +116,7 @@ export const getUsers = async () => {
   };
   export const updateSkinCare = async (product) => {
     try {
-      const res = await API.patch(`products/${product.id}`, product);
+      const res = await API.patch(`skinCare_products/${product.id}`, product);
       return {
         success: true,
         data: res.data,
@@ -130,6 +130,7 @@ export const getUsers = async () => {
       };
     }
   };
+  
   
   export const getUserOrders = async () => {
     try {
