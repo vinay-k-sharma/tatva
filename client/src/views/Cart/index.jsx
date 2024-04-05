@@ -5,14 +5,17 @@ import { FaHeart } from "react-icons/fa";
 import { IoIosRemove } from "react-icons/io";
 import { IoIosAdd } from "react-icons/io";
 import { DELETE, REMOVE_ONE, ADD, emptyCart } from '../../redux/actions/cartActions';
-import { updateUser,getUserOrders,orderEntry,updateSkinCare} from '../../utils/axios-instance';
+import { updateUser,getUserOrders,orderEntry,updateSkinCare,getSkinCare} from '../../utils/axios-instance';
 import { setRole } from '../../redux/actions/roleAction';
 import EmptyCart from './EmptyCart';
 import {useNavigate} from 'react-router-dom'
 const Cart = () => {
   const cartItems = useSelector((state) => state.cart.carts);
+  const products = useSelector((state)=>state.product.prducts)
   console.log(cartItems)
+
   const [orders,setOrders] = useState([])
+  const [productData,setProductData]  = useState([0])
   const user = useSelector((state) => state.role.user);
   const dispatch = useDispatch()
   const navigate = useNavigate()
@@ -23,7 +26,12 @@ const Cart = () => {
       setOrders(data);
     })();
   }, []);
-
+  useEffect(() => {
+    (async () => {
+      const { data } = await getSkinCare();
+      setProductData(data);
+    })();
+  }, []);
   
 
   const removeWhole = (id) => {
@@ -84,7 +92,14 @@ const Cart = () => {
         ? (parseInt(orders[orders.length - 1].id) + 1).toString()
         : "1";
 
-        
+           for (let i = 0; i < cartItems.length; i++) {
+          const productIndex = productData.findIndex(product => product.id === cartItems[i].id);
+         if (productIndex !== -1) {
+            productData[productIndex].stock = cartItems[i].stock;
+            await updateSkinCare(productData[productIndex]); 
+         }
+    }
+
     for (let i = 0; i < cartItems.length; i++) {
       const newObj = {
         id: orderId,
