@@ -28,7 +28,7 @@ const BestSeller = ({ data, handleLikesDislikes, isProductLiked }) => {
         ssr={true}
         infinite={true}
         autoPlay={true}
-        autoPlaySpeed={1000} 
+        autoPlaySpeed={3000} 
         keyBoardControl={true}
         customTransition="all .5"
         transitionDuration={500}

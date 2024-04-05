@@ -9,6 +9,7 @@ import { updateUser,getUserOrders,orderEntry,updateSkinCare,getSkinCare} from '.
 import { setRole } from '../../redux/actions/roleAction';
 import EmptyCart from './EmptyCart';
 import {useNavigate} from 'react-router-dom'
+import { toast } from "react-toastify";
 const Cart = () => {
   const cartItems = useSelector((state) => state.cart.carts);
   const products = useSelector((state)=>state.product.prducts)
@@ -41,7 +42,11 @@ const Cart = () => {
     dispatch(REMOVE_ONE(product))
   }
   const add = (product) => {
-    dispatch(ADD(product))
+    if (product.stock > 0) {
+      dispatch(ADD(product))
+    } else {
+      toast.warn('Out Of Stock');
+    }
   }
   const subtotal = cartItems.reduce((acc, item) => {
     return acc + (item.price - item.discount) * item.quantity;
@@ -162,7 +167,7 @@ const Cart = () => {
                     <button type="button" className="bg-transparent mx-4 px-4 py-2 font-semibold text-[#333] text-md border">
                       {item.quantity}
                     </button>
-                    <button onClick={()=>add(item)} type="button" className="bg-transparent py-2 font-semibold text-[#333]">
+                    <button onClick={ ()=>add(item) } className={`bg-transparent py-2 font-semibold text-[#333]  ${item.stock <= 0 ? "opacity-30 cursor-not-allowed" : ""}`}>
                       <IoIosAdd/>
                     </button>
                   </div>
