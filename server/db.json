@@ -9,7 +9,7 @@
       "discount": 3,
       "sku": "ZG011AQA",
       "rating": 4.5,
-      "stock": 73,
+      "stock": 2,
       "brand": "VelvetLips",
       "category": "makeup",
       "sub_category": "lips",
@@ -57,7 +57,7 @@
       "discount": 2,
       "sku": "ZG011AQC",
       "rating": 4.3,
-      "stock": 69,
+      "stock": 0,
       "brand": "PrecisionLine",
       "featured": "true",
       "quantity": "0",
@@ -205,6 +205,30 @@
             "https://example.com/product-images/eyeliner/image2.jpg",
             "https://example.com/product-images/eyeliner/image3.jpg"
           ]
+        },
+        {
+          "id": "4",
+          "name": "Body Wash",
+          "description": "A refreshing body wash for clean and hydrated skin",
+          "long_description": "This will be long description",
+          "price": 10,
+          "discount": 1,
+          "sku": "ZG011AQD",
+          "rating": 4.6,
+          "stock": 85,
+          "brand": "FreshClean",
+          "featured": "true",
+          "quantity": "0",
+          "category": "bath",
+          "sub_category": "soaps",
+          "total_sold": 40,
+          "reviews": "This body wash smells amazing and leaves my skin feeling so soft.",
+          "thumbnail": "https://theskinstore.in/cdn/shop/files/10-5-2022-desktop_1c27b611-91b4-4489-bb01-e969cca1f1ce_1400x.jpg?v=1704137181",
+          "images": [
+            "https://example.com/product-images/body_wash/image1.jpg",
+            "https://example.com/product-images/body_wash/image2.jpg",
+            "https://example.com/product-images/body_wash/image3.jpg"
+          ]
         }
       ]
     },
@@ -328,6 +352,17 @@
       "order_accepted": "pending",
       "accepted_by": "",
       "quantity": 1,
+      "payment_id": ""
+    },
+    {
+      "id": "10",
+      "user_id": "2",
+      "product_id": "3",
+      "ordered_at": "4/5/2024, 4:39:07 PM",
+      "expected_delivery": "",
+      "order_accepted": "pending",
+      "accepted_by": "",
+      "quantity": 10,
       "payment_id": ""
     }
   ],
