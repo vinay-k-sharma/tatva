@@ -18,3 +18,8 @@ export const REMOVE_ONE = (product) => {
         payload:product
     }
 }
+export const emptyCart = () => {
+    return {
+        type:"EMPTY_CART"
+    }
+}

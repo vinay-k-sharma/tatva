@@ -148,7 +148,7 @@
       "id": "1",
       "name": "Ishaan",
       "email": "ishaan@example.com",
-      "password": "ishaanpass",
+      "password": "ishaanpassword",
       "favouriteProducts": []
     },
     {
@@ -180,6 +180,30 @@
             "https://example.com/product-images/facial_cleanser/image2.jpg",
             "https://example.com/product-images/facial_cleanser/image3.jpg"
           ]
+        },
+        {
+          "id": "3",
+          "name": "Eyeliner",
+          "description": "A waterproof eyeliner for precise and long-lasting definition",
+          "long_description": "This will be long description",
+          "price": 12,
+          "discount": 2,
+          "sku": "ZG011AQC",
+          "rating": 4.3,
+          "stock": 70,
+          "brand": "PrecisionLine",
+          "featured": "true",
+          "quantity": "0",
+          "category": "makeup",
+          "sub_category": "eyes",
+          "total_sold": 35,
+          "reviews": "Love this eyeliner! Goes on smoothly and stays put all day.",
+          "thumbnail": "https://theskinstore.in/cdn/shop/files/desktop-banner-29-11-2022_1400x.png?v=1669714576",
+          "images": [
+            "https://example.com/product-images/eyeliner/image1.jpg",
+            "https://example.com/product-images/eyeliner/image2.jpg",
+            "https://example.com/product-images/eyeliner/image3.jpg"
+          ]
         }
       ]
     },
@@ -208,12 +232,58 @@
   "orders": [
     {
       "id": "1",
-      "user_id": "1",
-      "product_id": "3",
-      "ordered_at": "3/12/2024, 10:26:51 AM",
-      "expected_delivery": "3/15/2024",
-      "order_accepted": true,
-      "accepted_by": "1"
+      "user_id": "2",
+      "product_id": "4",
+      "ordered_at": "4/5/2024, 11:33:42 AM",
+      "expected_delivery": "",
+      "order_accepted": "pending",
+      "accepted_by": "",
+      "quantity": 1,
+      "payment_id": ""
+    },
+    {
+      "id": "2",
+      "user_id": "2",
+      "product_id": "5",
+      "ordered_at": "4/5/2024, 11:33:42 AM",
+      "expected_delivery": "",
+      "order_accepted": "pending",
+      "accepted_by": "",
+      "quantity": 1,
+      "payment_id": ""
+    },
+    {
+      "id": "3",
+      "user_id": "2",
+      "product_id": "1",
+      "ordered_at": "4/5/2024, 12:12:49 PM",
+      "expected_delivery": "",
+      "order_accepted": "pending",
+      "accepted_by": "",
+      "quantity": 1,
+      "payment_id": ""
+    },
+    {
+      "id": "4",
+      "user_id": "2",
+      "product_id": "2",
+      "ordered_at": "4/5/2024, 2:10:01 PM",
+      "expected_delivery": "",
+      "order_accepted": "pending",
+      "accepted_by": "",
+      "quantity": 1,
+      "payment_id": ""
+    },
+    {
+      "id": "5",
+      "user_id": "2",
+      "product_id": "4",
+      "ordered_at": "4/5/2024, 2:10:01 PM",
+      "expected_delivery": "",
+      "order_accepted": "pending",
+      "accepted_by": "",
+      "quantity": 1,
+      "payment_id": ""
     }
   ],
   "categories": [

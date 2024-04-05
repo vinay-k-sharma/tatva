@@ -1,17 +1,31 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { CiCircleRemove } from "react-icons/ci";
 import { FaHeart } from "react-icons/fa";
 import { IoIosRemove } from "react-icons/io";
 import { IoIosAdd } from "react-icons/io";
-import { DELETE, REMOVE_ONE, ADD } from '../../redux/actions/cartActions';
-import { updateUser } from '../../utils/axios-instance';
+import { DELETE, REMOVE_ONE, ADD, emptyCart } from '../../redux/actions/cartActions';
+import { updateUser,getUserOrders,orderEntry,updateSkinCare} from '../../utils/axios-instance';
 import { setRole } from '../../redux/actions/roleAction';
 import EmptyCart from './EmptyCart';
+import {useNavigate} from 'react-router-dom'
 const Cart = () => {
   const cartItems = useSelector((state) => state.cart.carts);
+  console.log(cartItems)
+  const [orders,setOrders] = useState([])
   const user = useSelector((state) => state.role.user);
   const dispatch = useDispatch()
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    (async () => {
+      const { data } = await getUserOrders();
+      setOrders(data);
+    })();
+  }, []);
+
+  
+
   const removeWhole = (id) => {
     dispatch(DELETE(id))
   }  
@@ -24,6 +38,7 @@ const Cart = () => {
   const subtotal = cartItems.reduce((acc, item) => {
     return acc + (item.price - item.discount) * item.quantity;
   }, 0);
+
   const isProductLiked = (product) => {
     if (user && user.favouriteProducts) {
       return user.favouriteProducts.some(
@@ -60,12 +75,43 @@ const Cart = () => {
       }
     }
   };
+  const handleCheckout = async () => {
+
+
+
+    let orderId =
+      orders.length !== 0
+        ? (parseInt(orders[orders.length - 1].id) + 1).toString()
+        : "1";
+
+        
+    for (let i = 0; i < cartItems.length; i++) {
+      const newObj = {
+        id: orderId,
+        user_id: user.id,
+        product_id: cartItems[i].id,
+        ordered_at: `${new Date().toLocaleDateString()}, ${new Date().toLocaleTimeString()}`,
+        expected_delivery: "", 
+        order_accepted: "pending",
+        accepted_by: "",
+        quantity: cartItems[i].quantity,
+        payment_id: ""
+      };
+      await orderEntry(newObj);
+      orderId = (parseInt(orderId) + 1).toString();
+      dispatch(emptyCart())
+      navigate('/')
+    }
+  };
+
+
+
   return cartItems.length > 0 ?(
     
     <div >
-      <div className="grid grid-rows-1">
+      <div className="grid gap-12 p-6">
         {cartItems.map((item) => (
-          <div key={item.id} className="">
+          <div key={item.id} className="lg:col-span-2 bg-white divide-y">
             <div className="flex items-start max-sm:flex-col gap-8 py-6">
               <div className="h-52 shrink-0">
                 <img src={item.thumbnail} className="w-full h-full object-contain rounded-md" alt={item.name} />
@@ -122,7 +168,7 @@ const Cart = () => {
             <li className="flex flex-wrap gap-4 text-md py-4">Tax <span className="ml-auto font-bold">$4.00</span></li>
             <li className="flex flex-wrap gap-4 text-md py-4 font-bold">Total <span className="ml-auto">${subtotal+4+4}</span></li>
           </ul>
-          <button type="button" className="mt-6 text-md px-6 py-2.5 w-full bg-[#D88552]  text-white rounded">Check out</button>
+          <button onClick={handleCheckout} className="mt-6 text-md px-6 py-2.5 w-full bg-[#D88552]  text-white rounded">Check out</button>
           <div className="mt-10">
           
             
