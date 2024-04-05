@@ -10,6 +10,7 @@ switch(action.type) {
         console.log(itemIndex)
     if(itemIndex>=0){
         state.carts[itemIndex].quantity +=1
+        state.carts[itemIndex].stock -=1
         return {
             ...state,
             carts:[...state.carts]
@@ -19,6 +20,7 @@ switch(action.type) {
         const temp = {...action.payload,quantity:1}
         console.log(temp)
         console.log("logging")
+        temp.stock -=1
 
         return {
             ...state,
@@ -37,7 +39,8 @@ switch(action.type) {
             const decrement_item = state.carts.findIndex((item) => item.id === action.payload.id)
 
             if(state.carts[decrement_item].quantity>=1){
-                const deleteItems = state.carts[decrement_item].quantity -= 1
+                 state.carts[decrement_item].quantity -= 1
+                 state.carts[decrement_item].stock+= 1
                 return {
                     ...state,
                     carts:[...state.carts]
@@ -50,6 +53,12 @@ switch(action.type) {
                     carts:data
                 }
             }
+
+            case  "EMPTY_CART" :
+                return {
+                    ...state,
+                    carts:[]
+                }
     default : return state
 }
 }

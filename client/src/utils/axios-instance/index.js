@@ -114,4 +114,46 @@ export const getUsers = async () => {
       };
     }
   };
+  export const updateSkinCare = async (product) => {
+    try {
+      const res = await API.patch(`products/${product.id}`, product);
+      return {
+        success: true,
+        data: res.data,
+        error: null,
+      };
+    } catch (error) {
+      return {
+        success: false,
+        data: null,
+        error: error.message,
+      };
+    }
+  };
   
+  export const getUserOrders = async () => {
+    try {
+      const res = await API.get('orders')
+      return {
+        success:true,
+        data:res.data,
+        error:null
+      }
+    }
+    catch(error){
+      console.log(error)
+    }
+  }
+
+ export  const orderEntry = async (obj) => {
+    try{
+      const res = await API.post('orders',obj)
+      return{
+        success:true,
+        data:res.data
+      }
+    }
+    catch(error){
+      console.log(error)
+    }
+  }
