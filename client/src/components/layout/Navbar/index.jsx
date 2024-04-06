@@ -24,11 +24,12 @@ const Navbar = () => {
 
   return (
     <nav className="bg-[#D88552] sticky top-0 left-0 z-50 ">
-      <div className="flex flex-wrap items-center justify-between mx-auto py-1 px-4 md:px-2">
+      <div className="flex flex-wrap items-center justify-between mx-auto py-4 px-4 md:px-6">
         <NavLink
           to={
             admin ? "/admin" : "/"
           }
+          className='flex items-center'
         >
           <div className="w-[65px] md:w-[60px]">
             <img src={logo} alt="logo" className="w-full" />

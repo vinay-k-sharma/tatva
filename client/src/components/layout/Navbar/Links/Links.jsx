@@ -10,8 +10,8 @@ const Links = ({ children, linksToRender}) => {
             <li key={id}>
               <NavLink
                 to={element.path}
-                className='text-white'
-              >
+                className='text-white flex items-center gap-1 text-[1rem] p-2 rounded transition-all duration-200 ease-in-out hover:text-black'
+              > {element.icon}
                 {element?.label}
               </NavLink>
             </li>
