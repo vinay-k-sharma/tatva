@@ -11,7 +11,10 @@ const Login = React.lazy(()=> import("../views/Login"))
 const Contact = React.lazy(()=> import("../views/Contact"))
 const About = React.lazy(()=> import("../views/About"))
 const Cart = React.lazy(()=> import("../views/Cart"))
-const Admin = React.lazy(()=> import("../views/Admin"))
+const AdminDashboard = React.lazy(()=> import("../views/Admin"))
+const Admin_Users = React.lazy(()=>import ('../views/Admin/Admin_Users'))
+const Admin_Products = React.lazy(()=>import ('../views/Admin/Admin_Products'))
+const Admin_Categories = React.lazy(()=>import ('../views/Admin/Admin_Categories'))
 const Wishlist = React.lazy(()=> import("../views/Whishlist"))
 const Profile = React.lazy(()=> import("../views/Profile"))
 const ProductDetails = React.lazy(()=> import("../views/ProductDetails"))
@@ -62,7 +65,19 @@ export const Router = () => {
                     children:[
                         {
                             path:'admin',
-                            element:<Admin/>
+                            element:<AdminDashboard/>
+                        },
+                        {
+                            path: 'admin-users',
+                            element: <Admin_Users/>
+                        },
+                        {
+                            path : 'admin-products',
+                            element: <Admin_Products/>
+                        }, 
+                        {
+                            path: 'admin-categories',
+                            element: <Admin_Categories/>
                         }
                     ]
                 },

@@ -23,8 +23,20 @@ export const generalLinks = [
 
 export const adminLinks = [
   {
-    label : "Admin-Page",
+    label : "Dashboard",
     path : "/admin"
+  },
+  {
+    label : "Users",
+    path: "/admin-users"
+  },
+  {
+    label: "Products",
+    path: "/admin-products"
+  },
+  {
+    label:"Categories",
+    path:"/admin-categories"
   }
 ];
 
