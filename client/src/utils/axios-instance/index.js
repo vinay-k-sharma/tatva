@@ -38,6 +38,22 @@ export const getUsers = async () => {
       };
     }
   };
+  export const deleteUser = async (id) => {
+    try {
+      const res = await API.delete(`users/${id}`);
+      return {
+        success: true,
+        data: res.data,
+        error: null,
+      };
+    } catch (error) {
+      return {
+        success: false,
+        data: null,
+        error: error.message,
+      };
+    }
+  };
   export const updateUser = async (updatedUser) => {
     try {
       const res = await API.patch(`users/${updatedUser.id}`, updatedUser);
@@ -58,14 +74,17 @@ export const getUsers = async () => {
     try {
       const res  = await API.get('skinCare_products')
       return {
-        data : res.data
+        success : true,
+        data : res.data,
+        error: res.error
       }
     }
-    catch(error){
+    catch (error) {
       return {
-        data:[],
-        error: error.message
-      }
+        success: false,
+        data: [],
+        error: error.message,
+      };
     }
   }
   export const addSkinCare = async (product) => {
@@ -98,7 +117,7 @@ export const getUsers = async () => {
       };
     }
   };
-  export const DeleteSkinCareById = async (id) => {
+  export const DeleteSkinCare = async (id) => {
     try {
       const res = await API.delete(`skinCare_products/${id}`);
       return {
@@ -158,3 +177,35 @@ export const getUsers = async () => {
       console.log(error)
     }
   }
+  export const getCategories = async () => {
+    try {
+      const res = await API.get("categories");
+      return {
+        success: true,
+        data: res.data,
+        error: null,
+      };
+    } catch (error) {
+      return {
+        success: false,
+        data: null,
+        error: error.message,
+      };
+    }
+  };
+  export const deleteCategories = async (id) => {
+    try {
+      const res = await API.delete(`categories/${id}`);
+      return {
+        success: true,
+        data: res.data,
+        error: null,
+      };
+    } catch (error) {
+      return {
+        success: false,
+        data: null,
+        error: error.message,
+      };
+    }
+  };
