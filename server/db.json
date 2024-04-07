@@ -22,7 +22,8 @@
         "https://theskinstore.in/cdn/shop/files/desktop-banner2_01-08-22_1400x.png?v=1659364308",
         "https://theskinstore.in/cdn/shop/files/10-5-2022-desktop_1c27b611-91b4-4489-bb01-e969cca1f1ce_1400x.jpg?v=1704137181",
         "https://theskinstore.in/cdn/shop/files/desktop-banner-29-11-2022_1400x.png?v=1669714576"
-      ]
+      ],
+      "discountPercentage": "23"
     },
     {
       "id": "2",
@@ -70,11 +71,12 @@
         "https://example.com/product-images/eyeliner/image1.jpg",
         "https://example.com/product-images/eyeliner/image2.jpg",
         "https://example.com/product-images/eyeliner/image3.jpg"
-      ]
+      ],
+      "discountPercentage": "23"
     },
     {
       "id": "4",
-      "name": "Body Wash",
+      "name": "Body Washe",
       "description": "A refreshing body wash for clean and hydrated skin",
       "long_description": "This will be long description",
       "price": 10,
@@ -119,6 +121,17 @@
         "https://example.com/product-images/facial_cleanser/image2.jpg",
         "https://example.com/product-images/facial_cleanser/image3.jpg"
       ]
+    },
+    {
+      "id": "6",
+      "name": "vinay",
+      "description": "dfdfdf",
+      "long_description": "dfdfdf",
+      "price": 23,
+      "discount": 23,
+      "stock": 23,
+      "brand": "dfdfdf",
+      "category": "dfdf"
     }
   ],
   "reviews": [
@@ -248,9 +261,23 @@
     },
     {
       "id": "6",
-      "name": "kishan",
+      "name": "kishangopal",
       "email": "vandna@gmail.com",
       "password": "raju123",
+      "favouriteProducts": []
+    },
+    {
+      "id": "7",
+      "name": "fenil",
+      "email": "fenil@gmail.com",
+      "password": "fenilpass",
+      "favouriteProducts": []
+    },
+    {
+      "id": "8",
+      "name": "sujal mandalia",
+      "email": "sujal@gmail.com",
+      "password": "sujalpass",
       "favouriteProducts": []
     }
   ],
@@ -462,6 +489,14 @@
           "name": "Face Wash"
         }
       ]
+    },
+    {
+      "id": "5",
+      "name": "lair"
+    },
+    {
+      "id": "6",
+      "name": "lair"
     }
   ]
 }
