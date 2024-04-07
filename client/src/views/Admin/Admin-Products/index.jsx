@@ -1,12 +1,13 @@
 import {useEffect,useState} from 'react'
-import {getSkinCare,DeleteSkinCare} from '../../utils/axios-instance'
+import {getSkinCare,DeleteSkinCare} from '../../../utils/axios-instance'
 import { toast } from "react-toastify";
-import CommonTable from '../../components/common/CommonTable';
-import {setLoader} from '../../redux/actions/appActions'
+import CommonTable from '../../../components/common/CommonTable';
+import {setLoader} from '../../../redux/actions/appActions'
 import {useSelector,useDispatch} from 'react-redux'
+import {useNavigate} from 'react-router-dom'
 const Admin_Products = () => {
   const loader = useSelector((state)=> state.app)
-
+  const navigate = useNavigate()
   const dispatch  = useDispatch()
   const [products,setProducts] = useState([])
   useEffect(() => {
@@ -38,19 +39,26 @@ const handleDelete = async (prodId) => {
           prevProducts.filter((product) => product.id !== prodId)
         );
     toast.success("Deleted Successfully")
+    dispatch(setLoader(false))
   }
   else{
     toast.error("Error in deleting")
   }
 }
+const handleUpdate = async (prodId) => {
+  navigate(`/admin-update-product/${prodId}`);
+};
+
+
   return (
     <div>
       Admin-Products
+      <button onClick={()=> navigate('/admin-add-product') }>Add</button>
       <CommonTable
       data={products}
       headers={productsArray}
       handleDelete={handleDelete}
-      // handleUpdate={handleUpdate}
+      handleUpdate={handleUpdate}
       />
     </div>
   )

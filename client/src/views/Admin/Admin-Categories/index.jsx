@@ -1,9 +1,11 @@
 import {useEffect,useState} from 'react'
-import {getCategories,deleteCategories} from '../../utils/axios-instance'
+import {getCategories,deleteCategories} from '../../../utils/axios-instance'
 import { toast } from "react-toastify";
-import CommonTable from '../../components/common/CommonTable';
+import {useNavigate} from 'react-router-dom'
+import CommonTable from '../../../components/common/CommonTable';
 const Admin_Categories = () => {
   const [categories,setCategories] = useState([])
+  const navigate = useNavigate()
   useEffect(() => {
     (async () => {
       const { data,error } = await getCategories();
@@ -30,14 +32,19 @@ const Admin_Categories = () => {
     }
 
   }
+  const handleUpdate = async (categoryId) => {
+    navigate(`/admin-update-category/${categoryId}`);
+  };
 console.log(categories)
   return (
     <div>
       Admin-Categories
+      <button onClick={()=> navigate('/admin-add-categories') }>Add</button>
       <CommonTable
       data={categories}
       headers={categoriesArray}
       handleDelete={handleDelete}
+      handleUpdate={handleUpdate}
       />
     </div>
   )

@@ -38,6 +38,38 @@ export const getUsers = async () => {
       };
     }
   };
+  export const updateUserFromAdmin = async (id, userData) => {
+    try {
+        const res = await API.patch(`/users/${id}`, userData);
+        return {
+            success: true,
+            data: res.data,
+            error: null,
+        };
+    } catch (error) {
+        return {
+            success: false,
+            data: [],
+            error: error.message,
+        };
+    }
+  };
+  export const getUserById = async (id) => {
+    try {
+      const res = await API.get(`users/${id}`);
+      return {
+        success: true,
+        data: res.data,
+        error: null,
+      };
+    } catch (error) {
+      return {
+        success: false,
+        data: null,
+        error: error.message,
+      };
+    }
+  };
   export const deleteUser = async (id) => {
     try {
       const res = await API.delete(`users/${id}`);
@@ -87,9 +119,9 @@ export const getUsers = async () => {
       };
     }
   }
-  export const addSkinCare = async (product) => {
+  export const addSkinCare = async (productObj) => {
     try {
-      const res = await API.post("skinCare_products", product);
+      const res = await API.post("skinCare_products", productObj);
       return {
         data: res.data,
       };
@@ -193,6 +225,20 @@ export const getUsers = async () => {
       };
     }
   };
+  export const addCategory = async (categoryObj) => {
+    try {
+      const res = await API.post("categories", categoryObj);
+      return {
+        data: res.data,
+      };
+    } catch (error) {
+      return {
+        success: false,
+        data: null,
+        error: error.message,
+      };
+    }
+  };
   export const deleteCategories = async (id) => {
     try {
       const res = await API.delete(`categories/${id}`);
@@ -207,5 +253,37 @@ export const getUsers = async () => {
         data: null,
         error: error.message,
       };
+    }
+  };
+  export const getCategoryById = async (categoryId) => {
+    try {
+      const res = await API.get(`categories/${categoryId}`);
+      return {
+        success: true,
+        data: res.data,
+        error: null,
+      };
+    } catch (error) {
+      return {
+        success: false,
+        data: null,
+        error: error.message,
+      };
+    }
+  };
+  export const updateCategoryFromAdmin = async (categoryId, categoryData) => {
+    try {
+        const res = await API.patch(`/categories/${categoryId}`, categoryData);
+        return {
+            success: true,
+            data: res.data,
+            error: null,
+        };
+    } catch (error) {
+        return {
+            success: false,
+            data: [],
+            error: error.message,
+        };
     }
   };
