@@ -2,7 +2,7 @@ import { FaShoppingCart } from "react-icons/fa";
 import Badge from '@mui/material/Badge';
 import { useSelector } from 'react-redux';
 import HomeIcon from '@material-ui/icons/Home';
-
+import { GiReceiveMoney } from "react-icons/gi";
 const CartIconWithBadge = () => {
   const carts = useSelector((state) => state.cart.carts);
 
@@ -18,7 +18,11 @@ export const generalLinks = [
     icon: <HomeIcon/>,
     label: "Home",
     path:'/'
-  } 
+  }, 
+  {
+    label:"Seller",
+    path : '/seller-registration'
+  }
 ];
 
 export const adminLinks = [
@@ -39,6 +43,21 @@ export const adminLinks = [
     path:"/admin-categories"
   }
 ];
+export const sellerLinks = [
+  {
+    label:"Seller Dashboard",
+    path : '/seller-dashboard'
+  },
+  {
+    label: "Seller Orders",
+    icon : <GiReceiveMoney/>,
+    path: '/seller-orders'
+  },
+  {
+    label : "Your Products",
+    path : '/seller-products'
+  }
+]
 
 export const userLinks = [
   {
@@ -52,5 +71,10 @@ export const userLinks = [
   {
     icon: <CartIconWithBadge />,
     path: "/cart"
+  },
+  {
+    label: 'Your Orders',
+    icon: <GiReceiveMoney />,
+    path : '/your-orders'
   }
 ];
