@@ -121,17 +121,6 @@
         "https://example.com/product-images/facial_cleanser/image2.jpg",
         "https://example.com/product-images/facial_cleanser/image3.jpg"
       ]
-    },
-    {
-      "id": "6",
-      "name": "vinay",
-      "description": "dfdfdf",
-      "long_description": "dfdfdf",
-      "price": 23,
-      "discount": 23,
-      "stock": 23,
-      "brand": "dfdfdf",
-      "category": "dfdf"
     }
   ],
   "reviews": [
