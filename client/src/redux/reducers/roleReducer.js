@@ -4,6 +4,7 @@ const initialState = JSON.parse(localStorage.getItem("role")) || {
   isAuth: false,
   admin: null,
   user: null,
+  seller: null
 };
 
 const roleReducer = (state = initialState, action) => {
@@ -20,6 +21,7 @@ const roleReducer = (state = initialState, action) => {
         isAuth: false,
         admin: null,
         user: null,
+        seller:null
       };
     }
     default: {

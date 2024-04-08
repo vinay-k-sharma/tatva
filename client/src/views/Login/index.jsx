@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { loginSchema } from '../../schemas';
 import { useDispatch, useSelector } from 'react-redux';
-import { getUsers } from '../../utils/axios-instance';
+import { getUsers,getSellers } from '../../utils/axios-instance';
 import { setRole } from '../../redux/actions/roleAction';
 import { useFormik } from 'formik';
 import { NavLink, useNavigate } from 'react-router-dom';
@@ -17,6 +17,7 @@ const LoginPage = () => {
   const navigate = useNavigate();
   const { isAuth } = useSelector((state) => state.role);
   const [users, setUsers] = useState([]);
+  const [sellers,setSellers] = useState([])
 
   const { values, errors, touched, handleChange, handleSubmit, handleBlur, handleReset } = useFormik({
     initialValues: roleValues,
@@ -34,6 +35,17 @@ const LoginPage = () => {
         navigate('/');
       }
     }
+    if (role === "seller") {
+      console.log("inside this loop")
+      let seller = sellers.find((seller) => seller.email === email);
+      if (seller && seller.password === password) {
+        dispatch(setRole(role, seller));
+
+        navigate("/seller-dashboard");
+      } else {
+
+      }
+    }
     if (role === 'admin') {
       const admin = { email, password };
       if (email === 'admin@gmail.com' && password === 'Admin@123') {
@@ -45,12 +57,22 @@ const LoginPage = () => {
   }
 
   useEffect(() => {
-    isAuth ? navigate('/') : null;
+    isAuth ? navigate("/") : null;
 
     (async () => {
-      const { success: usersSuccess, data: usersData, error: userError } = await getUsers();
+      const {
+        success: usersSuccess,
+        data: usersData,
+        error: userError,
+      } = await getUsers();
+      const {
+        success: sellerSuccess,
+        data: sellersData,
+        error: sellerError,
+      } = await getSellers();
 
       setUsers(usersData);
+      setSellers(sellersData);
     })();
   }, []);
 
@@ -70,6 +92,7 @@ const LoginPage = () => {
             className="mt-2 h-12 w-full rounded-md bg-gray-100 px-3"
           >
             <option value="user">User</option>
+            <option value="seller">Seller</option>
             <option value="admin">Admin</option>
           </select>
         </div>

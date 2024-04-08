@@ -3,6 +3,7 @@ import React from 'react'
 import { createBrowserRouter } from 'react-router-dom'
 import PrivateRoutesUser from '../utils/private-routes/PrivateRoutesUser'
 import PrivateRoutesAdmin from '../utils/private-routes/PrivateRoutesAdmin'
+import PrivateRoutesSeller from '../utils/private-routes/PrivateRoutesSeller'
 const ErrorPage = React.lazy(()=> import("../views/ErrorPage"))
 const Layout = React.lazy(()=> import("../components/layout/Layout"))
 const Home = React.lazy(()=> import("../views/Home"))
@@ -21,6 +22,10 @@ const UpdateProduct = React.lazy(()=> import ('../views/Register/UpdateProduct')
 const Admin_Categories = React.lazy(()=>import ('../views/Admin/Admin-Categories'))
 const Add_Admin_Categories = React.lazy(()=>import ('../views/Register/RegisterCategory'))
 const Update_Admin_Categories = React.lazy(()=> import ('../views/Admin/Admin-Categories/Admin_Update_Category'))
+const SellerDashboard = React.lazy(()=> import('../views/Seller'))
+const SellerOrders = React.lazy(()=> import('../views/Seller/SellerOrders'))
+const SellerProducts = React.lazy(() => import('../views/Seller/SellerProducts'))
+const RegisterSeller = React.lazy(()=> import('../views/Register/RegisterSeller'))
 const Wishlist = React.lazy(()=> import("../views/Whishlist"))
 const Profile = React.lazy(()=> import("../views/Profile"))
 const ProductDetails = React.lazy(()=> import("../views/ProductDetails"))
@@ -62,6 +67,25 @@ export const Router = () => {
                         }
                     ]
                 },
+                {
+					element: <PrivateRoutesSeller isSellerAuth={role.seller !== null ? true : false} />,
+					children: [
+						{
+							path: "seller-dashboard",
+							element: < SellerDashboard/>,
+						},
+						{
+							path: "seller-orders",
+							element: <SellerOrders/>
+						},
+						{
+							path: "seller-products",
+							element: <SellerProducts/>
+						},
+					
+						
+					],
+				},
                 {
                     element:(
                         <PrivateRoutesAdmin
@@ -118,6 +142,10 @@ export const Router = () => {
                 {
                     path:'register',
                     element:<RegisterUser/>
+                },
+                {
+                    path:'register-seller',
+                    element: <RegisterSeller/>
                 }
             ]
         },
