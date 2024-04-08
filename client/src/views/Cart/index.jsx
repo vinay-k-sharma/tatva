@@ -113,6 +113,7 @@ const Cart = () => {
         ordered_at: `${new Date().toLocaleDateString()}, ${new Date().toLocaleTimeString()}`,
         expected_delivery: "", 
         status: "Pending",
+        dispatched: "Pending",
         accepted_by_id: "",
         accepted_by_name : "",
         quantity: cartItems[i].quantity,
