@@ -11,15 +11,15 @@ export default function CategoryChart({ products }) {
       if (acc[product.category]) {
         acc[product.category] += totalSold;
       } else {
-        acc[product.category] = totalSold;
+        acc[product.category] = totalSold; 
       }
     }
     return acc;
   }, {});
 
+  console.log(categoryData)
   console.log("Category Data:", categoryData);
 
-  // Convert categoryData object to an array of objects
   const data = Object.keys(categoryData).map(category => ({
     category,
     totalSold: categoryData[category]

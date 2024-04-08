@@ -83,7 +83,7 @@
       "discount": 1,
       "sku": "ZG011AQD",
       "rating": 4.6,
-      "stock": 85,
+      "stock": 80,
       "brand": "FreshClean",
       "featured": "true",
       "quantity": "0",
@@ -136,14 +136,46 @@
     {
       "id": "1",
       "name": "jay-updated",
-      "businessName": "BacMart",
-      "gstin": "22AAAAA0000A1Z5",
+      "organization": "BacMart",
       "brand": "samsung",
       "email": "jay@gmail.com",
       "password": "Dhruv123@",
-      "productsToSell": [
+      "sellerProductsId": [
         "2"
       ]
+    },
+    {
+      "id": "2",
+      "name": "Vinay",
+      "organization": "Vinay Organization",
+      "brand": "Vinay Brand",
+      "email": "vinaysharma352044@gmail.com",
+      "password": "vinaysharma",
+      "sellerProductsId": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "id": "3",
+      "name": "fenil",
+      "organization": "fenil",
+      "brand": "fenil",
+      "email": "fenil@gmail.com",
+      "password": "fenilpass",
+      "sellerProductsId": []
+    },
+    {
+      "id": "4",
+      "name": "as",
+      "organization": "as",
+      "brand": "as",
+      "email": "a@gmail.com",
+      "password": "apassword",
+      "sellerProductsId": []
     }
   ],
   "users": [
@@ -161,56 +193,33 @@
       "password": "vinaysharma",
       "favouriteProducts": [
         {
-          "id": "5",
-          "name": "Facial Cleanser",
-          "description": "A gentle facial cleanser for clean and clear skin",
+          "id": "1",
+          "name": "Lipstick",
+          "description": "A creamy lipstick for long-lasting color and hydration",
           "long_description": "This will be long description",
-          "price": 12,
-          "discount": 2,
-          "sku": "ZG011AQD",
-          "rating": 4.4,
-          "stock": 75,
-          "brand": "ClearSkin",
-          "featured": "false",
-          "quantity": 1,
-          "category": "bath",
-          "sub_category": "face wash",
-          "total_sold": 35,
-          "reviews": "Love this cleanser! Removes dirt and makeup without drying out my skin.",
-          "thumbnail": "https://ayuga.in/cdn/shop/collections/Giftbox_WebBanner_1900x780_f3f8a07f-2b8c-42c7-8dc8-2c67cc19d1f1_1800x.jpg?v=1711111349",
-          "images": [
-            "https://example.com/product-images/facial_cleanser/image1.jpg",
-            "https://example.com/product-images/facial_cleanser/image2.jpg",
-            "https://example.com/product-images/facial_cleanser/image3.jpg"
-          ]
-        },
-        {
-          "id": "3",
-          "name": "Eyeliner",
-          "description": "A waterproof eyeliner for precise and long-lasting definition",
-          "long_description": "This will be long description",
-          "price": 12,
-          "discount": 2,
-          "sku": "ZG011AQC",
-          "rating": 4.3,
-          "stock": 70,
-          "brand": "PrecisionLine",
+          "price": 18,
+          "discount": 3,
+          "sku": "ZG011AQA",
+          "rating": 4.5,
+          "stock": 2,
+          "brand": "VelvetLips",
+          "category": "makeup",
+          "sub_category": "lips",
+          "total_sold": 45,
           "featured": "true",
           "quantity": "0",
-          "category": "makeup",
-          "sub_category": "eyes",
-          "total_sold": 35,
-          "reviews": "Love this eyeliner! Goes on smoothly and stays put all day.",
-          "thumbnail": "https://theskinstore.in/cdn/shop/files/desktop-banner-29-11-2022_1400x.png?v=1669714576",
+          "reviews": "Love this lipstick! Beautiful color and lasts all day.",
+          "thumbnail": "https://ayuga.in/cdn/shop/collections/Giftbox_WebBanner_1900x780_f3f8a07f-2b8c-42c7-8dc8-2c67cc19d1f1_1800x.jpg?v=1711111349",
           "images": [
-            "https://example.com/product-images/eyeliner/image1.jpg",
-            "https://example.com/product-images/eyeliner/image2.jpg",
-            "https://example.com/product-images/eyeliner/image3.jpg"
-          ]
+            "https://theskinstore.in/cdn/shop/files/desktop-banner2_01-08-22_1400x.png?v=1659364308",
+            "https://theskinstore.in/cdn/shop/files/10-5-2022-desktop_1c27b611-91b4-4489-bb01-e969cca1f1ce_1400x.jpg?v=1704137181",
+            "https://theskinstore.in/cdn/shop/files/desktop-banner-29-11-2022_1400x.png?v=1669714576"
+          ],
+          "discountPercentage": "23"
         },
         {
           "id": "4",
-          "name": "Body Wash",
+          "name": "Body Washe",
           "description": "A refreshing body wash for clean and hydrated skin",
           "long_description": "This will be long description",
           "price": 10,
@@ -276,110 +285,65 @@
       "user_id": "2",
       "product_id": "4",
       "ordered_at": "4/5/2024, 11:33:42 AM",
-      "expected_delivery": "",
-      "order_accepted": "pending",
-      "accepted_by": "",
+      "dispatched": "Dispatched",
+      "status": "Rejected",
+      "accepted_by_id": "1",
+      "accepted_by_name": "jay-updated",
       "quantity": 1,
-      "payment_id": ""
+      "payment_id": "",
+      "accepted_by": "1"
     },
     {
       "id": "2",
       "user_id": "2",
       "product_id": "5",
       "ordered_at": "4/5/2024, 11:33:42 AM",
-      "expected_delivery": "",
-      "order_accepted": "pending",
-      "accepted_by": "",
+      "dispatched": "Pending",
+      "status": "Rejected",
+      "accepted_by_id": "1",
+      "accepted_by_name": "jay-updated",
       "quantity": 1,
-      "payment_id": ""
+      "payment_id": "",
+      "accepted_by": "1"
     },
     {
       "id": "3",
       "user_id": "2",
       "product_id": "1",
       "ordered_at": "4/5/2024, 12:12:49 PM",
-      "expected_delivery": "",
-      "order_accepted": "pending",
-      "accepted_by": "",
+      "dispatched": "Dispatched",
+      "status": "Accepted",
+      "accepted_by_id": "1",
+      "accepted_by_name": "jay-updated",
       "quantity": 1,
-      "payment_id": ""
+      "payment_id": "",
+      "accepted_by": "1"
     },
     {
       "id": "4",
       "user_id": "2",
       "product_id": "2",
       "ordered_at": "4/5/2024, 2:10:01 PM",
-      "expected_delivery": "",
-      "order_accepted": "pending",
-      "accepted_by": "",
+      "dispatched": "Pending",
+      "status": "Accepted",
+      "accepted_by_id": "1",
+      "accepted_by_name": "jay-updated",
       "quantity": 1,
-      "payment_id": ""
+      "payment_id": "",
+      "accepted_by": "1"
     },
     {
       "id": "5",
       "user_id": "2",
       "product_id": "4",
       "ordered_at": "4/5/2024, 2:10:01 PM",
-      "expected_delivery": "",
-      "order_accepted": "pending",
-      "accepted_by": "",
+      "dispatched": "Pending",
+      "status": "Accepted",
+      "accepted_by_id": "",
+      "accepted_by_name": "",
       "quantity": 1,
-      "payment_id": ""
-    },
-    {
-      "id": "6",
-      "user_id": "2",
-      "product_id": "3",
-      "ordered_at": "4/5/2024, 3:05:08 PM",
-      "expected_delivery": "",
-      "order_accepted": "pending",
-      "accepted_by": "",
-      "quantity": 5,
-      "payment_id": ""
-    },
-    {
-      "id": "7",
-      "user_id": "2",
-      "product_id": "5",
-      "ordered_at": "4/5/2024, 3:08:16 PM",
-      "expected_delivery": "",
-      "order_accepted": "pending",
-      "accepted_by": "",
-      "quantity": 2,
-      "payment_id": ""
-    },
-    {
-      "id": "8",
-      "user_id": "2",
-      "product_id": "1",
-      "ordered_at": "4/5/2024, 3:08:16 PM",
-      "expected_delivery": "",
-      "order_accepted": "pending",
-      "accepted_by": "",
-      "quantity": 2,
-      "payment_id": ""
-    },
-    {
-      "id": "9",
-      "user_id": "2",
-      "product_id": "3",
-      "ordered_at": "4/5/2024, 3:08:16 PM",
-      "expected_delivery": "",
-      "order_accepted": "pending",
-      "accepted_by": "",
-      "quantity": 1,
-      "payment_id": ""
-    },
-    {
-      "id": "10",
-      "user_id": "2",
-      "product_id": "3",
-      "ordered_at": "4/5/2024, 4:39:07 PM",
-      "expected_delivery": "",
-      "order_accepted": "pending",
-      "accepted_by": "",
-      "quantity": 10,
-      "payment_id": ""
+      "payment_id": "",
+      "accepted_by": "1"
     }
   ],
   "categories": [

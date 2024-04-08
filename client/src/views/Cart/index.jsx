@@ -112,8 +112,9 @@ const Cart = () => {
         product_id: cartItems[i].id,
         ordered_at: `${new Date().toLocaleDateString()}, ${new Date().toLocaleTimeString()}`,
         expected_delivery: "", 
-        order_accepted: "pending",
-        accepted_by: "",
+        status: "Pending",
+        accepted_by_id: "",
+        accepted_by_name : "",
         quantity: cartItems[i].quantity,
         payment_id: ""
       };

@@ -9,10 +9,11 @@ import {
   generalLinks,
   adminLinks,
   userLinks,
+  sellerLinks
 } from "./Links/LinkData";
 
 const Navbar = () => {
-  const { isAuth, user, admin } = useSelector((state) => state.role);
+  const { isAuth, user,seller, admin } = useSelector((state) => state.role);
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -27,7 +28,7 @@ const Navbar = () => {
       <div className="flex flex-wrap items-center justify-between mx-auto py-4 px-4 md:px-6">
         <NavLink
           to={
-            admin ? "/admin" : "/"
+            admin ? "/admin" : seller ? "/seller-dashboard" : "/"
           }
           className='flex items-center'
         >
@@ -40,6 +41,8 @@ const Navbar = () => {
             linksToRender={
               user
                 ? userLinks
+                : seller
+                ? sellerLinks
                 : admin
                 ? adminLinks
                 : generalLinks

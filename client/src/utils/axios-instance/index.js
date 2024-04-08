@@ -209,6 +209,22 @@ export const getUsers = async () => {
       console.log(error)
     }
   }
+  export const updateOrderFromSeller = async (orderId, orderData) => {
+    try {
+        const res = await API.patch(`/orders/${orderId}`, orderData);
+        return {
+            success: true,
+            data: res.data,
+            error: null,
+        };
+    } catch (error) {
+        return {
+            success: false,
+            data: [],
+            error: error.message,
+        };
+    }
+  };
   export const getCategories = async () => {
     try {
       const res = await API.get("categories");
@@ -285,5 +301,35 @@ export const getUsers = async () => {
             data: [],
             error: error.message,
         };
+    }
+  };
+  export const getSellers = async () => {
+    try {
+      const res = await API.get("sellers");
+      return {
+        success: true,
+        data: res.data,
+        error: null,
+      };
+    } catch (error) {
+      return {
+        success: false,
+        data: [],
+        error: error.message,
+      };
+    }
+  };
+  export const addSeller = async (sellerObj) => {
+    try {
+      const res = await API.post("sellers", sellerObj);
+      return {
+        data: res.data,
+      };
+    } catch (error) {
+      return {
+        success: false,
+        data: null,
+        error: error.message,
+      };
     }
   };

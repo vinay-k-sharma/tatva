@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Button } from '@mui/material';
 import TablePagination from '@mui/material/TablePagination';
 
-const CommonTable = ({ data, headers, handleUpdate, handleDelete }) => {
+const CommonTable = ({ data, headers, handleUpdate, handleDelete, handleAccept, handleReject, handleDispatch }) => {
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(5);
 
@@ -38,10 +38,43 @@ const CommonTable = ({ data, headers, handleUpdate, handleDelete }) => {
                 <TableCell key={header.key}>
                   {item[header.key]}
                   {header.key === 'update' && (
-                    <Button onClick={() => handleUpdate(item.id)} variant="outlined" size="small">Update</Button>
+                    <Button onClick={() => handleUpdate(item.id)} variant="outlined" color="success" size="small">Update</Button>
                   )}
                   {header.key === 'delete' && (
                     <Button onClick={() => handleDelete(item.id)} variant="contained" size="small" color="error">Delete</Button>
+                  )}
+                  {header.key === 'dispatched_button' && (
+                    <Button
+                      onClick={() => handleDispatch(item.id)}
+                      variant="contained"
+                      size="small"
+                      color="success"
+                      disabled={item.status !== 'Accepted' || item.dispatched === 'Dispatched'}
+                    >
+                      Dispatch
+                    </Button>
+                  )}
+                  {header.key === 'accept' && (
+                    <Button
+                      onClick={() => handleAccept(item.id)}
+                      variant="contained"
+                      size="small"
+                      color="success"
+                      disabled={item.status === 'Accepted' || item.dispatched === 'Dispatched'}
+                    >
+                      Accept
+                    </Button>
+                  )}
+                  {header.key === 'reject' && (
+                    <Button
+                      onClick={() => handleReject(item.id)}
+                      variant="contained"
+                      size="small"
+                      color="error"
+                      disabled={item.status === 'Rejected' || item.dispatched === 'Dispatched'}
+                    >
+                      Reject
+                    </Button>
                   )}
                 </TableCell>
               ))}

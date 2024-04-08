@@ -3,6 +3,8 @@ import Badge from '@mui/material/Badge';
 import { useSelector } from 'react-redux';
 import HomeIcon from '@material-ui/icons/Home';
 import { GiReceiveMoney } from "react-icons/gi";
+import { FaShop } from "react-icons/fa6";
+import { FaHeart } from "react-icons/fa";
 const CartIconWithBadge = () => {
   const carts = useSelector((state) => state.cart.carts);
 
@@ -21,7 +23,7 @@ export const generalLinks = [
   }, 
   {
     label:"Seller",
-    path : '/seller-registration'
+    path : '/register-seller'
   }
 ];
 
@@ -44,13 +46,16 @@ export const adminLinks = [
   }
 ];
 export const sellerLinks = [
+
   {
-    label:"Seller Dashboard",
-    path : '/seller-dashboard'
+    label:"Dashboard ",
+    icon: <FaShop className="text-2xl"/> ,
+    path: '/seller-dashboard',
   },
+  
   {
-    label: "Seller Orders",
-    icon : <GiReceiveMoney/>,
+    label: "Your Orders",
+    icon : <GiReceiveMoney className="text-2xl pb-1"/>,
     path: '/seller-orders'
   },
   {
@@ -61,20 +66,23 @@ export const sellerLinks = [
 
 export const userLinks = [
   {
+    label: 'Home',
     icon : <HomeIcon style={{ fontSize: 30 }}/>,
     path: '/'
   },
   {
     label : 'Wishlist',
+    icon : <FaHeart className="text-xl"/>,
     path :"/wishlist"
   },
   {
+    label: "Cart",
     icon: <CartIconWithBadge />,
     path: "/cart"
   },
   {
     label: 'Your Orders',
-    icon: <GiReceiveMoney />,
+    icon: <GiReceiveMoney className='text-4xl pb-2'/>,
     path : '/your-orders'
   }
 ];
