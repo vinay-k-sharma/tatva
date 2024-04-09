@@ -58,7 +58,7 @@
       "discount": 2,
       "sku": "ZG011AQC",
       "rating": 4.3,
-      "stock": 0,
+      "stock": 69,
       "brand": "PrecisionLine",
       "featured": "true",
       "quantity": "0",
@@ -291,12 +291,28 @@
       "product_id": "4",
       "ordered_at": "4/8/2024, 7:23:43 PM",
       "expected_delivery": "",
-      "status": "Pending",
+      "status": "Accepted",
       "dispatched": "Pending",
-      "accepted_by_id": "",
-      "accepted_by_name": "",
+      "accepted_by_id": "1",
+      "accepted_by_name": "Vinay Sharma",
       "quantity": 3,
-      "payment_id": ""
+      "payment_id": "",
+      "accepted_by": "1"
+    },
+    {
+      "id": "3",
+      "user_id": "2",
+      "product_id": "3",
+      "ordered_at": "4/8/2024, 10:36:30 PM",
+      "expected_delivery": "",
+      "status": "Accepted",
+      "dispatch": "Pending",
+      "accepted_by_id": "1",
+      "accepted_by_name": "Vinay Sharma",
+      "quantity": 1,
+      "payment_id": "",
+      "accepted_by": "1",
+      "dispatched": "Dispatched"
     }
   ],
   "categories": [

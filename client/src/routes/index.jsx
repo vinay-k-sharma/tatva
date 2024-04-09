@@ -27,6 +27,7 @@ const SellerOrders = React.lazy(()=> import('../views/Seller/SellerOrders'))
 const SellerProducts = React.lazy(() => import('../views/Seller/SellerProducts'))
 const RegisterSeller = React.lazy(()=> import('../views/Register/RegisterSeller'))
 const Wishlist = React.lazy(()=> import("../views/Whishlist"))
+const UserOrders = React.lazy(()=> import('../views/User-Orders'))
 const Profile = React.lazy(()=> import("../views/Profile"))
 const ProductDetails = React.lazy(()=> import("../views/ProductDetails"))
 export const Router = () => {
@@ -64,6 +65,10 @@ export const Router = () => {
                         {
                             path:'cart',
                             element:<Cart/>
+                        },
+                        {
+                            path:'your-orders',
+                            element:<UserOrders/>
                         }
                     ]
                 },
