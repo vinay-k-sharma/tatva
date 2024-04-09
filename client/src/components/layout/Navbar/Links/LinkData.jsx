@@ -43,6 +43,10 @@ export const adminLinks = [
   {
     label:"Categories",
     path:"/admin-categories"
+  },
+  {
+    label: "Orders",
+    path: "/admin-orders"
   }
 ];
 export const sellerLinks = [

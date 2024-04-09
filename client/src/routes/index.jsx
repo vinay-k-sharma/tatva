@@ -22,6 +22,7 @@ const UpdateProduct = React.lazy(()=> import ('../views/Register/UpdateProduct')
 const Admin_Categories = React.lazy(()=>import ('../views/Admin/Admin-Categories'))
 const Add_Admin_Categories = React.lazy(()=>import ('../views/Register/RegisterCategory'))
 const Update_Admin_Categories = React.lazy(()=> import ('../views/Admin/Admin-Categories/Admin_Update_Category'))
+const Admin_Orders = React.lazy(()=>import ('../views/Admin/Admin-Orders'))
 const SellerDashboard = React.lazy(()=> import('../views/Seller'))
 const SellerOrders = React.lazy(()=> import('../views/Seller/SellerOrders'))
 const SellerProducts = React.lazy(() => import('../views/Seller/SellerProducts'))
@@ -137,6 +138,10 @@ export const Router = () => {
                         {
                             path: 'admin-categories',
                             element: <Admin_Categories/>
+                        },
+                        {
+                            path: 'admin-orders',
+                            element:<Admin_Orders/>
                         },
                         {
                             path: 'admin-add-categories',
