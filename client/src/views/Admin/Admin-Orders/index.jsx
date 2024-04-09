@@ -1,22 +1,13 @@
 import { useEffect, useState } from 'react';
-import { useSelector } from 'react-redux';
-import {  getUserOrders, updateOrderFromSeller } from '../../utils/axios-instance';
-import CommonTable from '../../components/common/CommonTable';
+import {  getUserOrders, updateOrderFromAdmin } from '../../../utils/axios-instance';
+import CommonTable from '../../../components/common/CommonTable';
 
-const SellerOrders = () => {
-
+const Admin_Orders = () => {
   const [orders, setOrders] = useState([]);
-  const { seller } = useSelector((state) => state.role);
-  console.log(seller)
-  
-  const name = seller.name.toUpperCase();
 
   const fetchData = async () => {
-
-    
     const ordersData = await getUserOrders();
-    const filteredOrders = ordersData.data.filter(order => seller.productsToSell.includes(order.product_id));
-    setOrders(filteredOrders); 
+    setOrders(ordersData.data)
   };
 
   useEffect(() => {
@@ -44,7 +35,7 @@ const SellerOrders = () => {
         return order;
       });
       setOrders(updatedOrders);
-      await updateOrderFromSeller(orderId, { status: 'Accepted', accepted_by_id: seller.id, accepted_by_name: seller.name });
+      await updateOrderFromAdmin(orderId, { status: 'Accepted', accepted_by_id: "admin", accepted_by_name: "admin" });
     } catch (error) {
       console.log('Error Accepting Order', error);
     }
@@ -59,7 +50,7 @@ const SellerOrders = () => {
         return order;
       });
       setOrders(updatedOrders);
-      await updateOrderFromSeller(orderId, { status: 'Rejected', accepted_by_id: seller.id, accepted_by_name: seller.name });
+      await updateOrderFromAdmin(orderId, { status: 'Rejected', accepted_by_id: "admin", accepted_by_name: "admin" });
     } catch (error) {
       console.log('Error Rejecting Order', error);
     }
@@ -74,7 +65,7 @@ const SellerOrders = () => {
         return order;
       });
       setOrders(updatedOrders);
-      await updateOrderFromSeller(orderId, { dispatched: 'Dispatched', accepted_by_id: seller.id, accepted_by_name: seller.name });
+      await updateOrderFromAdmin(orderId, { dispatched: 'Dispatched', accepted_by_id: "admin", accepted_by_name: "admin" });
     } catch (error) {
       console.log('Error Dispatching Order', error);
     }
@@ -82,7 +73,7 @@ const SellerOrders = () => {
 
   return (
     <div className="flex flex-col items-center">
-      <h3 className="mb-4 text-2xl mt-2">{name}'s Orders</h3>
+      <h3 className="mb-4 text-2xl mt-2"> Orders</h3>
       {orders.length === 0 ? (
         <div className="text-center text-gray-500 text-2xl mt-20">You have no orders currently</div>
       ) : (
@@ -98,4 +89,4 @@ const SellerOrders = () => {
   );
 };
 
-export default SellerOrders;
+export default Admin_Orders;

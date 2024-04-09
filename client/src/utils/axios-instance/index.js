@@ -227,6 +227,22 @@ export const getUsers = async () => {
         };
     }
   };
+  export const updateOrderFromAdmin = async (orderId, orderData) => {
+    try {
+        const res = await API.patch(`/orders/${orderId}`, orderData);
+        return {
+            success: true,
+            data: res.data,
+            error: null,
+        };
+    } catch (error) {
+        return {
+            success: false,
+            data: [],
+            error: error.message,
+        };
+    }
+  };
   export const getCategories = async () => {
     try {
       const res = await API.get("categories");
