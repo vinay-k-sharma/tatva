@@ -7,6 +7,8 @@ const SellerOrders = () => {
   const [products, setProducts] = useState([]);
   const [orders, setOrders] = useState([]);
   const { seller } = useSelector((state) => state.role);
+  console.log(seller)
+  
   const name = seller.name.toUpperCase();
 
   const fetchData = async () => {
@@ -14,7 +16,10 @@ const SellerOrders = () => {
     setProducts(productData.data);
     
     const ordersData = await getUserOrders();
-    setOrders(ordersData.data);
+    console.log(ordersData.data)
+    const filteredOrders = ordersData.data.filter(order => seller.productsToSell.includes(order.product_id));
+    console.log(filteredOrders)
+    setOrders(filteredOrders); 
   };
 
   useEffect(() => {
