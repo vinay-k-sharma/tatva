@@ -123,7 +123,9 @@ export const getUsers = async () => {
     try {
       const res = await API.post("skinCare_products", productObj);
       return {
+        success: true,
         data: res.data,
+        error: res.error
       };
     } catch (error) {
       return {
@@ -324,6 +326,29 @@ export const getUsers = async () => {
       const res = await API.post("sellers", sellerObj);
       return {
         data: res.data,
+      };
+    } catch (error) {
+      return {
+        success: false,
+        data: null,
+        error: error.message,
+      };
+    }
+  };
+  export const updateSellerProducts = async (seller, newProductId) => {
+    try {
+      const sellerProducts = seller.productsToSell;
+      const updatedSellersProducts = [...sellerProducts, newProductId];
+      const newSellerObj = {
+        ...seller,
+        productsToSell: updatedSellersProducts,
+      };
+      const res = await API.put(`sellers/${seller.id}`, newSellerObj);
+  
+      return {
+        success: true,
+        data: newSellerObj,
+        error: null,
       };
     } catch (error) {
       return {

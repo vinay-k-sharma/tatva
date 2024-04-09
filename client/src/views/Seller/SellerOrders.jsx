@@ -16,9 +16,7 @@ const SellerOrders = () => {
     setProducts(productData.data);
     
     const ordersData = await getUserOrders();
-    console.log(ordersData.data)
     const filteredOrders = ordersData.data.filter(order => seller.productsToSell.includes(order.product_id));
-    console.log(filteredOrders)
     setOrders(filteredOrders); 
   };
 

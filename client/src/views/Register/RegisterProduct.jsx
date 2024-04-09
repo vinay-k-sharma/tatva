@@ -1,18 +1,21 @@
 import React, { useEffect, useState } from "react";
 import { useFormik } from "formik";
-import { addSkinCare, getSkinCare } from '../../utils/axios-instance';
-import { useSelector } from "react-redux";
+import { addSkinCare, getSkinCare, updateSellerProducts } from '../../utils/axios-instance';
+import { useSelector,useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { setLoader } from "../../redux/actions/appActions";
 import Loader from "../../components/common/Loader";
 import { ProductSchema } from '../../schemas';
+import { setRole } from "../../redux/actions/roleAction";
+
 
 const RegisterProduct = () => {
   const navigate = useNavigate();
   const [products,setProducts] = useState([])
-  const { isAuth } = useSelector((state) => state.role);
+  const { seller } = useSelector((state) => state.role);
   const { loader } = useSelector((state) => state.app);
+  const dispatch = useDispatch()
 
   useEffect(() => {
     const fetchData = async () => {
@@ -30,14 +33,13 @@ const RegisterProduct = () => {
 
     fetchData();
   }, []);
+
   async function onSubmit(values) {
-    console.log("inside onsubmit")
-    const {name,description,long_description,price,discount,stock,brand,category} = values
-    let prodObj = {
-        id:
-          products.length !== 0
-            ? (parseInt(products[products.length - 1].id) + 1).toString()
-            : "1",
+    try {
+      const { name, description, long_description, price, discount, stock, brand, category } = values;
+  
+      const newProduct = {
+        id: products.length !== 0 ? (parseInt(products[products.length - 1].id) + 1).toString() : "1",
         name: name.trim(),
         description: description.trim(),
         long_description,
@@ -47,22 +49,34 @@ const RegisterProduct = () => {
         brand,
         category
       };
-      try{
-        const { success, data, error } = await addSkinCare(prodObj);
-        if(success){
-            navigate('/admin-add-products')
-            toast.success('product added successfully')
-        }
-        else{
-            navigate('/admin')
-            toast.error('error registering product')
-        }
-        
+
+      const { success: addProductSuccess, data: addedProductData, error: addProductError } = await addSkinCare(newProduct);
+      console.log("Add product response:", addProductSuccess, addedProductData, addProductError);
+      
+      if (!addProductSuccess) {
+        throw new Error(`Error adding product: ${addProductError}`);
       }
-      catch(error){
-        console.log(error)
+      if(seller){
+      const { success: updateSellerSuccess, data: updatedSellerData, error: updateSellerError } = await updateSellerProducts(seller, newProduct.id.toString());
+      console.log("Update seller response:", updateSellerSuccess, updatedSellerData, updateSellerError);
+      
+      if (!updateSellerSuccess) {
+        throw new Error(`Error updating seller's products: ${updateSellerError}`);
       }
+
+      dispatch(setRole("seller", updatedSellerData));
+
+      navigate("/seller-products");
+    }else{
+      navigate('/admin-products')
+    }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      toast.error("Error submitting form. Please try again later.");
+    }
   }
+  
+  
 
   const initialValuesProducts = {
     name: "",

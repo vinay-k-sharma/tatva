@@ -26,6 +26,8 @@ const SellerDashboard = React.lazy(()=> import('../views/Seller'))
 const SellerOrders = React.lazy(()=> import('../views/Seller/SellerOrders'))
 const SellerProducts = React.lazy(() => import('../views/Seller/SellerProducts'))
 const RegisterSeller = React.lazy(()=> import('../views/Register/RegisterSeller'))
+const SellerAddProduct = React.lazy(() => import('../views/Register/RegisterProduct'))
+const SellerUpdateProduct = React.lazy(()=> import('../views/Register/UpdateProduct'))
 const Wishlist = React.lazy(()=> import("../views/Whishlist"))
 const UserOrders = React.lazy(()=> import('../views/User-Orders'))
 const Profile = React.lazy(()=> import("../views/Profile"))
@@ -87,8 +89,14 @@ export const Router = () => {
 							path: "seller-products",
 							element: <SellerProducts/>
 						},
-					
-						
+                        {
+                            path:'seller-add-products',
+                            element : <SellerAddProduct/>
+                        },
+						{
+                            path:"seller-update-product/:prodId",
+                            element: <SellerUpdateProduct/>
+                        }
 					],
 				},
                 {

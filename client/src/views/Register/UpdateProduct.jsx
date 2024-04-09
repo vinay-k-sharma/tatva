@@ -10,9 +10,9 @@ const UpdateProduct = () => {
   const { prodId } = useParams();
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  const {seller} = useSelector((state) => state.role)
   const [product, setProduct] = useState(null);
 
-  const isAdmin = useSelector((state) => state.role.admin);
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -47,7 +47,7 @@ const UpdateProduct = () => {
       const { success, error } = await updateSkinCare(product);
 
       if (success) {
-        navigate("/admin");
+        seller ? navigate("/seller-products") : navigate("/admin-products");
         toast.success("Product updated successfully");
       } else {
         console.error("Error updating product:", error);

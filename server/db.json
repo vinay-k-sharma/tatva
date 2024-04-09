@@ -76,7 +76,7 @@
     },
     {
       "id": "4",
-      "name": "Body Washe",
+      "name": "Body Wash",
       "description": "A refreshing body wash for clean and hydrated skin",
       "long_description": "This will be long description",
       "price": 10,
@@ -121,6 +121,17 @@
         "https://example.com/product-images/facial_cleanser/image2.jpg",
         "https://example.com/product-images/facial_cleanser/image3.jpg"
       ]
+    },
+    {
+      "id": "11",
+      "name": "admin product 4",
+      "description": "df",
+      "long_description": "df",
+      "price": 23,
+      "discount": 23,
+      "stock": 23,
+      "brand": "df",
+      "category": "df"
     }
   ],
   "reviews": [
@@ -142,7 +153,8 @@
       "password": "vinaysharma",
       "productsToSell": [
         "5",
-        "4"
+        "4",
+        "9"
       ]
     }
   ],
