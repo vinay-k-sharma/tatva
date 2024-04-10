@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { getSkinCare } from '../../utils/axios-instance';
 const index = () => {
   return (
     <div>
