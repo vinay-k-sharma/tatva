@@ -30,8 +30,8 @@ const Admin_Products = () => {
     { key: 'stock', label: 'Stock' },
     { key: 'category', label: 'Category' },
     { key: 'rating', label: 'Rating' },
-    { key: 'update', label: 'Update' },
-    { key: 'delete', label: 'Delete' }
+    { key: 'update', label: 'Update' , disableSorting: true},
+    { key: 'delete', label: 'Delete', disableSorting: true }
   ];
 
   const handleDelete = async prodId => {

@@ -23,13 +23,13 @@ const Admin_Users = () => {
 
   console.log(users);
 
-  const usersArray = [
+  const usersInfoColumn = [
     { key: "id", label: "ID" },
     { key: "name", label: "Name" },
-    { key: "email", label: "Email" },
-    { key: "password", label: "Password" },
-    { key: "update", label: "Update User" },
-    { key: "delete", label: "Delete User" },
+    { key: "email", label: "Email", disableSorting: true },
+    { key: "password", label: "Password", disableSorting: true },
+    { key: "update", label: "Update User", disableSorting: true },
+    { key: "delete", label: "Delete User", disableSorting: true },
   ];
 
   const handleDelete = async (userId) => {
@@ -63,7 +63,7 @@ const Admin_Users = () => {
       </div>
       <CommonTable
         data={users}
-        headers={usersArray}
+        headers={usersInfoColumn}
         handleDelete={handleDelete}
         handleUpdate={handleUpdate}
       />

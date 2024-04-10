@@ -5,6 +5,7 @@ import {useSelector,useDispatch} from 'react-redux'
 const UserOrders = () => {
   const [orders,setOrders] = useState([])
   console.log(orders)
+  useEffect(()=>{orders.sort((a,b)=> b.ordered_at - a.ordered_at)},[])
   const {user} = useSelector((state)=> state.role)
   const name = user.name.toUpperCase()
   const fetchData = async () => {
@@ -20,7 +21,7 @@ const UserOrders = () => {
   useEffect(()=>{
     fetchData()
   },[])
-  const userOrdersArray = [
+  const userOrdersColumn = [
     { key: 'id', label: 'Order ID' },
     { key: 'product_id', label: 'Product Id' },
     { key: 'quantity', label: 'Quantity' },
@@ -39,7 +40,7 @@ const UserOrders = () => {
             <div className="flex justify-end w-full mr-12">
             </div>
           </div>
-          <CommonTable data={orders} headers={userOrdersArray} />
+          <CommonTable data={orders} headers={userOrdersColumn} />
         </>
       )}
     </div>

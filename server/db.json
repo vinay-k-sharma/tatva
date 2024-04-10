@@ -9,7 +9,7 @@
       "discount": 3,
       "sku": "ZG011AQA",
       "rating": 4.5,
-      "stock": 2,
+      "stock": 10,
       "brand": "VelvetLips",
       "category": "makeup",
       "sub_category": "lips",
@@ -83,7 +83,7 @@
       "discount": 1,
       "sku": "ZG011AQD",
       "rating": 4.6,
-      "stock": 77,
+      "stock": 74,
       "brand": "FreshClean",
       "featured": "true",
       "quantity": "0",
@@ -121,17 +121,6 @@
         "https://example.com/product-images/facial_cleanser/image2.jpg",
         "https://example.com/product-images/facial_cleanser/image3.jpg"
       ]
-    },
-    {
-      "id": "11",
-      "name": "admin product 4",
-      "description": "df",
-      "long_description": "df",
-      "price": 23,
-      "discount": 23,
-      "stock": 23,
-      "brand": "df",
-      "category": "df"
     }
   ],
   "reviews": [
@@ -197,30 +186,6 @@
           ]
         },
         {
-          "id": "3",
-          "name": "Eyeliner",
-          "description": "A waterproof eyeliner for precise and long-lasting definition",
-          "long_description": "This will be long description",
-          "price": 12,
-          "discount": 2,
-          "sku": "ZG011AQC",
-          "rating": 4.3,
-          "stock": 70,
-          "brand": "PrecisionLine",
-          "featured": "true",
-          "quantity": "0",
-          "category": "makeup",
-          "sub_category": "eyes",
-          "total_sold": 35,
-          "reviews": "Love this eyeliner! Goes on smoothly and stays put all day.",
-          "thumbnail": "https://theskinstore.in/cdn/shop/files/desktop-banner-29-11-2022_1400x.png?v=1669714576",
-          "images": [
-            "https://example.com/product-images/eyeliner/image1.jpg",
-            "https://example.com/product-images/eyeliner/image2.jpg",
-            "https://example.com/product-images/eyeliner/image3.jpg"
-          ]
-        },
-        {
           "id": "4",
           "name": "Body Wash",
           "description": "A refreshing body wash for clean and hydrated skin",
@@ -243,6 +208,30 @@
             "https://example.com/product-images/body_wash/image2.jpg",
             "https://example.com/product-images/body_wash/image3.jpg"
           ]
+        },
+        {
+          "id": "2",
+          "name": "Mascara",
+          "description": "A volumizing mascara for long and thick lashes",
+          "long_description": "This will be long description",
+          "price": 14,
+          "discount": 2,
+          "sku": "ZG011AQB",
+          "rating": 4.4,
+          "stock": 65,
+          "brand": "LashBoost",
+          "featured": "true",
+          "quantity": "0",
+          "category": "makeup",
+          "sub_category": "eyes",
+          "total_sold": 30,
+          "reviews": "Best mascara ever! Adds volume and length to my lashes.",
+          "thumbnail": "https://theskinstore.in/cdn/shop/files/desktop-banner2_01-08-22_1400x.png?v=1659364308",
+          "images": [
+            "https://theskinstore.in/cdn/shop/files/desktop-banner2_01-08-22_1400x.png?v=1659364308",
+            "https://theskinstore.in/cdn/shop/files/desktop-banner2_01-08-22_1400x.png?v=1659364308",
+            "https://theskinstore.in/cdn/shop/products/iS-Clinical-Eclipse-SPF50_500x.jpg?v=1610171008"
+          ]
         }
       ]
     },
@@ -261,13 +250,6 @@
       "favouriteProducts": []
     },
     {
-      "id": "6",
-      "name": "kishangopal",
-      "email": "vandna@gmail.com",
-      "password": "raju123",
-      "favouriteProducts": []
-    },
-    {
       "id": "7",
       "name": "fenil",
       "email": "fenil@gmail.com",
@@ -276,9 +258,16 @@
     },
     {
       "id": "8",
-      "name": "sujal mandalia",
+      "name": "Sujal Mandalia",
       "email": "sujal@gmail.com",
       "password": "sujalpass",
+      "favouriteProducts": []
+    },
+    {
+      "id": "9",
+      "name": "Rahul Sharma",
+      "email": "rahul@gmail.com",
+      "password": "rahulsharma",
       "favouriteProducts": []
     }
   ],
@@ -303,9 +292,9 @@
       "ordered_at": "4/8/2024, 7:23:43 PM",
       "expected_delivery": "",
       "status": "Accepted",
-      "dispatched": "Pending",
-      "accepted_by_id": "admin",
-      "accepted_by_name": "admin",
+      "dispatched": "Dispatched",
+      "accepted_by_id": "1",
+      "accepted_by_name": "Vinay Sharma",
       "quantity": 3,
       "payment_id": ""
     },
@@ -322,6 +311,32 @@
       "quantity": 1,
       "payment_id": "",
       "dispatched": "Dispatched"
+    },
+    {
+      "id": "4",
+      "user_id": "2",
+      "product_id": "1",
+      "ordered_at": "4/9/2024, 4:00:12 PM",
+      "expected_delivery": "",
+      "status": "Pending",
+      "dispatched": "Pending",
+      "accepted_by_id": "",
+      "accepted_by_name": "",
+      "quantity": 3,
+      "payment_id": ""
+    },
+    {
+      "id": "5",
+      "user_id": "2",
+      "product_id": "4",
+      "ordered_at": "4/9/2024, 4:03:37 PM",
+      "expected_delivery": "",
+      "status": "Pending",
+      "dispatched": "Pending",
+      "accepted_by_id": "",
+      "accepted_by_name": "",
+      "quantity": 3,
+      "payment_id": ""
     }
   ],
   "categories": [

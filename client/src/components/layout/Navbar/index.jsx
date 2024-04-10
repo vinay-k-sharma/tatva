@@ -24,7 +24,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-[#D88552] sticky top-0 left-0 z-50 ">
+    <nav className="bg-[#D88552] sticky top-0 left-0 " style={{zIndex: 1001}}>
       <div className="flex flex-wrap items-center justify-between mx-auto py-4 px-4 md:px-6">
         <NavLink
           to={

@@ -19,11 +19,11 @@ const Admin_Orders = () => {
     { key: 'product_id', label: 'Product Id' },
     { key: 'quantity', label: 'Quantity' },
     { key: 'ordered_at', label: 'Ordered Date' },
-    { key: 'dispatched', label: 'Dispatched' },
-    { key: 'status', label: 'Status' },
-    { key: 'dispatched_button', label: 'Dispatched' },
-    { key: 'accept', label: 'Accept' },
-    { key: 'reject', label: 'Reject' },
+    { key: 'dispatched', label: 'Dispatched',disableSorting: true },
+    { key: 'status', label: 'Status',disableSorting: true },
+    { key: 'dispatched_button', label: 'Dispatched',disableSorting: true },
+    { key: 'accept', label: 'Accept',disableSorting: true },
+    { key: 'reject', label: 'Reject',disableSorting:true },
   ];
   
   const handleAccept = async (orderId) => {

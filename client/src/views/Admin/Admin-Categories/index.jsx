@@ -21,8 +21,8 @@ const Admin_Categories = () => {
   const categoriesArray = [
     { key: 'id', label: 'ID' },
     { key: 'name', label: 'Name' },
-    { key: 'update', label: 'Update' },
-    { key: 'delete', label: 'Delete' }
+    { key: 'update', label: 'Update', disableSorting:true },
+    { key: 'delete', label: 'Delete', disableSorting: true }
   ];
 
   const handleDelete = async categoryId => {
