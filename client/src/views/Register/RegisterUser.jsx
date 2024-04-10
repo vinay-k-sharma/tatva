@@ -1,14 +1,17 @@
-import React, { useEffect,useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useFormik } from "formik";
-import { getUsers, registerUser,updateUserFromAdmin } from '../../utils/axios-instance';
+import {
+  getUsers,
+  registerUser,
+  updateUserFromAdmin,
+} from "../../utils/axios-instance";
 import { useDispatch, useSelector } from "react-redux";
 import { setRole } from "../../redux/actions/roleAction";
 import { NavLink, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { setLoader } from "../../redux/actions/appActions";
 import Loader from "../../components/common/Loader";
-import { userSchema,userSchemaAdmin } from '../../schemas';
-
+import { userSchema, userSchemaAdmin } from "../../schemas";
 
 const RegisterUser = ({ isFromAdmin = false, userData }) => {
   const dispatch = useDispatch();
@@ -91,8 +94,7 @@ const RegisterUser = ({ isFromAdmin = false, userData }) => {
       (user) => user.email === values.email
     );
 
-
-    if (emailExistsInUsers === -1 ) {
+    if (emailExistsInUsers === -1) {
       let userObj = {
         id:
           users.length !== 0
@@ -113,12 +115,10 @@ const RegisterUser = ({ isFromAdmin = false, userData }) => {
           toast.success("User registered successfully");
           !isFromAdmin ? navigate("/") : navigate("/admin-users");
         } else {
-          toast.error(
-            "Failed to register user."
-          );
+          toast.error("Failed to register user.");
         }
       } catch (error) {
-        console.log( error);
+        console.log(error);
       } finally {
         dispatch(setLoader(false));
       }
@@ -139,10 +139,8 @@ const RegisterUser = ({ isFromAdmin = false, userData }) => {
         data: usersData,
         error: userError,
       } = await getUsers();
-     
 
       setUsers(usersData);
-
     })();
   }, []);
 
@@ -167,17 +165,17 @@ const RegisterUser = ({ isFromAdmin = false, userData }) => {
             className="relative border border-gray-100 space-y-3 max-w-screen-md mx-auto rounded-md bg-white p-6 shadow-xl lg:p-10"
           >
             <div className="flex flex-col">
-            <label htmlFor="name">First Name</label>
+              <label htmlFor="name">Name</label>
 
-            <input
-            type="text"
-            placeholder="Your Name"
-            className="mt-2 h-12 w-full rounded-md bg-gray-100 px-3"
-            name="name"
-            value={values.name}
-            onChange={handleChange}
-            onBlur={handleBlur}
-          />
+              <input
+                type="text"
+                placeholder="Enter Name"
+                className="mt-2 h-12 w-full rounded-md bg-gray-100 px-3"
+                name="name"
+                value={values.name}
+                onChange={handleChange}
+                onBlur={handleBlur}
+              />
 
               {touched.name && errors.name ? (
                 <p className="text-[14px] text-red-700">{errors.name}</p>
@@ -187,17 +185,17 @@ const RegisterUser = ({ isFromAdmin = false, userData }) => {
             </div>
 
             <div className="flex flex-col">
-            <label htmlFor="email">Email Address</label>
+              <label htmlFor="email">Email Address</label>
 
-            <input
-            type="email"
-            placeholder="Info@example.com"
-            className="mt-2 h-12 w-full rounded-md bg-gray-100 px-3"
-            name="email"
-            value={values.email}
-            onChange={handleChange}
-            onBlur={handleBlur}
-          />
+              <input
+                type="email"
+                placeholder="Info@example.com"
+                className="mt-2 h-12 w-full rounded-md bg-gray-100 px-3"
+                name="email"
+                value={values.email}
+                onChange={handleChange}
+                onBlur={handleBlur}
+              />
               {touched.email && errors.email ? (
                 <p className="text-[14px] text-red-700">{errors.email}</p>
               ) : (
@@ -206,18 +204,17 @@ const RegisterUser = ({ isFromAdmin = false, userData }) => {
             </div>
 
             <div className="flex flex-col">
-            <label htmlFor="password">Password</label>
+              <label htmlFor="password">Password</label>
 
-             
               <input
-            type="password"
-            placeholder="******"
-            className="mt-2 h-12 w-full rounded-md bg-gray-100 px-3"
-            name="password"
-            value={values.password}
-            onChange={handleChange}
-            onBlur={handleBlur}
-          />
+                type="password"
+                placeholder="******"
+                className="mt-2 h-12 w-full rounded-md bg-gray-100 px-3"
+                name="password"
+                value={values.password}
+                onChange={handleChange}
+                onBlur={handleBlur}
+              />
 
               {touched.password && errors.password ? (
                 <p className="text-[14px] text-red-700 w-[min(24rem,85vw)]">
@@ -232,20 +229,20 @@ const RegisterUser = ({ isFromAdmin = false, userData }) => {
               <div className="flex flex-col relative">
                 <label htmlFor="confirm_password">Confirm Password</label>
 
-                
                 <input
-            type="password"
-            placeholder="******"
-            className="mt-2 h-12 w-full rounded-md bg-gray-100 px-3"
-            name="confirm_password"
-            value={values.confirm_password}
-            onChange={handleChange}
-            onBlur={handleBlur}
-          />
-                  
-                
-                {touched.cpassword && errors.cpassword ? (
-                  <p className="text-[14px] text-red-700">{errors.cpassword}</p>
+                  type="password"
+                  placeholder="******"
+                  className="mt-2 h-12 w-full rounded-md bg-gray-100 px-3"
+                  name="confirm_password"
+                  value={values.confirm_password}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                />
+
+                {touched.confirm_password && errors.confirm_password ? (
+                  <p className="text-[14px] text-red-700">
+                    {errors.confirm_password}
+                  </p>
                 ) : (
                   <p className="text-[14px] opacity-0">null</p>
                 )}
@@ -255,7 +252,11 @@ const RegisterUser = ({ isFromAdmin = false, userData }) => {
             <div className="flex justify-between gap-2">
               <button
                 type="submit"
-                className="mt-5 w-30 rounded-md bg-[#D88552] p-2 text-center font-semibold text-white"
+                className={`mt-5 w-30 rounded-md bg-[#D88552] p-2 text-center font-semibold text-white ${
+                  errors.name || errors.password || errors.email
+                    ? "cursor-not-allowed"
+                    : ""
+                }`}
                 disabled={
                   errors.name || errors.password || errors.email ? true : false
                 }
@@ -287,7 +288,7 @@ const RegisterUser = ({ isFromAdmin = false, userData }) => {
                   Already have an account?{" "}
                   <NavLink
                     to="/login"
-                    className="text-[#0295db]  border-[#0295db] hover:border-b-[1px]"
+                    className="text-[#D88552]  border-[#D88552] hover:border-b-[1px]"
                     onClick={() => window.scrollTo({ top, behavior: "smooth" })}
                   >
                     Login here
@@ -295,7 +296,7 @@ const RegisterUser = ({ isFromAdmin = false, userData }) => {
                 </p>
               </div>
             )}
-          </form>  
+          </form>
         </div>
       </div>
     </div>

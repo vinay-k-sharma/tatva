@@ -1,7 +1,7 @@
 import Card from "../../components/common/Card";
 import { useDispatch, useSelector } from "react-redux";
-
-import MyCarousel from "../../components/common/Carousel";
+import {useNavigate} from 'react-router-dom'
+import MyCarousel from "../../components/common/MyCarousel";
 import { setRole } from "../../redux/actions/roleAction";
 import { updateUser } from "../../utils/axios-instance";
 import BestSeller from "./BestSeller";
@@ -9,7 +9,8 @@ import Featured from "./Featured";
 const SkinCareProducts = ({ data }) => {
   const user = useSelector((state) => state.role.user);
   const dispatch = useDispatch();
-
+  const navigate = useNavigate()
+  console.log(data);
   const isProductLiked = (product) => {
     if (user && user.favouriteProducts) {
       return user.favouriteProducts.some(
@@ -48,11 +49,14 @@ const SkinCareProducts = ({ data }) => {
   };
   return (
     <>
-      <MyCarousel
-        data={data}
-        handleLikesDislikes={handleLikesDislikes}
-        isProductLiked={isProductLiked}
-      />
+    <div className="">
+      <MyCarousel >
+        {data.map((item) => (
+          <img src={item.thumbnail} key={item.id} alt={item.name}  onClick={() => navigate(`/products/${item.id}`)} className="mt-5 "/>
+        ))}
+      </MyCarousel>
+      </div>
+
       <BestSeller
         data={data}
         handleLikesDislikes={handleLikesDislikes}
@@ -66,7 +70,9 @@ const SkinCareProducts = ({ data }) => {
       <div className="flex flex-col items-center">
         <div className="w-full max-w-2xl px-4 mt-10">
           <div className="border-b-2 border-t-2 border-amber-800 py-2">
-            <h1 className="text-amber-800 text-center text-2xl">All Products</h1>
+            <h1 className="text-amber-800 text-center text-2xl">
+              All Products
+            </h1>
           </div>
         </div>
       </div>

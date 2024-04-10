@@ -30,8 +30,8 @@ const Admin_Products = () => {
     { key: 'stock', label: 'Stock' },
     { key: 'category', label: 'Category' },
     { key: 'rating', label: 'Rating' },
-    { key: 'update', label: 'Update' },
-    { key: 'delete', label: 'Delete' }
+    { key: 'update', label: 'Update' , disableSorting: true},
+    { key: 'delete', label: 'Delete', disableSorting: true }
   ];
 
   const handleDelete = async prodId => {
@@ -54,7 +54,7 @@ const Admin_Products = () => {
 
   return (
     <div className="flex flex-col items-center">
-      <h1 className="mb-4 text-3xl mt-2">Admin-Products</h1>
+      <h1 className="mb-4 text-3xl mt-2">All-Products</h1>
       <div className="w-full flex justify-between items-center mb-4 px-4 md:px-0">
         <div className="flex justify-end w-full mr-12">
           <button

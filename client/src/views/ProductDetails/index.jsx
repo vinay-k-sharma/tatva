@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { API } from "../../utils/axios-instance";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-
+import MyCarousel from "../../components/common/MyCarousel";
 const ProductDetails = () => {
   const [productData, setProductData] = useState({});
   const params = useParams();
@@ -21,12 +21,6 @@ const ProductDetails = () => {
     getProductDetails();
   }, [productId]);
 
-  const responsive = {
-    desktop: { breakpoint: { max: 3000, min: 1024 }, items: 1, slidesToSlide: 1 },
-    tablet: { breakpoint: { max: 1024, min: 464 }, items: 1, slidesToSlide: 1 },
-    mobile: { breakpoint: { max: 464, min: 0 }, items: 1, slidesToSlide: 1 }
-  };
-
   return (
     <div>
       <div className="py-6">
@@ -36,28 +30,11 @@ const ProductDetails = () => {
                
               {productData.images && productData.images.length > 0 ? (
                 <div className="max-w-4xl max-h-screen">
-                <Carousel
-                  swipeable={true}
-                  draggable={true}
-                  showDots={true}
-                  responsive={responsive}
-                  ssr={true}
-                  infinite={false}
-                  autoPlay={true}
-                  autoPlaySpeed={10000}
-                  keyBoardControl={true}
-                  customTransition="all .5"
-                  transitionDuration={500}
-                  containerClass="carousel-container"
-                  removeArrowOnDeviceType={["tablet", "mobile"]}
-                  deviceType={"desktop"} // i will dynamically set it using props based on client's device
-                  dotListClass="custom-dot-list-style"
-                  itemClass="carousel-item-padding-40-px"
-                >
+                <MyCarousel>
                   {productData.images.map((image, index) => (
                     <img key={index} src={image} alt={`Product Image ${index}`} className="w-full" />
                   ))}
-                </Carousel>
+                </MyCarousel>
                 </div>
               ) : (
                 <p>No images available</p>

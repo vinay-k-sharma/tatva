@@ -183,6 +183,22 @@ export const getUsers = async () => {
       };
     }
   };
+  export const updateCategory = async (category) => {
+    try {
+      const res = await API.patch(`categories/${category.id}`, category);
+      return {
+        success: true,
+        data: res.data,
+        error: null,
+      };
+    } catch (error) {
+      return {
+        success: false,
+        data: null,
+        error: error.message,
+      };
+    }
+  };
   
   
   export const getUserOrders = async () => {

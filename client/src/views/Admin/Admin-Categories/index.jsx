@@ -21,8 +21,8 @@ const Admin_Categories = () => {
   const categoriesArray = [
     { key: 'id', label: 'ID' },
     { key: 'name', label: 'Name' },
-    { key: 'update', label: 'Update' },
-    { key: 'delete', label: 'Delete' }
+    { key: 'update', label: 'Update', disableSorting:true },
+    { key: 'delete', label: 'Delete', disableSorting: true }
   ];
 
   const handleDelete = async categoryId => {
@@ -43,7 +43,7 @@ const Admin_Categories = () => {
 
   return (
     <div className="flex flex-col items-center">
-      <h1 className="mb-4 text-3xl mt-2">Admin-Categories</h1>
+      <h1 className="mb-4 text-3xl mt-2">All-Categories</h1>
       <div className="w-full flex justify-between items-center mb-4 px-4 md:px-0">
         <div className="flex justify-end w-full mr-12">
           <button
