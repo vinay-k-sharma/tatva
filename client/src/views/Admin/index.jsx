@@ -8,6 +8,7 @@ const AdminDashboard = () => {
   const[ordersCount,setOrdersCount ] = useState(0)
   const [categoriesCount,setCategoriesCount] = useState(0)
   const [products,setProducts] = useState([])
+  console.log(products)
   const fetchCounts = async () => {
     try {
       const products = await getSkinCare()
@@ -29,7 +30,7 @@ const AdminDashboard = () => {
   },[])
   console.log(products)
   return (
-    <div className='flex flex-col gap-4 mt-5'>
+    <div className=' gap-4 mt-5'>
      <DashBoardStatsGrid productsCount={productsCount} usersCount={usersCount} ordersCount={ordersCount} categoriesCount={categoriesCount}/>
      <CategoryChart products={products}/>
     </div>

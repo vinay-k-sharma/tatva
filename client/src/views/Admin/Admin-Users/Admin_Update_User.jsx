@@ -4,17 +4,17 @@ import { getUserById } from "../../../utils/axios-instance";
 import RegisterUser from "../../Register/RegisterUser";
 import { toast } from "react-toastify";
 function Admin_Update_Users() {
-  const { userId} = useParams();
+  const { userId } = useParams();
   const [userData, setUserData] = useState({});
-    console.log(userId)
+  const fetchData = async () => {
+    const { data, error } = await getUserById(userId);
+    if (error) {
+      toast.error("Something went wrong, please try again.");
+    }
+    setUserData(data);
+  };
   useEffect(() => {
-    (async () => {
-      const { data,error } = await getUserById(userId);
-      if (error) {
-        toast.error("Something went wrong, please try again.");
-      }
-      setUserData(data);
-    })();
+    fetchData();
   }, []);
 
   return <RegisterUser isFromAdmin={true} userData={userData} />;

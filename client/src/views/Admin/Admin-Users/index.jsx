@@ -3,7 +3,7 @@ import { deleteUser, getUsers } from "../../../utils/axios-instance";
 import { toast } from "react-toastify";
 import CommonTable from "../../../components/common/CommonTable";
 import { setLoader } from "../../../redux/actions/appActions";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
 const Admin_Users = () => {
@@ -11,14 +11,15 @@ const Admin_Users = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
+  const fetchData = async () => {
+    const { data, error } = await getUsers();
+    if (error) {
+      toast.error("Something went wrong, please try again.");
+    }
+    setUsers(data);
+  };
   useEffect(() => {
-    (async () => {
-      const { data, error } = await getUsers();
-      if (error) {
-        toast.error("Something went wrong, please try again.");
-      }
-      setUsers(data);
-    })();
+    fetchData();
   }, []);
 
   console.log(users);
@@ -50,7 +51,7 @@ const Admin_Users = () => {
 
   return (
     <div className="flex flex-col items-center">
-      <h1 className="mb-4 text-3xl mt-2">Admin-Users</h1>
+      <h1 className="mb-4 text-3xl mt-2">All-Users</h1>
       <div className="w-full flex justify-between items-center mb-4 px-4 md:px-0">
         <div className="flex justify-end w-full mr-12">
           <button

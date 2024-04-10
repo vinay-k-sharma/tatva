@@ -161,7 +161,51 @@ const UpdateProduct = () => {
                 />
                
               </div>
+              <div className="flex flex-col">
+                <label htmlFor="category">Category</label>
 
+                <input
+                  type="text"
+                  id="category"
+                  placeholder="Category Name"
+                  className="mt-2 h-12 w-full rounded-md bg-gray-100 px-3"
+                  name="category"
+                  value={product.category}
+                  onChange={handleChange}
+       
+                />
+               
+              </div>
+              <div className="flex flex-col">
+                <label htmlFor="sub_category">Sub_Category</label>
+
+                <input
+                  type="text"
+                  id="sub_category"
+                  placeholder="Sub_Category Name"
+                  className="mt-2 h-12 w-full rounded-md bg-gray-100 px-3"
+                  name="sub_category"
+                  value={product.sub_category}
+                  onChange={handleChange}
+       
+                />
+               
+              </div>
+              <div className="flex flex-col">
+                <label htmlFor="thumbnail">Thumbnail</label>
+
+                <input
+                  type="text"
+                  id="thumbnail"
+                  placeholder="Thumbnail URL"
+                  className="mt-2 h-12 w-full rounded-md bg-gray-100 px-3"
+                  name="thumbnail"
+                  value={product.thumbnail}
+                  onChange={handleChange}
+       
+                />
+               
+              </div>
               <div className="flex justify-between gap-2">
                 <button
                   type="submit"
@@ -169,6 +213,14 @@ const UpdateProduct = () => {
                 >
                  Submit
                 </button>
+                <button
+                  type="button"
+                  className="mt-5 w-30 rounded-md bg-[#D88552] p-2 text-center font-semibold text-white"
+                  onClick={() => navigate("/admin-products")}
+                >
+                  BACK
+                </button>
+                
               </div>
             </Form>
           </div>

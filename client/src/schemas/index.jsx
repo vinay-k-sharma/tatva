@@ -27,13 +27,15 @@ export const userSchemaAdmin = Yup.object({
 });
 
 export const loginSchema = Yup.object({
-  role: Yup.string().required().oneOf(["user", "admin","seller"]),
+  role: Yup.string().required().oneOf(["user", "admin", "seller"]),
   email: Yup.string().trim(),
   password: Yup.string().trim(),
 });
 
 export const ProductSchema = Yup.object({
-  name: Yup.string().required("Product name is required"),
+  name: Yup.string()
+    .required("Product name is required")
+    .min(2, "Enter atleast 2 characters"),
   description: Yup.string().required("Description is required"),
   long_description: Yup.string().required("Long Description is required"),
   price: Yup.number()
@@ -48,6 +50,8 @@ export const ProductSchema = Yup.object({
     .min(0, "Stock must be 0 or greater"),
   brand: Yup.string().required("Brand Name is required"),
   category: Yup.string().required("Category is required"),
+  sub_category: Yup.string().required("Sub_Category is required"),
+  thumbnail: Yup.string().url("Thumbnail must be a valid URL").required("Thumbnail URL is required"),
 });
 
 export const CategorySchema = Yup.object({
@@ -55,15 +59,18 @@ export const CategorySchema = Yup.object({
 });
 
 export const sellerSchema = Yup.object({
-  name: Yup.string().required("*required").min(2, "*Please enter more than two characters").max(25, "*Only 25 characters allowed!").trim(),
+  name: Yup.string()
+    .required("*required")
+    .min(2, "*Please enter more than two characters")
+    .max(25, "*Only 25 characters allowed!")
+    .trim(),
   organization: Yup.string().required("*required").trim(),
-  brand: Yup.string().required("*required").min(2, "*More than two characters required"),
+  brand: Yup.string()
+    .required("*required")
+    .min(2, "*More than two characters required"),
   email: Yup.string().required("*required").email("*Enter valid email").trim(),
-  password: Yup
-    .string()
-    .required("*required").min(6),
-  cpassword: Yup
-    .string()
+  password: Yup.string().required("*required").min(6),
+  cpassword: Yup.string()
     .required("*required")
     .oneOf([Yup.ref("password")], "*Enter matching passwords"),
 });

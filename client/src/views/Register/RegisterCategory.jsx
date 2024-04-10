@@ -4,14 +4,12 @@ import { getCategories,addCategory, updateCategoryFromAdmin } from '../../utils/
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import { setLoader } from "../../redux/actions/appActions";
-import Loader from "../../components/common/Loader";
-import { CategorySchema, ProductSchema } from '../../schemas';
+import { CategorySchema} from '../../schemas';
 
 const RegisterCategory = ({categoryData}) => {
+  console.log(categoryData)
   const navigate = useNavigate();
   const [categories,setCategories] = useState([])
-  const { isAuth } = useSelector((state) => state.role);
   const { loader } = useSelector((state) => state.app);
 
   useEffect(() => {
@@ -34,17 +32,18 @@ const RegisterCategory = ({categoryData}) => {
     console.log("inside onsubmit")
     const { name } = values;
     if(categoryData){
-        const {success,data,error} = await updateCategoryFromAdmin(categoryData?.id,
+        const {success} = await updateCategoryFromAdmin(categoryData?.id,
         {
             name:values.name.trim(),
         })
         if(success){
             toast.success("updation successfull")
-            navigate('/admin')
+            navigate('/admin-categories')
         }
         else{
             toast.error("Failed to update")
         }
+        return; 
     }
     let categoryObj = {
       id:
@@ -55,18 +54,11 @@ const RegisterCategory = ({categoryData}) => {
     };
     try {
       const { success, error } = await addCategory(categoryObj);
-      if (success) {
-        navigate('/admin-categories');
-        toast.success('Category added successfully');
-      } else {
-        toast.error(error ? error.message : 'Error registering category');
-      }
+      navigate('/admin-categories');
     } catch (error) {
       console.log(error);
-      toast.error('Error registering category');
     }
-  }
-  console.log(categoryData.name)
+}
 
   const initialValuesCategories = {
     name: categoryData?.name ? categoryData.name : "",
@@ -87,9 +79,6 @@ const RegisterCategory = ({categoryData}) => {
   });
 
 
-  if (loader) {
-    return <Loader />;
-  }
 
   return (
     <div className="lg: m-10">
@@ -124,7 +113,7 @@ const RegisterCategory = ({categoryData}) => {
                 type="submit"
                 className="mt-5 w-30 rounded-md bg-[#D88552] p-2 text-center font-semibold text-white"
               >
-                Submit
+                 {!categoryData ? "SUBMIT" : "UPDATE"}
               </button>
             </div>
           </form>

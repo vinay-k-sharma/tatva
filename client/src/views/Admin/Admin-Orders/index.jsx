@@ -73,7 +73,7 @@ const Admin_Orders = () => {
 
   return (
     <div className="flex flex-col items-center">
-      <h3 className="mb-4 text-2xl mt-2"> Orders</h3>
+      <h3 className="mb-4 text-2xl mt-2">All Orders</h3>
       {orders.length === 0 ? (
         <div className="text-center text-gray-500 text-2xl mt-20">You have no orders currently</div>
       ) : (

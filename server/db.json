@@ -3,7 +3,7 @@
     {
       "id": "1",
       "name": "Lipstick",
-      "description": "A creamy lipstick for long-lasting color and hydration",
+      "description": "A creamy lipstick for long-lasting color and hydrationn",
       "long_description": "This will be long description",
       "price": 18,
       "discount": 3,
@@ -11,7 +11,7 @@
       "rating": 4.5,
       "stock": 10,
       "brand": "VelvetLips",
-      "category": "makeup",
+      "category": "Makeup",
       "sub_category": "lips",
       "total_sold": 45,
       "featured": "true",
@@ -22,8 +22,7 @@
         "https://theskinstore.in/cdn/shop/files/desktop-banner2_01-08-22_1400x.png?v=1659364308",
         "https://theskinstore.in/cdn/shop/files/10-5-2022-desktop_1c27b611-91b4-4489-bb01-e969cca1f1ce_1400x.jpg?v=1704137181",
         "https://theskinstore.in/cdn/shop/files/desktop-banner-29-11-2022_1400x.png?v=1669714576"
-      ],
-      "discountPercentage": "23"
+      ]
     },
     {
       "id": "2",
@@ -38,7 +37,7 @@
       "brand": "LashBoost",
       "featured": "true",
       "quantity": "0",
-      "category": "makeup",
+      "category": "Makeup",
       "sub_category": "eyes",
       "total_sold": 30,
       "reviews": "Best mascara ever! Adds volume and length to my lashes.",
@@ -54,7 +53,7 @@
       "name": "Eyeliner",
       "description": "A waterproof eyeliner for precise and long-lasting definition",
       "long_description": "This will be long description",
-      "price": 12,
+      "price": "15",
       "discount": 2,
       "sku": "ZG011AQC",
       "rating": 4.3,
@@ -62,17 +61,16 @@
       "brand": "PrecisionLine",
       "featured": "true",
       "quantity": "0",
-      "category": "makeup",
+      "category": "Makeup",
       "sub_category": "eyes",
       "total_sold": 35,
       "reviews": "Love this eyeliner! Goes on smoothly and stays put all day.",
       "thumbnail": "https://theskinstore.in/cdn/shop/files/desktop-banner-29-11-2022_1400x.png?v=1669714576",
       "images": [
-        "https://example.com/product-images/eyeliner/image1.jpg",
-        "https://example.com/product-images/eyeliner/image2.jpg",
-        "https://example.com/product-images/eyeliner/image3.jpg"
-      ],
-      "discountPercentage": "23"
+        "https://theskinstore.in/cdn/shop/files/desktop-banner2_01-08-22_1400x.png?v=1659364308",
+        "https://theskinstore.in/cdn/shop/files/10-5-2022-desktop_1c27b611-91b4-4489-bb01-e969cca1f1ce_1400x.jpg?v=1704137181",
+        "https://theskinstore.in/cdn/shop/files/desktop-banner-29-11-2022_1400x.png?v=1669714576"
+      ]
     },
     {
       "id": "4",
@@ -80,22 +78,22 @@
       "description": "A refreshing body wash for clean and hydrated skin",
       "long_description": "This will be long description",
       "price": 10,
-      "discount": 1,
+      "discount": "12",
       "sku": "ZG011AQD",
       "rating": 4.6,
       "stock": 74,
       "brand": "FreshClean",
       "featured": "true",
       "quantity": "0",
-      "category": "bath",
+      "category": "Bath",
       "sub_category": "soaps",
       "total_sold": 40,
       "reviews": "This body wash smells amazing and leaves my skin feeling so soft.",
       "thumbnail": "https://theskinstore.in/cdn/shop/files/10-5-2022-desktop_1c27b611-91b4-4489-bb01-e969cca1f1ce_1400x.jpg?v=1704137181",
       "images": [
-        "https://example.com/product-images/body_wash/image1.jpg",
-        "https://example.com/product-images/body_wash/image2.jpg",
-        "https://example.com/product-images/body_wash/image3.jpg"
+        "https://theskinstore.in/cdn/shop/files/desktop-banner2_01-08-22_1400x.png?v=1659364308",
+        "https://theskinstore.in/cdn/shop/files/10-5-2022-desktop_1c27b611-91b4-4489-bb01-e969cca1f1ce_1400x.jpg?v=1704137181",
+        "https://theskinstore.in/cdn/shop/files/desktop-banner-29-11-2022_1400x.png?v=1669714576"
       ]
     },
     {
@@ -111,15 +109,231 @@
       "brand": "ClearSkin",
       "featured": "false",
       "quantity": "0",
-      "category": "bath",
+      "category": "Bath",
       "sub_category": "face wash",
       "total_sold": 35,
       "reviews": "Love this cleanser! Removes dirt and makeup without drying out my skin.",
       "thumbnail": "https://ayuga.in/cdn/shop/collections/Giftbox_WebBanner_1900x780_f3f8a07f-2b8c-42c7-8dc8-2c67cc19d1f1_1800x.jpg?v=1711111349",
       "images": [
-        "https://example.com/product-images/facial_cleanser/image1.jpg",
-        "https://example.com/product-images/facial_cleanser/image2.jpg",
-        "https://example.com/product-images/facial_cleanser/image3.jpg"
+        "https://theskinstore.in/cdn/shop/files/desktop-banner2_01-08-22_1400x.png?v=1659364308",
+        "https://theskinstore.in/cdn/shop/files/10-5-2022-desktop_1c27b611-91b4-4489-bb01-e969cca1f1ce_1400x.jpg?v=1704137181",
+        "https://theskinstore.in/cdn/shop/files/desktop-banner-29-11-2022_1400x.png?v=1669714576"
+      ]
+    },
+    {
+      "id": "6",
+      "name": "Hydrating Face Serum",
+      "description": "A lightweight serum that hydrates and rejuvenates the skin",
+      "long_description": "Enriched with hyaluronic acid and vitamin C, this serum provides deep hydration while brightening the skin.",
+      "price": 22,
+      "discount": 4,
+      "sku": "ZG021AQA",
+      "rating": 4.7,
+      "stock": 50,
+      "brand": "GlowMax",
+      "category": "Skin",
+      "sub_category": "Face",
+      "total_sold": 20,
+      "featured": "true",
+      "quantity": "0",
+      "reviews": "My skin feels so much more hydrated and plump after using this serum!",
+      "thumbnail": "https://theskinstore.in/cdn/shop/files/desktop-banner-29-11-2022_1400x.png?v=1669714576",
+      "images": [
+        "https://theskinstore.in/cdn/shop/files/desktop-banner2_01-08-22_1400x.png?v=1659364308",
+        "https://theskinstore.in/cdn/shop/files/10-5-2022-desktop_1c27b611-91b4-4489-bb01-e969cca1f1ce_1400x.jpg?v=1704137181",
+        "https://theskinstore.in/cdn/shop/files/desktop-banner-29-11-2022_1400x.png?v=1669714576"
+      ]
+    },
+    {
+      "id": "7",
+      "name": "Strengthening Hair Mask",
+      "description": "Intensive treatment that strengthens and restores hair health",
+      "long_description": "This mask penetrates deep to repair damaged hair and prevent future breakage. Suitable for all hair types.",
+      "price": 15,
+      "discount": 3,
+      "sku": "ZG022AQB",
+      "rating": 4.6,
+      "stock": 40,
+      "brand": "SilkThreads",
+      "category": "Hair",
+      "sub_category": "Hair Care",
+      "total_sold": 25,
+      "featured": "true",
+      "quantity": "0",
+      "reviews": "After just a few uses, my hair feels stronger and much softer.",
+      "thumbnail": "https://theskinstore.in/cdn/shop/files/desktop-banner-29-11-2022_1400x.png?v=1669714576",
+      "images": [
+        "https://theskinstore.in/cdn/shop/files/desktop-banner2_01-08-22_1400x.png?v=1659364308",
+        "https://theskinstore.in/cdn/shop/files/10-5-2022-desktop_1c27b611-91b4-4489-bb01-e969cca1f1ce_1400x.jpg?v=1704137181",
+        "https://theskinstore.in/cdn/shop/files/desktop-banner-29-11-2022_1400x.png?v=1669714576"
+      ]
+    },
+    {
+      "id": "8",
+      "name": "Eye Shadow Palette",
+      "description": "Versatile palette for creating endless eye looks",
+      "long_description": "With a mix of matte and shimmer shades, this palette is perfect for everyday wear or special occasions.",
+      "price": 24,
+      "discount": 5,
+      "sku": "ZG023AQC",
+      "rating": 4.8,
+      "stock": 30,
+      "brand": "ColorSplash",
+      "category": "Makeup",
+      "sub_category": "Eyes",
+      "total_sold": 15,
+      "featured": "true",
+      "quantity": "0",
+      "reviews": "The pigmentation is incredible, and the colors blend so well!",
+      "thumbnail": "https://theskinstore.in/cdn/shop/files/desktop-banner-29-11-2022_1400x.png?v=1669714576",
+      "images": [
+        "https://theskinstore.in/cdn/shop/files/desktop-banner2_01-08-22_1400x.png?v=1659364308",
+        "https://theskinstore.in/cdn/shop/files/10-5-2022-desktop_1c27b611-91b4-4489-bb01-e969cca1f1ce_1400x.jpg?v=1704137181",
+        "https://theskinstore.in/cdn/shop/files/desktop-banner-29-11-2022_1400x.png?v=1669714576"
+      ]
+    },
+    {
+      "id": "9",
+      "name": "Exfoliating Body Scrub",
+      "description": "A body scrub that exfoliates and smoothens skin",
+      "long_description": "Made with natural exfoliants, it leaves the skin soft and glowing by removing dead skin cells without stripping moisture.",
+      "price": 18,
+      "discount": 2,
+      "sku": "ZG024AQD",
+      "rating": 4.9,
+      "stock": 55,
+      "brand": "SmoothGlow",
+      "category": "Bath",
+      "sub_category": "Soaps",
+      "total_sold": 32,
+      "featured": "true",
+      "quantity": "0",
+      "reviews": "This scrub has made my skin feel so smooth and refreshed.",
+      "thumbnail": "https://theskinstore.in/cdn/shop/files/desktop-banner-29-11-2022_1400x.png?v=1669714576",
+      "images": [
+        "https://theskinstore.in/cdn/shop/files/desktop-banner2_01-08-22_1400x.png?v=1659364308",
+        "https://theskinstore.in/cdn/shop/files/10-5-2022-desktop_1c27b611-91b4-4489-bb01-e969cca1f1ce_1400x.jpg?v=1704137181",
+        "https://theskinstore.in/cdn/shop/files/desktop-banner-29-11-2022_1400x.png?v=1669714576"
+      ]
+    },
+    {
+      "id": "10",
+      "name": "Sunscreen SPF 50",
+      "description": "A lightweight, non-greasy sunscreen offering broad-spectrum protection",
+      "long_description": "This high-protection formula shields your skin from UVA and UVB rays, preventing sunburn and long-term skin damage.",
+      "price": 22,
+      "discount": 3,
+      "sku": "ZG012AAE",
+      "rating": 4.7,
+      "stock": 50,
+      "brand": "SunGuard",
+      "category": "Skin",
+      "sub_category": "Sunscreen",
+      "total_sold": 60,
+      "featured": "true",
+      "quantity": "0",
+      "reviews": "Perfect for daily use, doesn't leave a white cast or oily feeling.",
+      "thumbnail": "https://theskinstore.in/cdn/shop/files/desktop-banner-29-11-2022_1400x.png?v=1669714576",
+      "images": [
+        "https://theskinstore.in/cdn/shop/files/desktop-banner2_01-08-22_1400x.png?v=1659364308",
+        "https://theskinstore.in/cdn/shop/files/10-5-2022-desktop_1c27b611-91b4-4489-bb01-e969cca1f1ce_1400x.jpg?v=1704137181",
+        "https://theskinstore.in/cdn/shop/files/desktop-banner-29-11-2022_1400x.png?v=1669714576"
+      ]
+    },
+    {
+      "id": "11",
+      "name": "Nourishing Hair Oil",
+      "description": "A blend of essential oils for strengthening and nourishing your hair",
+      "long_description": "Infused with argan oil, coconut oil, and almond oil, this hair oil promotes hair growth, reduces frizz, and adds shine.",
+      "price": 15,
+      "discount": 2,
+      "sku": "ZG013AAE",
+      "rating": 4.5,
+      "stock": 40,
+      "brand": "HairEssence",
+      "category": "Hair",
+      "sub_category": "Hair Care",
+      "total_sold": 55,
+      "featured": "false",
+      "quantity": "0",
+      "reviews": "Makes my hair feel incredibly soft and healthy.",
+      "thumbnail": "https://theskinstore.in/cdn/shop/files/desktop-banner-29-11-2022_1400x.png?v=1669714576",
+      "images": [
+        "https://theskinstore.in/cdn/shop/files/desktop-banner2_01-08-22_1400x.png?v=1659364308",
+        "https://theskinstore.in/cdn/shop/files/10-5-2022-desktop_1c27b611-91b4-4489-bb01-e969cca1f1ce_1400x.jpg?v=1704137181",
+        "https://theskinstore.in/cdn/shop/files/desktop-banner-29-11-2022_1400x.png?v=1669714576"
+      ]
+    },
+    {
+      "id": "12",
+      "name": "Acne Control Face Wash",
+      "description": "A deep cleansing face wash for acne-prone skin",
+      "long_description": "Formulated with salicylic acid and tea tree oil, this face wash helps to unclog pores, reduce breakouts, and prevent new acne from forming.",
+      "price": 13,
+      "discount": 1,
+      "sku": "ZG014AAF",
+      "rating": 4.6,
+      "stock": 55,
+      "brand": "ClearFace",
+      "category": "Bath",
+      "sub_category": "Face Wash",
+      "total_sold": 50,
+      "featured": "true",
+      "quantity": "0",
+      "reviews": "Finally, a face wash that actually helps with my acne!",
+      "thumbnail": "https://theskinstore.in/cdn/shop/files/desktop-banner-29-11-2022_1400x.png?v=1669714576",
+      "images": [
+        "https://theskinstore.in/cdn/shop/files/desktop-banner2_01-08-22_1400x.png?v=1659364308",
+        "https://theskinstore.in/cdn/shop/files/10-5-2022-desktop_1c27b611-91b4-4489-bb01-e969cca1f1ce_1400x.jpg?v=1704137181",
+        "https://theskinstore.in/cdn/shop/files/desktop-banner-29-11-2022_1400x.png?v=1669714576"
+      ]
+    },
+    {
+      "id": "13",
+      "name": "Hydrating Nail Serum",
+      "description": "A nourishing serum to strengthen and hydrate nails",
+      "long_description": "Enriched with biotin and keratin, this serum promotes healthy nail growth and adds a protective shine.",
+      "price": 9,
+      "discount": 1,
+      "sku": "ZG015AAG",
+      "rating": 4.8,
+      "stock": 70,
+      "brand": "NailMagic",
+      "category": "Skin",
+      "sub_category": "Nail",
+      "total_sold": 25,
+      "featured": "false",
+      "quantity": "0",
+      "reviews": "My nails have never looked better!",
+      "thumbnail": "https://theskinstore.in/cdn/shop/files/desktop-banner-29-11-2022_1400x.png?v=1669714576",
+      "images": [
+        "https://theskinstore.in/cdn/shop/files/desktop-banner2_01-08-22_1400x.png?v=1659364308",
+        "https://theskinstore.in/cdn/shop/files/10-5-2022-desktop_1c27b611-91b4-4489-bb01-e969cca1f1ce_1400x.jpg?v=1704137181",
+        "https://theskinstore.in/cdn/shop/files/desktop-banner-29-11-2022_1400x.png?v=1669714576"
+      ]
+    },
+    {
+      "id": "14",
+      "name": "Volumizing Eyebrow Gel",
+      "description": "A tinted eyebrow gel for fuller, natural-looking brows",
+      "long_description": "This long-lasting, waterproof eyebrow gel comes with a micro brush for precise application, giving your brows a fuller, sculpted look.",
+      "price": 16,
+      "discount": 2,
+      "sku": "ZG016AAH",
+      "rating": 4.4,
+      "stock": 30,
+      "brand": "BrowPerfection",
+      "category": "Makeup",
+      "sub_category": "Eyes",
+      "total_sold": 40,
+      "featured": "true",
+      "quantity": "0",
+      "reviews": "Easy to apply and the color match is perfect!",
+      "thumbnail": "https://theskinstore.in/cdn/shop/files/desktop-banner-29-11-2022_1400x.png?v=1669714576",
+      "images": [
+        "https://theskinstore.in/cdn/shop/files/desktop-banner2_01-08-22_1400x.png?v=1659364308",
+        "https://theskinstore.in/cdn/shop/files/10-5-2022-desktop_1c27b611-91b4-4489-bb01-e969cca1f1ce_1400x.jpg?v=1704137181",
+        "https://theskinstore.in/cdn/shop/files/desktop-banner-29-11-2022_1400x.png?v=1669714576"
       ]
     }
   ],
@@ -157,7 +371,7 @@
     },
     {
       "id": "2",
-      "name": "vinay",
+      "name": "Vinay",
       "email": "vinaysharma352044@gmail.com",
       "password": "vinaysharma",
       "favouriteProducts": [
@@ -318,10 +532,10 @@
       "product_id": "1",
       "ordered_at": "4/9/2024, 4:00:12 PM",
       "expected_delivery": "",
-      "status": "Pending",
+      "status": "Accepted",
       "dispatched": "Pending",
-      "accepted_by_id": "",
-      "accepted_by_name": "",
+      "accepted_by_id": "admin",
+      "accepted_by_name": "admin",
       "quantity": 3,
       "payment_id": ""
     },
@@ -438,11 +652,7 @@
     },
     {
       "id": "5",
-      "name": "lair"
-    },
-    {
-      "id": "6",
-      "name": "lair"
+      "name": "zxz"
     }
   ]
 }
