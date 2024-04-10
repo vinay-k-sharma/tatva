@@ -28,7 +28,6 @@ const AdminDashboard = () => {
   useEffect(()=>{
     fetchCounts()
   },[])
-  console.log(products)
   return (
     <div className=' gap-4 mt-5'>
      <DashBoardStatsGrid productsCount={productsCount} usersCount={usersCount} ordersCount={ordersCount} categoriesCount={categoriesCount}/>
