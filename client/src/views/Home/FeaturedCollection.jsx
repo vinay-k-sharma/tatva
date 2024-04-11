@@ -8,7 +8,7 @@ import Searching from '../../components/common/Searching';
 import Sorting from '../../components/common/Sorting';
 import Filter from '../../components/common/Filter';
 import Pagination from '../../components/common/Pagination'
-const BestSellerCards = () => {
+const FeaturedCollection = () => {
   const products = useSelector((state)=>state.product.products)
   const user = useSelector((state) => state.role.user);
   const [productData,setProductData] = useState([])
@@ -31,7 +31,7 @@ const BestSellerCards = () => {
   const sliceProducts = filterResult.slice(indexOfFirstRecord, indexOfLastRecord);
   const nPages = Math.ceil(filterResult.length / recordsPerPage);
 
-  const filteredData = productData.filter(item => item.total_sold > 30);
+  const filteredData = products.filter(item => item.featured === "true");
 
   const shouldRenderPagination = filterResult.length > recordsPerPage;
 
@@ -88,7 +88,7 @@ const BestSellerCards = () => {
     <div className="flex flex-col items-center">
         <div className="w-full max-w-2xl px-4 mt-10">
           <div className="border-b-2 border-t-2 border-amber-800 py-2">
-            <h1 className="text-amber-800 text-center text-2xl">Best Sellers</h1>
+            <h1 className="text-amber-800 text-center text-2xl">Our Featured Collection</h1>
           </div>
         </div>
       </div>
@@ -110,5 +110,5 @@ const BestSellerCards = () => {
   )
 }
 
-export default BestSellerCards
+export default FeaturedCollection
 

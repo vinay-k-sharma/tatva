@@ -13,6 +13,7 @@ const AllProducts = React.lazy(()=> import("../views/Home/AllProducts"))
 const CategoryData = React.lazy(()=> import('../views/Home/CategoryData'))
 const Contact = React.lazy(()=> import("../views/Contact"))
 const BestSellers = React.lazy(() => import('../views/Home/BestSellerCards'))
+const FeaturedCollection = React.lazy(() => import('../views/Home/FeaturedCollection'))
 const Cart = React.lazy(()=> import("../views/Cart"))
 const AdminDashboard = React.lazy(()=> import("../views/Admin"))
 const Admin_Users = React.lazy(()=>import ('../views/Admin/Admin-Users'))
@@ -65,6 +66,10 @@ export const Router = () => {
                 {
                     path: 'all-products',
                     element: <AllProducts/>
+                },
+                {
+                    path: '/featured-collection',
+                    element:<FeaturedCollection/>
                 },
                 {
                     element:(

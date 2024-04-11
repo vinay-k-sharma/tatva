@@ -50,7 +50,7 @@ const Featured = ({ data, handleLikesDislikes, isProductLiked }) => {
         ))}
       </Carousel>
       <div className="flex  mr-4">
-        <Link to='/best-sellers' className=' flex items-center px-8'>
+        <Link to='/featured-collection' className=' flex items-center px-8'>
           View All <FaArrowAltCircleRight className='ml-1 text-[#D88552]'/>
         </Link>
       </div>
