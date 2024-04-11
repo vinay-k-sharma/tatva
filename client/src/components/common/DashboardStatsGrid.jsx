@@ -1,6 +1,5 @@
 import React from 'react'
 import { IoBagHandle, IoPieChart, IoPeople, IoCart } from 'react-icons/io5'
-import { FaEye } from "react-icons/fa";
 import { MdCategory } from "react-icons/md";
 export default function DashboardStatsGrid({productsCount,usersCount,ordersCount,categoriesCount}) {
 	return (

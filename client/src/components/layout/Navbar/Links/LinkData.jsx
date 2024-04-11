@@ -30,7 +30,12 @@ export const generalLinks = [
     icon: <FaShop className="text-xl"/>,
     label:"Seller",
     path : '/register-seller'
-  }
+  },
+  {
+    icon: <FaShop className="text-xl"/>,
+    label:"All-Products",
+    path : '/all-products'
+  },
 ];    
 
 export const adminLinks = [

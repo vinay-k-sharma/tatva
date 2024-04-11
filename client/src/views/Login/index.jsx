@@ -5,7 +5,7 @@ import { getUsers,getSellers } from '../../utils/axios-instance';
 import { setRole } from '../../redux/actions/roleAction';
 import { useFormik } from 'formik';
 import { NavLink, useNavigate } from 'react-router-dom';
-
+import { toast } from "react-toastify";
 const roleValues = {
   role: 'user',
   email: '',
@@ -131,14 +131,13 @@ const LoginPage = () => {
         <button type="submit" className="mt-5 w-full rounded-md bg-[#D88552] p-2 text-center font-semibold text-white">
           Login
         </button>
-      </form>
-
-      <p className="mt-3">
+        <p className="mt-10">
         Don't have an account?{' '}
         <NavLink to="/register" className="text-blue-600">
           Register
         </NavLink>
       </p>
+      </form>
     </div>
   );
 };

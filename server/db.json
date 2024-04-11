@@ -4,7 +4,7 @@
       "id": "1",
       "name": "Lipstick",
       "description": "A creamy lipstick for long-lasting color and hydration",
-      "long_description": "This will be long description",
+      "long_description": "Introducing VelvetLips latest addition to your makeup arsenal: the luxurious Lipstick. Crafted with precision and care, this creamy lipstick not only delivers vibrant, long-lasting color but also ensures your lips stay hydrated throughout the day. Dive into a world of rich hues and nourishing ingredients with each swipe. The formula is designed to provide a velvety finish while keeping your lips moisturized, preventing any dryness or flakiness. Whether you're going for a bold statement or a subtle everyday look, this lipstick has got you covered.",
       "price": 18,
       "discount": 3,
       "sku": "ZG011AQA",
@@ -14,6 +14,7 @@
       "category": "Makeup",
       "sub_category": "lips",
       "total_sold": 45,
+      "ingredients":"Aqua,Ethylhexyl Methoxycinnamate,Butyl Methoxydibenzoylmethane,Octocrylene,1,3 Butylene Glycol,Lecithin,C12-15 Alkyl Benzoate,Sodium Acrylates Copolymer,Polyglycerin-3,Phenoxyethanol,Shea Butter Triglyceride,Xylitol,Glucose,Anhydroxylitol ,Phoenix Dactylifera (Date Palm) Extract,Glyceryl Stearate,Crocus Sativus Flower (Saffron) Extract,Jasminum Officinale (Jasmine) Flower Extract,Helianthus Annuus (Sunflower) Seed Oil,Allantoin,Glycyrrhiza Glabra (Licorice) Root Extract,Niacinamide,Oxothiazolidine ,D-Alpha Tocopheryl Acetate,Ethoxydiglycol,Hyaluronic Acid,CI 19140 ,CI 15985",
       "featured": "true",
       "quantity": "0",
       "reviews": "Love this lipstick! Beautiful color and lasts all day.",
@@ -29,7 +30,7 @@
       "id": "2",
       "name": "Mascara",
       "description": "A volumizing mascara for long and thick lashes",
-      "long_description": "This will be long description",
+      "long_description": "Elevate your lash game with LashBoost's Volumizing Mascara. Designed to give you long and thick lashes, this mascara delivers intense volume and length for a dramatic eye look that lasts all day.Say goodbye to clumpy lashes and hello to effortless glamour. The unique formula coats each lash from root to tip, separating them for a clump-free finish. Whether you're going for a natural everyday look or a bold evening statement, this mascara is your perfect partner.But it doesn't stop there. Infused with nourishing ingredients, including vitamin E and panthenol, it also conditions and strengthens your lashes, promoting healthy growth over time. The result? Lashes that not only look stunning but also feel soft and supple.",
       "price": 14,
       "discount": 2,
       "sku": "ZG011AQB",
@@ -41,6 +42,7 @@
       "category": "Makeup",
       "sub_category": "eyes",
       "total_sold": 30,
+      "ingredients":"Aqua,Ethylhexyl Methoxycinnamate,Butyl Methoxydibenzoylmethane,Octocrylene,1,3 Butylene Glycol,Lecithin,C12-15 Alkyl Benzoate,Sodium Acrylates Copolymer,Polyglycerin-3,Phenoxyethanol,Shea Butter Triglyceride,Xylitol,Glucose,Anhydroxylitol ,Phoenix Dactylifera (Date Palm) Extract,Glyceryl Stearate,Crocus Sativus Flower (Saffron) Extract,Jasminum Officinale (Jasmine) Flower Extract,Helianthus Annuus (Sunflower) Seed Oil,Allantoin,Glycyrrhiza Glabra (Licorice) Root Extract,Niacinamide,Oxothiazolidine ,D-Alpha Tocopheryl Acetate,Ethoxydiglycol,Hyaluronic Acid,CI 19140 ,CI 15985",
       "reviews": "Best mascara ever! Adds volume and length to my lashes.",
       "thumbnail": "https://theskinstore.in/cdn/shop/files/desktop-banner2_01-08-22_1400x.png?v=1659364308",
       "images": [
@@ -53,7 +55,7 @@
       "id": "3",
       "name": "Eyeliner",
       "description": "A waterproof eyeliner for precise and long-lasting definition",
-      "long_description": "This will be long description",
+      "long_description": "PrecisionLine presents the ultimate solution for defined eyes: Waterproof Eyeliner. Whether you're creating a subtle everyday look or a bold, dramatic statement, this eyeliner delivers precise lines that last all day long.Designed for ease of use, the waterproof formula glides effortlessly onto the eyelids, allowing you to create everything from thin, subtle lines to bold, graphic looks with ease. No need to worry about smudging or fading – this eyeliner stays put through rain, sweat, and tears.But that's not all. Enriched with nourishing ingredients such as vitamin E and jojoba oil, it also cares for your delicate eye area, preventing dryness and irritation. Say goodbye to harsh, drying formulas and hello to smooth, comfortable wear.",
       "price": 12,
       "discount": 2,
       "sku": "ZG011AQC",
@@ -65,12 +67,13 @@
       "category": "Makeup",
       "sub_category": "eyes",
       "total_sold": 35,
+      "ingredients":"Aqua,Ethylhexyl Methoxycinnamate,Butyl Methoxydibenzoylmethane,Octocrylene,1,3 Butylene Glycol,Lecithin,C12-15 Alkyl Benzoate,Sodium Acrylates Copolymer,Polyglycerin-3,Phenoxyethanol,Shea Butter Triglyceride,Xylitol,Glucose,Anhydroxylitol ,Phoenix Dactylifera (Date Palm) Extract,Glyceryl Stearate,Crocus Sativus Flower (Saffron) Extract,Jasminum Officinale (Jasmine) Flower Extract,Helianthus Annuus (Sunflower) Seed Oil,Allantoin,Glycyrrhiza Glabra (Licorice) Root Extract,Niacinamide,Oxothiazolidine ,D-Alpha Tocopheryl Acetate,Ethoxydiglycol,Hyaluronic Acid,CI 19140 ,CI 15985",
       "reviews": "Love this eyeliner! Goes on smoothly and stays put all day.",
       "thumbnail": "https://theskinstore.in/cdn/shop/files/desktop-banner-29-11-2022_1400x.png?v=1669714576",
       "images": [
-        "https://example.com/product-images/eyeliner/image1.jpg",
-        "https://example.com/product-images/eyeliner/image2.jpg",
-        "https://example.com/product-images/eyeliner/image3.jpg"
+        "https://theskinstore.in/cdn/shop/files/desktop-banner2_01-08-22_1400x.png?v=1659364308",
+        "https://theskinstore.in/cdn/shop/files/10-5-2022-desktop_1c27b611-91b4-4489-bb01-e969cca1f1ce_1400x.jpg?v=1704137181",
+        "https://theskinstore.in/cdn/shop/files/desktop-banner-29-11-2022_1400x.png?v=1669714576"
       ],
       "discountPercentage": "23"
     },
@@ -78,31 +81,32 @@
       "id": "4",
       "name": "Body Wash",
       "description": "A refreshing body wash for clean and hydrated skin",
-      "long_description": "This will be long description",
+      "long_description": "Experience the ultimate indulgence in bath time luxury with FreshClean's Refreshing Body Wash. Formulated to cleanse and hydrate your skin, this body wash leaves you feeling refreshed and rejuvenated after every shower.Immerse yourself in the invigorating scent of fresh botanicals as the rich lather gently cleanses away dirt and impurities, leaving your skin feeling soft, smooth, and delicately fragranced. The nourishing formula replenishes moisture, restoring vitality to dull, dry skin.But it doesn't end there. Enriched with natural ingredients like aloe vera and vitamin E, this body wash also nourishes and soothes your skin, promoting overall skin health. Say hello to hydrated, glowing skin with every wash.",
       "price": 10,
       "discount": 1,
       "sku": "ZG011AQD",
       "rating": 4.6,
-      "stock": 77,
+      "stock": 76,
       "brand": "FreshClean",
       "featured": "true",
       "quantity": "0",
       "category": "Bath",
       "sub_category": "soaps",
       "total_sold": 40,
+      "ingredients":"Aqua,Ethylhexyl Methoxycinnamate,Butyl Methoxydibenzoylmethane,Octocrylene,1,3 Butylene Glycol,Lecithin,C12-15 Alkyl Benzoate,Sodium Acrylates Copolymer,Polyglycerin-3,Phenoxyethanol,Shea Butter Triglyceride,Xylitol,Glucose,Anhydroxylitol ,Phoenix Dactylifera (Date Palm) Extract,Glyceryl Stearate,Crocus Sativus Flower (Saffron) Extract,Jasminum Officinale (Jasmine) Flower Extract,Helianthus Annuus (Sunflower) Seed Oil,Allantoin,Glycyrrhiza Glabra (Licorice) Root Extract,Niacinamide,Oxothiazolidine ,D-Alpha Tocopheryl Acetate,Ethoxydiglycol,Hyaluronic Acid,CI 19140 ,CI 15985",
       "reviews": "This body wash smells amazing and leaves my skin feeling so soft.",
       "thumbnail": "https://theskinstore.in/cdn/shop/files/10-5-2022-desktop_1c27b611-91b4-4489-bb01-e969cca1f1ce_1400x.jpg?v=1704137181",
       "images": [
-        "https://example.com/product-images/body_wash/image1.jpg",
-        "https://example.com/product-images/body_wash/image2.jpg",
-        "https://example.com/product-images/body_wash/image3.jpg"
+        "https://theskinstore.in/cdn/shop/files/desktop-banner2_01-08-22_1400x.png?v=1659364308",
+        "https://theskinstore.in/cdn/shop/files/10-5-2022-desktop_1c27b611-91b4-4489-bb01-e969cca1f1ce_1400x.jpg?v=1704137181",
+        "https://theskinstore.in/cdn/shop/files/desktop-banner-29-11-2022_1400x.png?v=1669714576"
       ]
     },
     {
       "id": "5",
       "name": "Facial Cleanser",
       "description": "A gentle facial cleanser for clean and clear skin",
-      "long_description": "This will be long description",
+      "long_description": "Unveil the secret to clear, radiant skin with ClearSkin's Gentle Facial Cleanser. Formulated with a blend of gentle yet effective ingredients, this cleanser removes dirt, oil, and impurities without stripping your skin of its natural moisture.Experience the refreshing sensation as the lightweight gel formula transforms into a luxurious foam, gently cleansing your skin and leaving it feeling clean, soft, and refreshed. Perfect for daily use, this cleanser is suitable for all skin types, even sensitive skin.But there's more. Enriched with botanical extracts and antioxidants, including green tea and vitamin C, it also helps to protect your skin against environmental stressors, leaving you with a healthy, radiant complexion. Say goodbye to dull, tired skin and hello to a luminous glow.",
       "price": 12,
       "discount": 2,
       "sku": "ZG011AQD",
@@ -114,67 +118,70 @@
       "category": "Bath",
       "sub_category": "face wash",
       "total_sold": 35,
+      "ingredients":"Aqua,Ethylhexyl Methoxycinnamate,Butyl Methoxydibenzoylmethane,Octocrylene,1,3 Butylene Glycol,Lecithin,C12-15 Alkyl Benzoate,Sodium Acrylates Copolymer,Polyglycerin-3,Phenoxyethanol,Shea Butter Triglyceride,Xylitol,Glucose,Anhydroxylitol ,Phoenix Dactylifera (Date Palm) Extract,Glyceryl Stearate,Crocus Sativus Flower (Saffron) Extract,Jasminum Officinale (Jasmine) Flower Extract,Helianthus Annuus (Sunflower) Seed Oil,Allantoin,Glycyrrhiza Glabra (Licorice) Root Extract,Niacinamide,Oxothiazolidine ,D-Alpha Tocopheryl Acetate,Ethoxydiglycol,Hyaluronic Acid,CI 19140 ,CI 15985",
       "reviews": "Love this cleanser! Removes dirt and makeup without drying out my skin.",
       "thumbnail": "https://ayuga.in/cdn/shop/collections/Giftbox_WebBanner_1900x780_f3f8a07f-2b8c-42c7-8dc8-2c67cc19d1f1_1800x.jpg?v=1711111349",
       "images": [
-        "https://example.com/product-images/facial_cleanser/image1.jpg",
-        "https://example.com/product-images/facial_cleanser/image2.jpg",
-        "https://example.com/product-images/facial_cleanser/image3.jpg"
+        "https://theskinstore.in/cdn/shop/files/desktop-banner2_01-08-22_1400x.png?v=1659364308",
+        "https://theskinstore.in/cdn/shop/files/10-5-2022-desktop_1c27b611-91b4-4489-bb01-e969cca1f1ce_1400x.jpg?v=1704137181",
+        "https://theskinstore.in/cdn/shop/files/desktop-banner-29-11-2022_1400x.png?v=1669714576"
       ]
     },
     {
       "id": "6",
       "name": "Sunscreen SPF 50",
       "description": "A lightweight, non-greasy sunscreen offering broad-spectrum protection",
-      "long_description": "This high-protection formula shields your skin from UVA and UVB rays, preventing sunburn and long-term skin damage.",
+      "long_description": "Introducing SunGuard's Sunscreen SPF 50, your ultimate shield against the sun's harsh rays. This lightweight, non-greasy formula offers superior broad-spectrum protection from UVA and UVB rays, preventing sunburn and long-term skin damage. Its hydrating properties ensure that your skin remains moisturized and comfortable, even under the sun. With its water-resistant formula, it stays on through sweat and swimming, making it perfect for all your outdoor activities. Say goodbye to white casts and greasy residues with our quick-absorbing technology, leaving your skin with a clear, matte finish. Ideal for daily use on all skin types, SunGuard's Sunscreen SPF 50 is your first step towards healthy, protected, and youthful-looking skin.",
       "price": 22,
       "discount": 3,
       "sku": "ZG012AAE",
       "rating": 4.7,
-      "stock": 50,
+      "stock": 48,
       "brand": "SunGuard",
       "category": "Skin",
       "sub_category": "Sunscreen",
       "total_sold": 60,
+      "ingredients":"Aqua,Ethylhexyl Methoxycinnamate,Butyl Methoxydibenzoylmethane,Octocrylene,1,3 Butylene Glycol,Lecithin,C12-15 Alkyl Benzoate,Sodium Acrylates Copolymer,Polyglycerin-3,Phenoxyethanol,Shea Butter Triglyceride,Xylitol,Glucose,Anhydroxylitol ,Phoenix Dactylifera (Date Palm) Extract,Glyceryl Stearate,Crocus Sativus Flower (Saffron) Extract,Jasminum Officinale (Jasmine) Flower Extract,Helianthus Annuus (Sunflower) Seed Oil,Allantoin,Glycyrrhiza Glabra (Licorice) Root Extract,Niacinamide,Oxothiazolidine ,D-Alpha Tocopheryl Acetate,Ethoxydiglycol,Hyaluronic Acid,CI 19140 ,CI 15985",
       "featured": "true",
       "quantity": "0",
       "reviews": "Perfect for daily use, doesn't leave a white cast or oily feeling.",
       "thumbnail": "https://ayuga.in/cdn/shop/collections/Giftbox_WebBanner_1900x780_f3f8a07f-2b8c-42c7-8dc8-2c67cc19d1f1_1800x.jpg?v=1711111349",
       "images": [
-        "https://example.com/product-images/facial_cleanser/image1.jpg",
-        "https://example.com/product-images/facial_cleanser/image2.jpg",
-        "https://example.com/product-images/facial_cleanser/image3.jpg"
+        "https://theskinstore.in/cdn/shop/files/desktop-banner2_01-08-22_1400x.png?v=1659364308",
+        "https://theskinstore.in/cdn/shop/files/10-5-2022-desktop_1c27b611-91b4-4489-bb01-e969cca1f1ce_1400x.jpg?v=1704137181",
+        "https://theskinstore.in/cdn/shop/files/desktop-banner-29-11-2022_1400x.png?v=1669714576"
       ]
     },
     {
       "id": "7",
       "name": "Nourishing Hair Oil",
       "description": "A blend of essential oils for strengthening and nourishing your hair",
-      "long_description": "Infused with argan oil, coconut oil, and almond oil, this hair oil promotes hair growth, reduces frizz, and adds shine.",
+      "long_description": "Dive into the essence of hair care with HairEssence's Nourishing Hair Oil, a potent blend of argan oil, coconut oil, and almond oil. This luxurious hair oil is designed to fortify your hair from root to tip, promoting hair growth, reducing frizz, and imparting a silky, luminous shine. The natural ingredients work synergistically to deeply nourish the scalp, strengthen hair follicles, and prevent breakage, ensuring your hair feels incredibly soft and looks healthy. Perfect for all hair types, this non-greasy formula is easily absorbed, leaving your hair nourished, not oily. Experience the transformative effects of HairEssence's Nourishing Hair Oil and embrace the lustrous, healthy hair you deserve.",
       "price": 15,
       "discount": 2,
       "sku": "ZG013AAE",
       "rating": 4.5,
-      "stock": 40,
+      "stock": 39,
       "brand": "HairEssence",
       "category": "Hair",
       "sub_category": "Hair Care",
       "total_sold": 55,
+      "ingredients":"Aqua,Ethylhexyl Methoxycinnamate,Butyl Methoxydibenzoylmethane,Octocrylene,1,3 Butylene Glycol,Lecithin,C12-15 Alkyl Benzoate,Sodium Acrylates Copolymer,Polyglycerin-3,Phenoxyethanol,Shea Butter Triglyceride,Xylitol,Glucose,Anhydroxylitol ,Phoenix Dactylifera (Date Palm) Extract,Glyceryl Stearate,Crocus Sativus Flower (Saffron) Extract,Jasminum Officinale (Jasmine) Flower Extract,Helianthus Annuus (Sunflower) Seed Oil,Allantoin,Glycyrrhiza Glabra (Licorice) Root Extract,Niacinamide,Oxothiazolidine ,D-Alpha Tocopheryl Acetate,Ethoxydiglycol,Hyaluronic Acid,CI 19140 ,CI 15985",
       "featured": "false",
       "quantity": "0",
       "reviews": "Makes my hair feel incredibly soft and healthy.",
-      "thumbnail": "https://ayuga.in/cdn/shop/collections/Giftbox_WebBanner_1900x780_f3f8a07f-2b8c-42c7-8dc8-2c67cc19d1f1_1800x.jpg?v=1711111349",
+      "thumbnail": "https://theskinstore.in/cdn/shop/files/desktop-banner2_01-08-22_1400x.png?v=1659364308",
       "images": [
-        "https://example.com/product-images/facial_cleanser/image1.jpg",
-        "https://example.com/product-images/facial_cleanser/image2.jpg",
-        "https://example.com/product-images/facial_cleanser/image3.jpg"
+        "https://theskinstore.in/cdn/shop/files/desktop-banner2_01-08-22_1400x.png?v=1659364308",
+        "https://theskinstore.in/cdn/shop/files/10-5-2022-desktop_1c27b611-91b4-4489-bb01-e969cca1f1ce_1400x.jpg?v=1704137181",
+        "https://theskinstore.in/cdn/shop/files/desktop-banner-29-11-2022_1400x.png?v=1669714576"
       ]
     },
     {
       "id": "8",
       "name": "Acne Control Face Wash",
       "description": "A deep cleansing face wash for acne-prone skin",
-      "long_description": "Formulated with salicylic acid and tea tree oil, this face wash helps to unclog pores, reduce breakouts, and prevent new acne from forming.",
+      "long_description": "ClearFace's Acne Control Face Wash is a game-changer for anyone struggling with acne. Formulated with the powerful duo of salicylic acid and tea tree oil, it penetrates deep into the pores to remove impurities, reduce breakouts, and prevent new acne from forming. This gentle yet effective face wash soothes inflammation and redness, leaving your skin feeling clean, refreshed, and visibly clearer. Its balancing formula also helps to regulate oil production, making it ideal for daily use on oily and combination skin types. Embrace a clear, radiant complexion with the daily use of ClearFace's Acne Control Face Wash, your ally in the fight against acne.",
       "price": 13,
       "discount": 1,
       "sku": "ZG014AAF",
@@ -184,21 +191,22 @@
       "category": "Bath",
       "sub_category": "Face Wash",
       "total_sold": 50,
+      "ingredients":"Aqua,Ethylhexyl Methoxycinnamate,Butyl Methoxydibenzoylmethane,Octocrylene,1,3 Butylene Glycol,Lecithin,C12-15 Alkyl Benzoate,Sodium Acrylates Copolymer,Polyglycerin-3,Phenoxyethanol,Shea Butter Triglyceride,Xylitol,Glucose,Anhydroxylitol ,Phoenix Dactylifera (Date Palm) Extract,Glyceryl Stearate,Crocus Sativus Flower (Saffron) Extract,Jasminum Officinale (Jasmine) Flower Extract,Helianthus Annuus (Sunflower) Seed Oil,Allantoin,Glycyrrhiza Glabra (Licorice) Root Extract,Niacinamide,Oxothiazolidine ,D-Alpha Tocopheryl Acetate,Ethoxydiglycol,Hyaluronic Acid,CI 19140 ,CI 15985",
       "featured": "true",
       "quantity": "0",
       "reviews": "Finally, a face wash that actually helps with my acne!",
-      "thumbnail": "https://ayuga.in/cdn/shop/collections/Giftbox_WebBanner_1900x780_f3f8a07f-2b8c-42c7-8dc8-2c67cc19d1f1_1800x.jpg?v=1711111349",
+      "thumbnail": "https://theskinstore.in/cdn/shop/files/desktop-banner-29-11-2022_1400x.png?v=1669714576",
       "images": [
-        "https://example.com/product-images/facial_cleanser/image1.jpg",
-        "https://example.com/product-images/facial_cleanser/image2.jpg",
-        "https://example.com/product-images/facial_cleanser/image3.jpg"
+        "https://theskinstore.in/cdn/shop/files/desktop-banner2_01-08-22_1400x.png?v=1659364308",
+        "https://theskinstore.in/cdn/shop/files/10-5-2022-desktop_1c27b611-91b4-4489-bb01-e969cca1f1ce_1400x.jpg?v=1704137181",
+        "https://theskinstore.in/cdn/shop/files/desktop-banner-29-11-2022_1400x.png?v=1669714576"
       ]
     },
     {
       "id": "9",
       "name": "Hydrating Nail Serum",
       "description": "A nourishing serum to strengthen and hydrate nails",
-      "long_description": "Enriched with biotin and keratin, this serum promotes healthy nail growth and adds a protective shine.",
+      "long_description": "NailMagic's Hydrating Nail Serum is your secret weapon for beautiful, healthy nails. Enriched with the power of biotin and keratin, this potent serum is designed to promote healthy nail growth while adding a protective shine. Its hydrating formula penetrates deep into the nail and cuticle to prevent brittleness, splitting, and breakage. The serum's lightweight texture is quickly absorbed, providing instant moisture and strengthening benefits without any greasiness. Ideal for use on its own or as a base for nail polish, this serum will transform your nails, making them look stronger, healthier, and more vibrant. Treat your nails to the nourishing care they deserve with NailMagic's Hydrating Nail Serum.",
       "price": 9,
       "discount": 1,
       "sku": "ZG015AAG",
@@ -208,21 +216,22 @@
       "category": "Skin",
       "sub_category": "Nail",
       "total_sold": 25,
+      "ingredients":"Aqua,Ethylhexyl Methoxycinnamate,Butyl Methoxydibenzoylmethane,Octocrylene,1,3 Butylene Glycol,Lecithin,C12-15 Alkyl Benzoate,Sodium Acrylates Copolymer,Polyglycerin-3,Phenoxyethanol,Shea Butter Triglyceride,Xylitol,Glucose,Anhydroxylitol ,Phoenix Dactylifera (Date Palm) Extract,Glyceryl Stearate,Crocus Sativus Flower (Saffron) Extract,Jasminum Officinale (Jasmine) Flower Extract,Helianthus Annuus (Sunflower) Seed Oil,Allantoin,Glycyrrhiza Glabra (Licorice) Root Extract,Niacinamide,Oxothiazolidine ,D-Alpha Tocopheryl Acetate,Ethoxydiglycol,Hyaluronic Acid,CI 19140 ,CI 15985",
       "featured": "false",
       "quantity": "0",
       "reviews": "My nails have never looked better!",
-      "thumbnail": "https://ayuga.in/cdn/shop/collections/Giftbox_WebBanner_1900x780_f3f8a07f-2b8c-42c7-8dc8-2c67cc19d1f1_1800x.jpg?v=1711111349",
+      "thumbnail": "https://theskinstore.in/cdn/shop/files/10-5-2022-desktop_1c27b611-91b4-4489-bb01-e969cca1f1ce_1400x.jpg?v=1704137181",
       "images": [
-        "https://example.com/product-images/facial_cleanser/image1.jpg",
-        "https://example.com/product-images/facial_cleanser/image2.jpg",
-        "https://example.com/product-images/facial_cleanser/image3.jpg"
+        "https://theskinstore.in/cdn/shop/files/desktop-banner2_01-08-22_1400x.png?v=1659364308",
+        "https://theskinstore.in/cdn/shop/files/10-5-2022-desktop_1c27b611-91b4-4489-bb01-e969cca1f1ce_1400x.jpg?v=1704137181",
+        "https://theskinstore.in/cdn/shop/files/desktop-banner-29-11-2022_1400x.png?v=1669714576"
       ]
     },
     {
       "id": "10",
       "name": "Volumizing Eyebrow Gel",
       "description": "A tinted eyebrow gel for fuller, natural-looking brows",
-      "long_description": "This long-lasting, waterproof eyebrow gel comes with a micro brush for precise application, giving your brows a fuller, sculpted look.",
+      "long_description": "This long-lasting, waterproof eyebrow gel comes with a micro brush for precise application, giving your brows a fuller, sculpted look. The gel is tinted to match your brow color for a natural, seamless appearance. Its buildable formula allows you to achieve the desired intensity, from a natural enhancement to a bold, defined look. The lightweight, non-sticky texture keeps your brows in place all day without flaking or fading. Perfect for everyday wear, this eyebrow gel is your go-to for flawless brows.",
       "price": 16,
       "discount": 2,
       "sku": "ZG016AAH",
@@ -232,21 +241,22 @@
       "category": "Makeup",
       "sub_category": "Eyes",
       "total_sold": 40,
+      "ingredients":"Aqua,Ethylhexyl Methoxycinnamate,Butyl Methoxydibenzoylmethane,Octocrylene,1,3 Butylene Glycol,Lecithin,C12-15 Alkyl Benzoate,Sodium Acrylates Copolymer,Polyglycerin-3,Phenoxyethanol,Shea Butter Triglyceride,Xylitol,Glucose,Anhydroxylitol ,Phoenix Dactylifera (Date Palm) Extract,Glyceryl Stearate,Crocus Sativus Flower (Saffron) Extract,Jasminum Officinale (Jasmine) Flower Extract,Helianthus Annuus (Sunflower) Seed Oil,Allantoin,Glycyrrhiza Glabra (Licorice) Root Extract,Niacinamide,Oxothiazolidine ,D-Alpha Tocopheryl Acetate,Ethoxydiglycol,Hyaluronic Acid,CI 19140 ,CI 15985",
       "featured": "true",
       "quantity": "0",
       "reviews": "Easy to apply and the color match is perfect!",
       "thumbnail": "https://ayuga.in/cdn/shop/collections/Giftbox_WebBanner_1900x780_f3f8a07f-2b8c-42c7-8dc8-2c67cc19d1f1_1800x.jpg?v=1711111349",
       "images": [
-        "https://example.com/product-images/facial_cleanser/image1.jpg",
-        "https://example.com/product-images/facial_cleanser/image2.jpg",
-        "https://example.com/product-images/facial_cleanser/image3.jpg"
+        "https://theskinstore.in/cdn/shop/files/desktop-banner2_01-08-22_1400x.png?v=1659364308",
+        "https://theskinstore.in/cdn/shop/files/10-5-2022-desktop_1c27b611-91b4-4489-bb01-e969cca1f1ce_1400x.jpg?v=1704137181",
+        "https://theskinstore.in/cdn/shop/files/desktop-banner-29-11-2022_1400x.png?v=1669714576"
       ]
-    },
+    },    
     {
       "id": "11",
       "name": "Hydrating Face Serum",
       "description": "A lightweight serum that hydrates and rejuvenates the skin",
-      "long_description": "Enriched with hyaluronic acid and vitamin C, this serum provides deep hydration while brightening the skin.",
+      "long_description": "Enriched with hyaluronic acid and vitamin C, this serum provides deep hydration while brightening the skin for a radiant, youthful glow. The lightweight formula absorbs quickly, leaving no sticky residue, making it perfect for all skin types. It works to improve skin texture, reduce the appearance of fine lines, and protect against environmental damage. Use daily under your moisturizer for a boost of hydration and a visibly healthier complexion.",
       "price": 22,
       "discount": 4,
       "sku": "ZG021AQA",
@@ -256,21 +266,22 @@
       "category": "Skin",
       "sub_category": "Face",
       "total_sold": 20,
+      "ingredients":"Aqua,Ethylhexyl Methoxycinnamate,Butyl Methoxydibenzoylmethane,Octocrylene,1,3 Butylene Glycol,Lecithin,C12-15 Alkyl Benzoate,Sodium Acrylates Copolymer,Polyglycerin-3,Phenoxyethanol,Shea Butter Triglyceride,Xylitol,Glucose,Anhydroxylitol ,Phoenix Dactylifera (Date Palm) Extract,Glyceryl Stearate,Crocus Sativus Flower (Saffron) Extract,Jasminum Officinale (Jasmine) Flower Extract,Helianthus Annuus (Sunflower) Seed Oil,Allantoin,Glycyrrhiza Glabra (Licorice) Root Extract,Niacinamide,Oxothiazolidine ,D-Alpha Tocopheryl Acetate,Ethoxydiglycol,Hyaluronic Acid,CI 19140 ,CI 15985",
       "featured": "true",
       "quantity": "0",
       "reviews": "My skin feels so much more hydrated and plump after using this serum!",
       "thumbnail": "https://ayuga.in/cdn/shop/collections/Giftbox_WebBanner_1900x780_f3f8a07f-2b8c-42c7-8dc8-2c67cc19d1f1_1800x.jpg?v=1711111349",
       "images": [
-        "https://example.com/product-images/facial_cleanser/image1.jpg",
-        "https://example.com/product-images/facial_cleanser/image2.jpg",
-        "https://example.com/product-images/facial_cleanser/image3.jpg"
+        "https://theskinstore.in/cdn/shop/files/desktop-banner2_01-08-22_1400x.png?v=1659364308",
+        "https://theskinstore.in/cdn/shop/files/10-5-2022-desktop_1c27b611-91b4-4489-bb01-e969cca1f1ce_1400x.jpg?v=1704137181",
+        "https://theskinstore.in/cdn/shop/files/desktop-banner-29-11-2022_1400x.png?v=1669714576"
       ]
-    },
+    },    
     {
       "id": "12",
       "name": "Strengthening Hair Mask",
       "description": "Intensive treatment that strengthens and restores hair health",
-      "long_description": "This mask penetrates deep to repair damaged hair and prevent future breakage. Suitable for all hair types.",
+      "long_description": "This mask penetrates deep to repair damaged hair and prevent future breakage. Formulated with natural ingredients like keratin, biotin, and silk proteins, it nourishes and fortifies hair from root to tip. Suitable for all hair types, this mask transforms dry, damaged hair into strong, shiny, and healthy locks. Use once a week for best results. Experience the transformative power of this intensive treatment and enjoy the look and feel of revitalized hair.",
       "price": 15,
       "discount": 3,
       "sku": "ZG022AQB",
@@ -280,21 +291,22 @@
       "category": "Hair",
       "sub_category": "Hair Care",
       "total_sold": 25,
+      "ingredients":"Aqua,Ethylhexyl Methoxycinnamate,Butyl Methoxydibenzoylmethane,Octocrylene,1,3 Butylene Glycol,Lecithin,C12-15 Alkyl Benzoate,Sodium Acrylates Copolymer,Polyglycerin-3,Phenoxyethanol,Shea Butter Triglyceride,Xylitol,Glucose,Anhydroxylitol ,Phoenix Dactylifera (Date Palm) Extract,Glyceryl Stearate,Crocus Sativus Flower (Saffron) Extract,Jasminum Officinale (Jasmine) Flower Extract,Helianthus Annuus (Sunflower) Seed Oil,Allantoin,Glycyrrhiza Glabra (Licorice) Root Extract,Niacinamide,Oxothiazolidine ,D-Alpha Tocopheryl Acetate,Ethoxydiglycol,Hyaluronic Acid,CI 19140 ,CI 15985",
       "featured": "true",
       "quantity": "0",
       "reviews": "After just a few uses, my hair feels stronger and much softer.",
       "thumbnail": "https://ayuga.in/cdn/shop/collections/Giftbox_WebBanner_1900x780_f3f8a07f-2b8c-42c7-8dc8-2c67cc19d1f1_1800x.jpg?v=1711111349",
       "images": [
-        "https://example.com/product-images/facial_cleanser/image1.jpg",
-        "https://example.com/product-images/facial_cleanser/image2.jpg",
-        "https://example.com/product-images/facial_cleanser/image3.jpg"
+        "https://theskinstore.in/cdn/shop/files/desktop-banner2_01-08-22_1400x.png?v=1659364308",
+        "https://theskinstore.in/cdn/shop/files/10-5-2022-desktop_1c27b611-91b4-4489-bb01-e969cca1f1ce_1400x.jpg?v=1704137181",
+        "https://theskinstore.in/cdn/shop/files/desktop-banner-29-11-2022_1400x.png?v=1669714576"
       ]
-    },
+    },    
     {
       "id": "13",
       "name": "Eye Shadow Palette",
       "description": "Versatile palette for creating endless eye looks",
-      "long_description": "With a mix of matte and shimmer shades, this palette is perfect for everyday wear or special occasions.",
+      "long_description": "With a mix of matte and shimmer shades, this palette is perfect for everyday wear or special occasions. The highly pigmented formula ensures vibrant color payoff with every application, and the smooth texture allows for easy blending. From natural daytime looks to dramatic evening styles, this palette offers endless possibilities. The compact size makes it convenient for on-the-go touch-ups. Whether you're a makeup beginner or a pro, this eye shadow palette will become a staple in your beauty routine.",
       "price": 24,
       "discount": 5,
       "sku": "ZG023AQC",
@@ -303,17 +315,18 @@
       "brand": "ColorSplash",
       "category": "Makeup",
       "sub_category": "Eyes",
-      "total_sold": 15,
+      "total_sold": 35,
+      "ingredients":"Aqua,Ethylhexyl Methoxycinnamate,Butyl Methoxydibenzoylmethane,Octocrylene,1,3 Butylene Glycol,Lecithin,C12-15 Alkyl Benzoate,Sodium Acrylates Copolymer,Polyglycerin-3,Phenoxyethanol,Shea Butter Triglyceride,Xylitol,Glucose,Anhydroxylitol ,Phoenix Dactylifera (Date Palm) Extract,Glyceryl Stearate,Crocus Sativus Flower (Saffron) Extract,Jasminum Officinale (Jasmine) Flower Extract,Helianthus Annuus (Sunflower) Seed Oil,Allantoin,Glycyrrhiza Glabra (Licorice) Root Extract,Niacinamide,Oxothiazolidine ,D-Alpha Tocopheryl Acetate,Ethoxydiglycol,Hyaluronic Acid,CI 19140 ,CI 15985",
       "featured": "true",
       "quantity": "0",
-      "reviews": "The pigmentation is incredible, and the colors blend so well!",
+      "reviews": "The colors are gorgeous and blend so well together!",
       "thumbnail": "https://ayuga.in/cdn/shop/collections/Giftbox_WebBanner_1900x780_f3f8a07f-2b8c-42c7-8dc8-2c67cc19d1f1_1800x.jpg?v=1711111349",
       "images": [
-        "https://example.com/product-images/facial_cleanser/image1.jpg",
-        "https://example.com/product-images/facial_cleanser/image2.jpg",
-        "https://example.com/product-images/facial_cleanser/image3.jpg"
+        "https://theskinstore.in/cdn/shop/files/desktop-banner2_01-08-22_1400x.png?v=1659364308",
+        "https://theskinstore.in/cdn/shop/files/10-5-2022-desktop_1c27b611-91b4-4489-bb01-e969cca1f1ce_1400x.jpg?v=1704137181",
+        "https://theskinstore.in/cdn/shop/files/desktop-banner-29-11-2022_1400x.png?v=1669714576"
       ]
-    },
+    },    
     {
       "id": "14",
       "name": "Exfoliating Body Scrub",
@@ -323,19 +336,20 @@
       "discount": 2,
       "sku": "ZG024AQD",
       "rating": 4.9,
-      "stock": 55,
+      "stock": 49,
       "brand": "SmoothGlow",
       "category": "Bath",
       "sub_category": "Soaps",
       "total_sold": 32,
+      "ingredients":"Aqua,Ethylhexyl Methoxycinnamate,Butyl Methoxydibenzoylmethane,Octocrylene,1,3 Butylene Glycol,Lecithin,C12-15 Alkyl Benzoate,Sodium Acrylates Copolymer,Polyglycerin-3,Phenoxyethanol,Shea Butter Triglyceride,Xylitol,Glucose,Anhydroxylitol ,Phoenix Dactylifera (Date Palm) Extract,Glyceryl Stearate,Crocus Sativus Flower (Saffron) Extract,Jasminum Officinale (Jasmine) Flower Extract,Helianthus Annuus (Sunflower) Seed Oil,Allantoin,Glycyrrhiza Glabra (Licorice) Root Extract,Niacinamide,Oxothiazolidine ,D-Alpha Tocopheryl Acetate,Ethoxydiglycol,Hyaluronic Acid,CI 19140 ,CI 15985",
       "featured": "true",
       "quantity": "0",
       "reviews": "This scrub has made my skin feel so smooth and refreshed.",
-      "thumbnail": "https://ayuga.in/cdn/shop/collections/Giftbox_WebBanner_1900x780_f3f8a07f-2b8c-42c7-8dc8-2c67cc19d1f1_1800x.jpg?v=1711111349",
+      "thumbnail": " https://theskinstore.in/cdn/shop/files/desktop-banner-29-11-2022_1400x.png?v=1669714576",
       "images": [
-        "https://example.com/product-images/facial_cleanser/image1.jpg",
-        "https://example.com/product-images/facial_cleanser/image2.jpg",
-        "https://example.com/product-images/facial_cleanser/image3.jpg"
+        "https://theskinstore.in/cdn/shop/files/desktop-banner2_01-08-22_1400x.png?v=1659364308",
+        "https://theskinstore.in/cdn/shop/files/10-5-2022-desktop_1c27b611-91b4-4489-bb01-e969cca1f1ce_1400x.jpg?v=1704137181",
+        "https://theskinstore.in/cdn/shop/files/desktop-banner-29-11-2022_1400x.png?v=1669714576"
       ]
     }
   ],
@@ -380,54 +394,6 @@
       "password": "vinaysharma",
       "favouriteProducts": [
         {
-          "id": "5",
-          "name": "Facial Cleanser",
-          "description": "A gentle facial cleanser for clean and clear skin",
-          "long_description": "This will be long description",
-          "price": 12,
-          "discount": 2,
-          "sku": "ZG011AQD",
-          "rating": 4.4,
-          "stock": 75,
-          "brand": "ClearSkin",
-          "featured": "false",
-          "quantity": 1,
-          "category": "bath",
-          "sub_category": "face wash",
-          "total_sold": 35,
-          "reviews": "Love this cleanser! Removes dirt and makeup without drying out my skin.",
-          "thumbnail": "https://ayuga.in/cdn/shop/collections/Giftbox_WebBanner_1900x780_f3f8a07f-2b8c-42c7-8dc8-2c67cc19d1f1_1800x.jpg?v=1711111349",
-          "images": [
-            "https://example.com/product-images/facial_cleanser/image1.jpg",
-            "https://example.com/product-images/facial_cleanser/image2.jpg",
-            "https://example.com/product-images/facial_cleanser/image3.jpg"
-          ]
-        },
-        {
-          "id": "3",
-          "name": "Eyeliner",
-          "description": "A waterproof eyeliner for precise and long-lasting definition",
-          "long_description": "This will be long description",
-          "price": 12,
-          "discount": 2,
-          "sku": "ZG011AQC",
-          "rating": 4.3,
-          "stock": 70,
-          "brand": "PrecisionLine",
-          "featured": "true",
-          "quantity": "0",
-          "category": "makeup",
-          "sub_category": "eyes",
-          "total_sold": 35,
-          "reviews": "Love this eyeliner! Goes on smoothly and stays put all day.",
-          "thumbnail": "https://theskinstore.in/cdn/shop/files/desktop-banner-29-11-2022_1400x.png?v=1669714576",
-          "images": [
-            "https://example.com/product-images/eyeliner/image1.jpg",
-            "https://example.com/product-images/eyeliner/image2.jpg",
-            "https://example.com/product-images/eyeliner/image3.jpg"
-          ]
-        },
-        {
           "id": "4",
           "name": "Body Wash",
           "description": "A refreshing body wash for clean and hydrated skin",
@@ -436,19 +402,43 @@
           "discount": 1,
           "sku": "ZG011AQD",
           "rating": 4.6,
-          "stock": 85,
+          "stock": 76,
           "brand": "FreshClean",
           "featured": "true",
           "quantity": "0",
-          "category": "bath",
+          "category": "Bath",
           "sub_category": "soaps",
           "total_sold": 40,
           "reviews": "This body wash smells amazing and leaves my skin feeling so soft.",
           "thumbnail": "https://theskinstore.in/cdn/shop/files/10-5-2022-desktop_1c27b611-91b4-4489-bb01-e969cca1f1ce_1400x.jpg?v=1704137181",
           "images": [
-            "https://example.com/product-images/body_wash/image1.jpg",
-            "https://example.com/product-images/body_wash/image2.jpg",
-            "https://example.com/product-images/body_wash/image3.jpg"
+            "https://theskinstore.in/cdn/shop/files/desktop-banner2_01-08-22_1400x.png?v=1659364308",
+            "https://theskinstore.in/cdn/shop/files/10-5-2022-desktop_1c27b611-91b4-4489-bb01-e969cca1f1ce_1400x.jpg?v=1704137181",
+            "https://theskinstore.in/cdn/shop/files/desktop-banner-29-11-2022_1400x.png?v=1669714576"
+          ]
+        },
+        {
+          "id": "5",
+          "name": "Facial Cleanser",
+          "description": "A gentle facial cleanser for clean and clear skin",
+          "long_description": "This will be long description",
+          "price": 12,
+          "discount": 2,
+          "sku": "ZG011AQD",
+          "rating": 4.4,
+          "stock": 70,
+          "brand": "ClearSkin",
+          "featured": "false",
+          "quantity": "0",
+          "category": "Bath",
+          "sub_category": "face wash",
+          "total_sold": 35,
+          "reviews": "Love this cleanser! Removes dirt and makeup without drying out my skin.",
+          "thumbnail": "https://ayuga.in/cdn/shop/collections/Giftbox_WebBanner_1900x780_f3f8a07f-2b8c-42c7-8dc8-2c67cc19d1f1_1800x.jpg?v=1711111349",
+          "images": [
+            "https://theskinstore.in/cdn/shop/files/desktop-banner2_01-08-22_1400x.png?v=1659364308",
+            "https://theskinstore.in/cdn/shop/files/10-5-2022-desktop_1c27b611-91b4-4489-bb01-e969cca1f1ce_1400x.jpg?v=1704137181",
+            "https://theskinstore.in/cdn/shop/files/desktop-banner-29-11-2022_1400x.png?v=1669714576"
           ]
         }
       ]
@@ -529,6 +519,58 @@
       "quantity": 1,
       "payment_id": "",
       "dispatched": "Dispatched"
+    },
+    {
+      "id": "4",
+      "user_id": "2",
+      "product_id": "14",
+      "ordered_at": "4/10/2024, 7:41:32 PM",
+      "expected_delivery": "",
+      "status": "Accepted",
+      "dispatched": "Dispatched",
+      "accepted_by_id": "1",
+      "accepted_by_name": "Vinay Sharma",
+      "quantity": 6,
+      "payment_id": ""
+    },
+    {
+      "id": "5",
+      "user_id": "2",
+      "product_id": "4",
+      "ordered_at": "4/10/2024, 7:41:32 PM",
+      "expected_delivery": "",
+      "status": "Pending",
+      "dispatched": "Pending",
+      "accepted_by_id": "",
+      "accepted_by_name": "",
+      "quantity": 1,
+      "payment_id": ""
+    },
+    {
+      "id": "6",
+      "user_id": "2",
+      "product_id": "6",
+      "ordered_at": "4/10/2024, 7:41:33 PM",
+      "expected_delivery": "",
+      "status": "Pending",
+      "dispatched": "Pending",
+      "accepted_by_id": "",
+      "accepted_by_name": "",
+      "quantity": 2,
+      "payment_id": ""
+    },
+    {
+      "id": "7",
+      "user_id": "2",
+      "product_id": "7",
+      "ordered_at": "4/10/2024, 7:41:33 PM",
+      "expected_delivery": "",
+      "status": "Pending",
+      "dispatched": "Pending",
+      "accepted_by_id": "",
+      "accepted_by_name": "",
+      "quantity": 1,
+      "payment_id": ""
     }
   ],
   "categories": [

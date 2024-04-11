@@ -9,7 +9,7 @@ const Footer = () => {
         <Link to="/" className="font-medium text-white">Home</Link>
         <Link to="#" className="font-medium text-white">Terms & Conditions</Link>
       </nav>
-      <p className="py-10 text-center text-gray-300">© 2022 Boleno | All Rights Reserved</p>
+      <p className="py-10 text-center text-gray-300">© 2024 Tatva | All Rights Reserved</p>
     </footer>
   );
 };

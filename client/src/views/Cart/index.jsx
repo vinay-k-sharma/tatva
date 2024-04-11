@@ -135,7 +135,7 @@ const Cart = () => {
         {cartItems.map((item) => (
           <div key={item.id} className="lg:col-span-2 bg-white divide-y">
             <div className="flex items-start max-sm:flex-col gap-8 py-6">
-              <div className="h-52 shrink-0">
+              <div className="h-52 w-[60rem]">
                 <img src={item.thumbnail} className="w-full h-full object-contain rounded-md" alt={item.name} />
               </div>
               <div className="flex items-start gap-6 max-md:flex-col w-full">
@@ -182,7 +182,7 @@ const Cart = () => {
             </div>
           </div>
         ))}
-        <div className="shadow-md p-6">
+        <div className="shadow-md w-[75rem] ml-11 p-6">
           <h3 className="text-xl font-extrabold text-[#333] border-b pb-4">Order Summary</h3>
           <ul className="text-[#333] divide-y mt-6">
             <li className="flex flex-wrap gap-4 text-md py-4">Subtotal <span className="ml-auto font-bold">${subtotal}</span></li>

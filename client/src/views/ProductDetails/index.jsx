@@ -1,12 +1,16 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { API } from "../../utils/axios-instance";
-import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import MyCarousel from "../../components/common/MyCarousel";
+import {ADD} from "../../redux/actions/cartActions"
+import { toast } from "react-toastify";
+import {useDispatch} from 'react-redux'
+
 const ProductDetails = () => {
   const [productData, setProductData] = useState({});
   const params = useParams();
+  const dispatch=  useDispatch()
   const productId = params.productID;
 
   useEffect(() => {
@@ -20,7 +24,13 @@ const ProductDetails = () => {
     };
     getProductDetails();
   }, [productId]);
-
+  
+  const send = (product) => {
+    dispatch(ADD(product))
+    console.log("added to cart")
+    console.log(product.quantity) 
+    toast.success('Added to Cart')
+  }
   return (
     <div>
       <div className="py-6">
@@ -61,12 +71,33 @@ const ProductDetails = () => {
               </div>
               <p className="text-gray-500">{productData.description}</p>
               <div className="flex py-4 space-x-4">
-                <button type="button" className="h-14 px-6 py-2 font-semibold rounded-xl bg-[#D88552] hover:bg-indigo-500 text-white">
+                <button type="button" className="h-14 px-6 py-2 font-semibold rounded-xl bg-[#D88552] hover:bg-indigo-500 text-white"  onClick={()=> send(productData)}>
                   Add to Cart
                 </button>
               </div>
             </div>
           </div>
+          
+      <div className="flex flex-col items-center">
+      <div className="inline-block px-4 mt-10 mb-5">
+  <div className="border-b border-t border-amber-800 py-2">
+    <h1 className="text-amber-800 text-center text-2xl">
+      Product Description
+    </h1>
+  </div>
+</div>
+      </div>
+          {productData.long_description}
+          <div className="flex flex-col items-center">
+      <div className="inline-block px-4 mt-10 mb-5">
+  <div className="border-b border-t border-amber-800 py-2">
+    <h1 className="text-amber-800 text-center text-2xl">
+      Product Ingredients
+    </h1>
+  </div>
+</div>
+      </div>
+          {productData.ingredients}
         </div>
       </div>
     </div>
