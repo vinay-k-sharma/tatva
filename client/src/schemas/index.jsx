@@ -14,6 +14,10 @@ export const userSchema = Yup.object({
   confirm_password: Yup.string()
     .required()
     .oneOf([Yup.ref("password"), null], "Password must match !"),
+    // country: Yup.string().required().min(4),
+    // address: Yup.string().required().min(5),
+    // phone: Yup.string().required()
+
 });
 
 export const userSchemaAdmin = Yup.object({

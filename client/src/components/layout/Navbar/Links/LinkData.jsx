@@ -82,6 +82,11 @@ export const sellerLinks = [
   {
     label : "Your Products",
     path : '/seller-products'
+  },
+  {
+    icon: <FaUser/>,
+    label : 'Profile',
+    path: '/seller-profile'
   }
 ]
 

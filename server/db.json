@@ -47,8 +47,8 @@
       "thumbnail": "https://theskinstore.in/cdn/shop/files/desktop-banner2_01-08-22_1400x.png?v=1659364308",
       "images": [
         "https://theskinstore.in/cdn/shop/files/desktop-banner2_01-08-22_1400x.png?v=1659364308",
-        "https://theskinstore.in/cdn/shop/files/desktop-banner2_01-08-22_1400x.png?v=1659364308",
-        "https://theskinstore.in/cdn/shop/products/iS-Clinical-Eclipse-SPF50_500x.jpg?v=1610171008"
+        "https://theskinstore.in/cdn/shop/files/10-5-2022-desktop_1c27b611-91b4-4489-bb01-e969cca1f1ce_1400x.jpg?v=1704137181",
+        "https://theskinstore.in/cdn/shop/files/desktop-banner-29-11-2022_1400x.png?v=1669714576"
       ]
     },
     {
@@ -367,7 +367,7 @@
       "id": "1",
       "name": "Vinay Sharma",
       "businessName": "Vinay's Mart",
-      "brand": "Jimi-Chu",
+      "brand": "Jimi-e",
       "email": "vinaymart@gmail.com",
       "password": "vinaysharma",
       "productsToSell": [
@@ -389,7 +389,7 @@
     },
     {
       "id": "2",
-      "name": "vinay",
+      "name": "Vinay Sharma",
       "email": "vinaysharma352044@gmail.com",
       "password": "vinaysharma",
       "favouriteProducts": [
@@ -441,7 +441,10 @@
             "https://theskinstore.in/cdn/shop/files/desktop-banner-29-11-2022_1400x.png?v=1669714576"
           ]
         }
-      ]
+      ],
+      "country": "India",
+      "address": "99 Shilpa Society, India",
+      "phone": "9427352044"
     },
     {
       "id": "3",

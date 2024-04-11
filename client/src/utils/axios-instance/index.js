@@ -368,6 +368,22 @@ export const getUsers = async () => {
       };
     }
   };
+  export const updateSeller = async (updatedSeller) => {
+    try {
+      const res = await API.patch(`sellers/${updatedSeller.id}`, updatedSeller);
+      return {
+        success: true,
+        data: res.data,
+        error: null,
+      };
+    } catch (error) {
+      return {
+        success: false,
+        data: [],
+        error: error.message,
+      };
+    }
+  };
   export const updateSellerProducts = async (seller, newProductId) => {
     try {
       const sellerProducts = seller.productsToSell;

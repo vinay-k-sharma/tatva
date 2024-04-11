@@ -35,6 +35,7 @@ const SellerUpdateProduct = React.lazy(()=> import('../views/Register/UpdateProd
 const Wishlist = React.lazy(()=> import("../views/Whishlist"))
 const UserOrders = React.lazy(()=> import('../views/User-Orders'))
 const Profile = React.lazy(()=> import("../views/Profile"))
+const SellerProfile = React.lazy(() => import('../views/Profile/SellerProfile'))
 const ProductDetails = React.lazy(()=> import("../views/ProductDetails"))
 export const Router = () => {
     const role = useSelector((state)=>state.role)
@@ -116,6 +117,10 @@ export const Router = () => {
 						{
                             path:"seller-update-product/:prodId",
                             element: <SellerUpdateProduct/>
+                        },
+                        {
+                            path:"seller-profile",
+                            element: <SellerProfile/>
                         }
 					],
 				},
