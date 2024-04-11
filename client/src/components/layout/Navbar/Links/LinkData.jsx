@@ -91,6 +91,11 @@ export const userLinks = [
     path: '/'
   },
   {
+    icon: <FaShop className="text-xl"/>,
+    label:"All-Products",
+    path : '/all-products'
+  },
+  {
     label : 'Wishlist',
     icon : <FaHeart className="text-xl"/>,
     path :"/wishlist"

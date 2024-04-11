@@ -18,10 +18,10 @@ const AllProducts = () => {
     const [recordsPerPage] = useState(6);
     const indexOfLastRecord = currentPage * recordsPerPage;
   const indexOfFirstRecord = indexOfLastRecord - recordsPerPage;
-  const sliceProducts = searchResults.slice(indexOfFirstRecord, indexOfLastRecord);
-  const shouldRenderPagination = searchResults.length > recordsPerPage;
+  const sliceProducts = filterResult.slice(indexOfFirstRecord, indexOfLastRecord);
+  const shouldRenderPagination = filterResult.length > recordsPerPage;
 
-  const nPages = Math.ceil(searchResults.length / recordsPerPage);
+  const nPages = Math.ceil(filterResult.length / recordsPerPage);
 
     const isProductLiked = (product) => {
         if (user && user.favouriteProducts) {
@@ -61,13 +61,18 @@ const AllProducts = () => {
       };
   return (
     <div>
-        <div display gap-5 flex flex-start flex-col px-4 md:flex-row justify-center items-start>
+        <div className="display gap-5 flex flex-start flex-col px-4 md:flex-row justify-center items-start mt-5">
         <Searching
           dataToSearch={products}
           setSearchResults={setSearchResults}
           setCurrentPage={setCurrentPage}
-        />   
-        </div>
+        />
+        <Sorting
+          setSortingResult={setSortingResult}
+          searchResults={searchResults}
+        />
+        <Filter setFilterResult={setFilterResult} setCurrentPage={setCurrentPage} productData={sortingResult}/>
+      </div>
       <Card 
           data={sliceProducts}
           handleLikesDislikes={handleLikesDislikes}

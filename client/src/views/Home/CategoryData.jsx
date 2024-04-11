@@ -5,12 +5,19 @@ import { setRole } from "../../redux/actions/roleAction";
 import { updateUser } from "../../utils/axios-instance";
 import { useDispatch, useSelector } from "react-redux";
 import Card from '../../components/common/Card';
+import Searching from '../../components/common/Searching';
+import Sorting from '../../components/common/Sorting';
+import Pagination from '../../components/common/Pagination'
 const CategoryData = () => {
   const { categoryId } = useParams();
   const [category, setCategory] = useState(null);
   const [products, setProducts] = useState([]);
   const user = useSelector((state) => state.role.user);
   const dispatch = useDispatch();
+  const [searchResults, setSearchResults] = useState([]);
+  const [sortingResult, setSortingResult] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [recordsPerPage] = useState(6);
 
   useEffect(() => {
     const fetchCategoryAndProducts = async () => {
@@ -29,6 +36,12 @@ const CategoryData = () => {
 
     fetchCategoryAndProducts();
   }, [categoryId]);
+
+  const indexOfLastRecord = currentPage * recordsPerPage;
+  const indexOfFirstRecord = indexOfLastRecord - recordsPerPage;
+  const sliceProducts = sortingResult.slice(indexOfFirstRecord, indexOfLastRecord);
+  const nPages = Math.ceil(sortingResult.length / recordsPerPage);
+  const shouldRenderPagination = sortingResult.length > recordsPerPage;
   const isProductLiked = (product) => {
     if (user && user.favouriteProducts) {
       return user.favouriteProducts.some(
@@ -67,6 +80,17 @@ const CategoryData = () => {
   };
   return (
     <div>
+         <div className="display gap-5 flex flex-start flex-col px-4 md:flex-row justify-center items-start mt-5">
+        <Searching
+          dataToSearch={products}
+          setSearchResults={setSearchResults}
+          setCurrentPage={setCurrentPage}
+        />
+        <Sorting
+          setSortingResult={setSortingResult}
+          searchResults={searchResults}
+        />
+      </div>
         <div className="flex flex-col items-center">
         <div className="w-full max-w-2xl px-4 mt-10">
           <div className="border-b-2 border-t-2 border-amber-800 py-2">
@@ -75,10 +99,19 @@ const CategoryData = () => {
         </div>
       </div>
       <Card
-      data={products}
+      data={sliceProducts}
       handleLikesDislikes={handleLikesDislikes}
       isProductLiked={isProductLiked}
       />
+      {shouldRenderPagination && (
+          <div className=" flex justify-center items-center w-auto h-10 my-6">
+            <Pagination
+              nPages={nPages}
+              currentPage={currentPage}
+              setCurrentPage={setCurrentPage}
+            />
+          </div>
+        )}
     </div>
   );
 };
