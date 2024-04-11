@@ -32,6 +32,7 @@ const dispatch = useDispatch()
             <div className='flex flex-row justify-between'>
             <Link to={`/products/${product.id}`}>
               <h5 className="text-xl tracking-tight text-slate-900">{product.name}</h5>
+              <h5 className='tracking-tighter'>{product.description}</h5>
             </Link>
             { !wishListFlag ? (
             <button className=" h-10 w-10 md:w-11 lg:w-11 max-h-10 right-2 m-2   ">

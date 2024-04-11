@@ -3,13 +3,14 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import Card from '../../components/common/Card';
 import { Link } from 'react-router-dom';
+import { FaArrowAltCircleRight } from "react-icons/fa";
 const Featured = ({ data, handleLikesDislikes, isProductLiked }) => {
   const responsive = {
     desktop: { breakpoint: { max: 3000, min: 1024 }, items: 4, slidesToSlide: 1 }, 
     tablet: { breakpoint: { max: 1024, min: 464 }, items: 2, slidesToSlide: 1 }, 
     mobile: { breakpoint: { max: 464, min: 0 }, items: 1, slidesToSlide: 1 } 
   };
-  const filteredData = data.filter(item => item.total_sold > 30);
+  const filteredData = data.filter(item => item.featured === "true");
 
   return (
     <div>
@@ -48,7 +49,11 @@ const Featured = ({ data, handleLikesDislikes, isProductLiked }) => {
           />
         ))}
       </Carousel>
-      <Link to={'/best-sellers'} className=''>See All</Link>
+      <div className="flex  mr-4">
+        <Link to='/best-sellers' className=' flex items-center px-8'>
+          View All <FaArrowAltCircleRight className='ml-1 text-[#D88552]'/>
+        </Link>
+      </div>
     </div>
   );
 };

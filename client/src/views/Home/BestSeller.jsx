@@ -3,12 +3,15 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import Card from '../../components/common/Card';
 import { Link } from 'react-router-dom';
+import { FaArrowAltCircleRight } from "react-icons/fa";
+
 const BestSeller = ({ data, handleLikesDislikes, isProductLiked }) => {
   const responsive = {
     desktop: { breakpoint: { max: 3000, min: 1024 }, items: 4, slidesToSlide: 1 }, 
     tablet: { breakpoint: { max: 1024, min: 464 }, items: 2, slidesToSlide: 1 }, 
     mobile: { breakpoint: { max: 464, min: 0 }, items: 1, slidesToSlide: 1 } 
   };
+
   const filteredData = data.filter(item => item.total_sold > 30);
 
   return (
@@ -28,10 +31,10 @@ const BestSeller = ({ data, handleLikesDislikes, isProductLiked }) => {
         ssr={true}
         infinite={true}
         autoPlay={true}
-        autoPlaySpeed={3000} 
+        autoPlaySpeed={2000} 
         keyBoardControl={true}
         customTransition="all .5"
-        transitionDuration={500}
+        transitionDuration={100}
         containerClass="carousel-container"
         removeArrowOnDeviceType={["tablet", "mobile"]}
         deviceType={"desktop"} 
@@ -48,7 +51,11 @@ const BestSeller = ({ data, handleLikesDislikes, isProductLiked }) => {
           />
         ))}
       </Carousel>
-      <Link to={'/best-sellers'} className=''>See All</Link>
+      <div className="flex  mr-4">
+        <Link to='/best-sellers' className=' flex items-center px-8'>
+          View All <FaArrowAltCircleRight className='ml-1 text-[#D88552]'/>
+        </Link>
+      </div>
     </div>
   );
 };

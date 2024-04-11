@@ -7,17 +7,17 @@ const Searching = ({ dataToSearch, setSearchResults, setCurrentPage }) => {
   useEffect(() => {
     if (dataToSearch.length > 0) {
       const searchResults = dataToSearch.filter(
-        (product) =>
-          (product.title &&
-            product.title
+        (data) =>
+          (data.title &&
+            data.title
               .toLowerCase()
               .includes(debouncedSearchQuery.toLowerCase())) ||
-          (product.description &&
-            product.description
+          (data.description &&
+            data.description
               .toLowerCase()
               .includes(debouncedSearchQuery.toLowerCase())) ||
-          (product.name &&
-            product.name
+          (data.name &&
+            data.name
               .toLowerCase()
               .includes(debouncedSearchQuery.toLowerCase()))
       );

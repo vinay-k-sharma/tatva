@@ -11,7 +11,7 @@ const persistConfig = {
     key: 'root',
     storage,
     // Specify the reducers you want to persist
-    whitelist: ['cart'], // In this example, we persist the 'user' reducer
+    whitelist: ['cart','product'], // In this example, we persist the 'user' reducer
   };
 
   const persistedReducer = persistReducer(persistConfig, rootReducer);

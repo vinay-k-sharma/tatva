@@ -9,8 +9,10 @@ const Layout = React.lazy(()=> import("../components/layout/Layout"))
 const Home = React.lazy(()=> import("../views/Home"))
 const RegisterUser = React.lazy(() => import("../views/Register/RegisterUser"))
 const Login = React.lazy(()=> import("../views/Login"))
+const AllProducts = React.lazy(()=> import("../views/Home/AllProducts"))
+const CategoryData = React.lazy(()=> import('../views/Home/CategoryData'))
 const Contact = React.lazy(()=> import("../views/Contact"))
-const About = React.lazy(()=> import("../views/About"))
+const BestSellers = React.lazy(() => import('../views/Home/BestSellerCards'))
 const Cart = React.lazy(()=> import("../views/Cart"))
 const AdminDashboard = React.lazy(()=> import("../views/Admin"))
 const Admin_Users = React.lazy(()=>import ('../views/Admin/Admin-Users'))
@@ -51,6 +53,18 @@ export const Router = () => {
                 {
                     path:'/products/:productID',
                     element:<ProductDetails/>
+                },
+                {
+                    path: '/best-sellers',
+                    element:<BestSellers/>
+                },
+                {
+                    path: '/category/:categoryId',
+                    element: <CategoryData/>
+                },
+                {
+                    path: 'all-products',
+                    element: <AllProducts/>
                 },
                 {
                     element:(

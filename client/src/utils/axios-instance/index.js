@@ -321,6 +321,7 @@ export const getUsers = async () => {
       };
     }
   };
+
   export const updateCategoryFromAdmin = async (categoryId, categoryData) => {
     try {
         const res = await API.patch(`/categories/${categoryId}`, categoryData);

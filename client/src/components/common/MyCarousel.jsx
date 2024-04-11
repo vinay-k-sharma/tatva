@@ -16,7 +16,7 @@ const MyCarousel = ({ children }) => {
       showDots={true}
       responsive={responsive}
       ssr={true}
-      infinite={false}
+      infinite={true}
       autoPlay={true}
       autoPlaySpeed={1000}
       keyBoardControl={true}
