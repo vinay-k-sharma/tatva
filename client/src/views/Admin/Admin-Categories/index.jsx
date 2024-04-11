@@ -44,16 +44,13 @@ const Admin_Categories = () => {
   return (
     <div className="flex flex-col items-center">
       <h1 className="mb-4 text-3xl mt-2">All-Categories</h1>
-      <div className="w-full flex justify-between items-center mb-4 px-4 md:px-0">
-        <div className="flex justify-end w-full mr-12">
           <button
             className="bg-[#D88552] py-2 px-4 rounded"
             onClick={() => navigate('/admin-add-categories')}
           >
             ADD CATEGORY
           </button>
-        </div>
-      </div>
+
       <CommonTable
         data={categories}
         headers={categoriesArray}

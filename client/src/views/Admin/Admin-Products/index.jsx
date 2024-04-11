@@ -1,10 +1,11 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { getSkinCare, DeleteSkinCare } from '../../../utils/axios-instance';
 import { toast } from 'react-toastify';
 import CommonTable from '../../../components/common/CommonTable';
 import { setLoader } from '../../../redux/actions/appActions';
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+
 
 const Admin_Products = () => {
   const loader = useSelector(state => state.app);
@@ -30,7 +31,7 @@ const Admin_Products = () => {
     { key: 'stock', label: 'Stock' },
     { key: 'category', label: 'Category' },
     { key: 'rating', label: 'Rating' },
-    { key: 'update', label: 'Update' , disableSorting: true},
+    { key: 'update', label: 'Update', disableSorting: true },
     { key: 'delete', label: 'Delete', disableSorting: true }
   ];
 
@@ -55,18 +56,17 @@ const Admin_Products = () => {
   return (
     <div className="flex flex-col items-center">
       <h1 className="mb-4 text-3xl mt-2">All-Products</h1>
-      <div className="w-full flex justify-between items-center mb-4 px-4 md:px-0">
-        <div className="flex justify-end w-full mr-12">
+  
+
           <button
             className="bg-[#D88552] py-2 px-4 rounded"
             onClick={() => navigate('/admin-add-product')}
           >
             ADD PRODUCT
           </button>
-        </div>
-      </div>
+
       <CommonTable
-        data={products}
+        data={ products}
         headers={productsArray}
         handleDelete={handleDelete}
         handleUpdate={handleUpdate}

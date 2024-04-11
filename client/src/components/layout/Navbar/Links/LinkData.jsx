@@ -10,6 +10,7 @@ import { FaUsers } from "react-icons/fa";
 import { FaProductHunt } from "react-icons/fa";
 import { MdCategory } from "react-icons/md";
 import { MdBorderColor } from "react-icons/md";
+import { FaUser } from "react-icons/fa";
 const CartIconWithBadge = () => {
   const carts = useSelector((state) => state.cart.carts);
 
@@ -109,5 +110,10 @@ export const userLinks = [
     label: 'Your Orders',
     icon: <GiReceiveMoney className='text-4xl pb-2'/>,
     path : '/your-orders'
+  },
+  {
+    label: 'Profile',
+    icon: <FaUser/>,
+    path: '/profile'
   }
 ];
