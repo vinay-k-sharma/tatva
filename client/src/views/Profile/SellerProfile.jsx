@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect, useState } from 'react';
-import { updateUser } from '../../utils/axios-instance';
+import { updateSeller } from '../../utils/axios-instance';
 import { setRole } from '../../redux/actions/roleAction';
 import { toast } from 'react-toastify';
 import { useFormik } from 'formik';
@@ -11,13 +11,13 @@ const Profile = () => {
   const [readOnly, setReadOnly] = useState(true);
 
   const formik = useFormik({
-    initialValues: role.user,
+    initialValues: role.seller,
     onSubmit: async (values) => {
       try {
-        const res = await updateUser(values);
+        const res = await updateSeller(values);
         if (res.success) {
-          dispatch(setRole("user", values));
-          toast.success("Profile Updated !!");
+          dispatch(setRole("seller", values));
+          toast.success("Seller Updated !!");
           return;
         } else {
           toast.error("Something went wrong. Try again later!");
@@ -37,7 +37,7 @@ const Profile = () => {
   };
 
   useEffect(() => {
-    formik.setValues(role.user);
+    formik.setValues(role.seller);
   }, [role.user]);
 
   return (
@@ -54,6 +54,14 @@ const Profile = () => {
               <input id="name" name="name" type="text" value={formik.values.name} readOnly={readOnly} onChange={formik.handleChange} onBlur={formik.handleBlur} required className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:z-10 sm:text-sm" placeholder="Name" />
             </div>
             <div>
+              <label htmlFor="businessName" >businessName</label>
+              <input id="businessName" name="businessName" type="text" value={formik.values.businessName} readOnly={readOnly} onChange={formik.handleChange} onBlur={formik.handleBlur}  required className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:z-10 sm:text-sm" placeholder="businessName" />
+            </div>
+            <div>
+              <label htmlFor="brand" >Brand</label>
+              <input id="brand" name="brand" type="text" value={formik.values.brand} readOnly={readOnly} onChange={formik.handleChange} onBlur={formik.handleBlur}  required className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:z-10 sm:text-sm" placeholder="brand" />
+            </div>
+            <div>
               <label htmlFor="email-address" >Email address</label>
               <input id="email-address" name="email" type="email" value={formik.values.email} readOnly={readOnly} onChange={formik.handleChange} onBlur={formik.handleBlur} autoComplete="email" required className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:z-10 sm:text-sm" placeholder="Email address" />
             </div>
@@ -61,18 +69,8 @@ const Profile = () => {
               <label htmlFor="password" >Password</label>
               <input id="password" name="password" type="text" value={formik.values.password} readOnly={readOnly} onChange={formik.handleChange} onBlur={formik.handleBlur} autoComplete="password" required className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:z-10 sm:text-sm" placeholder="Password" />
             </div>
-            <div>
-              <label htmlFor="country" >Country</label>
-              <input id="country" name="country" type="text" value={formik.values.country} readOnly={readOnly} onChange={formik.handleChange} onBlur={formik.handleBlur} required className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:z-10 sm:text-sm" placeholder="Country" />
-            </div>
-            <div>
-              <label htmlFor="address" >Address</label>
-              <input id="address" name="address" type="text" value={formik.values.address} readOnly={readOnly} onChange={formik.handleChange} onBlur={formik.handleBlur} required className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:z-10 sm:text-sm" placeholder="Address" />
-            </div>
-            <div>
-              <label htmlFor="phone" >Phone Number</label>
-              <input id="phone" name="phone" type="text" value={formik.values.phone} readOnly={readOnly} onChange={formik.handleChange} onBlur={formik.handleBlur} required className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:z-10 sm:text-sm" placeholder="Phone Number" />
-            </div>
+            
+         
           </div>
 
           <div>
