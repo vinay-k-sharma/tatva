@@ -74,7 +74,7 @@ const SkinCareProducts = ({ data }) => {
         handleLikesDislikes={handleLikesDislikes}
         isProductLiked={isProductLiked}
       />
-
+      <div>
       <div className="flex flex-col items-center">
         <div className="w-full max-w-2xl px-4 mt-10">
           <div className="border-b-2 border-t-2 border-amber-800 py-2">
@@ -84,7 +84,10 @@ const SkinCareProducts = ({ data }) => {
           </div>
         </div>
       </div>
+      <div className="bg-[#F5EDDB] mt-8">
       <CategoryCards />
+      </div>
+      </div>
 
       <div className="flex flex-col items-center">
         <div className="w-full max-w-2xl px-4 mt-10">
@@ -93,7 +96,7 @@ const SkinCareProducts = ({ data }) => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col md:flex-row mt-10">
+      <div className="flex flex-col md:flex-row  bg-[#F5EDDB] mt-10">
         <div className="w-full md:w-1/2 ml-5">
           <img
             className="w-full h-full object-cover"

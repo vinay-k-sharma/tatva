@@ -23,6 +23,7 @@ const BestSeller = ({ data, handleLikesDislikes, isProductLiked }) => {
           </div>
         </div>
       </div>
+      <div className='bg-[#F5EDDB] mt-10'>
       <Carousel
         swipeable={true}
         draggable={true}
@@ -55,6 +56,7 @@ const BestSeller = ({ data, handleLikesDislikes, isProductLiked }) => {
         <Link to='/best-sellers' className=' flex items-center px-8'>
           View All <FaArrowAltCircleRight className='ml-1 text-[#D88552]'/>
         </Link>
+      </div>
       </div>
     </div>
   );

@@ -13,7 +13,7 @@ const Featured = ({ data, handleLikesDislikes, isProductLiked }) => {
   const filteredData = data.filter(item => item.featured === "true");
 
   return (
-    <div>
+    <div >
       <div className="flex flex-col items-center">
         <div className="w-full max-w-2xl px-4 mt-10">
           <div className="border-b-2 border-t-2 border-amber-800 py-2">
@@ -21,6 +21,7 @@ const Featured = ({ data, handleLikesDislikes, isProductLiked }) => {
           </div>
         </div>
       </div>
+      <div className='bg-[#F5EDDB] mt-10'>
       <Carousel
         swipeable={true}
         draggable={true}
@@ -53,6 +54,7 @@ const Featured = ({ data, handleLikesDislikes, isProductLiked }) => {
         <Link to='/featured-collection' className=' flex items-center px-8'>
           View All <FaArrowAltCircleRight className='ml-1 text-[#D88552]'/>
         </Link>
+      </div>
       </div>
     </div>
   );
