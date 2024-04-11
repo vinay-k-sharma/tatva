@@ -11,7 +11,6 @@ const RegisterUser = React.lazy(() => import("../views/Register/RegisterUser"))
 const Login = React.lazy(()=> import("../views/Login"))
 const AllProducts = React.lazy(()=> import("../views/Home/AllProducts"))
 const CategoryData = React.lazy(()=> import('../views/Home/CategoryData'))
-const Contact = React.lazy(()=> import("../views/Contact"))
 const BestSellers = React.lazy(() => import('../views/Home/BestSellerCards'))
 const FeaturedCollection = React.lazy(() => import('../views/Home/FeaturedCollection'))
 const Cart = React.lazy(()=> import("../views/Cart"))
@@ -49,10 +48,6 @@ export const Router = () => {
                 element:<Home/>,
                 },
                 {
-                    path:'/contact',
-                    element:<Contact/>
-                },
-                {
                     path:'/products/:productID',
                     element:<ProductDetails/>
                 },
@@ -73,6 +68,10 @@ export const Router = () => {
                     element:<FeaturedCollection/>
                 },
                 {
+                    path:'cart',
+                    element:<Cart/>
+                },
+                {
                     element:(
                         <PrivateRoutesUser isUserAuth={role.user!==null ? true : false} />
                     ),
@@ -84,10 +83,6 @@ export const Router = () => {
                         {
                             path:'profile',
                             element:<Profile/>
-                        },
-                        {
-                            path:'cart',
-                            element:<Cart/>
                         },
                         {
                             path:'your-orders',

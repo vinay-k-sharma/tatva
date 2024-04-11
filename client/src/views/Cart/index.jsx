@@ -86,6 +86,11 @@ const Cart = () => {
   };
 
   const handleCheckout = async () => {
+    if (!user) {
+      toast.error("Please login to checkout");
+      navigate('/login')
+      return;
+    }
     let orderId =
       orders.length !== 0
         ? (parseInt(orders[orders.length - 1].id) + 1).toString()
@@ -121,7 +126,7 @@ const Cart = () => {
 
     dispatch(emptyCart());
     navigate("/your-orders");
-    toast.success('Order Placed Successfully')
+    toast.success("Order Placed Successfully");
   };
 
   const subtotal = cartItems.reduce(
@@ -154,15 +159,19 @@ const Cart = () => {
               </div>
               <div className="flex items-start gap-6 max-md:flex-col w-full">
                 <div>
-                  <h3 className="text-xl font-extrabold text-[#333] mb-6 cursor-pointer" onClick={() => navigate(`/products/${item.id}`)}>
+                  <h3
+                    className="text-xl font-extrabold text-[#333] mb-6 cursor-pointer"
+                    onClick={() => navigate(`/products/${item.id}`)}
+                  >
                     {item.name}
-                    
                   </h3>
                   <div>
-                    <h6 className="text-md text-gray-500 cursor-pointer" onClick={() => navigate(`/products/${item.id}`)}>
+                    <h6
+                      className="text-md text-gray-500 cursor-pointer"
+                      onClick={() => navigate(`/products/${item.id}`)}
+                    >
                       Description:{" "}
                       <span className="ml-2">{item.description}</span>
-                    
                     </h6>
                     <h6 className="text-md text-gray-500 mt-2">
                       Brand: <span className="ml-2">{item.brand}</span>
@@ -246,7 +255,9 @@ const Cart = () => {
         </ul>
         <button
           onClick={handleCheckout}
-          className="mt-6 text-md px-6 py-2.5 w-full bg-[#D88552]  text-white rounded"
+          className={`mt-6 text-md px-6 py-2.5 w-full bg-[#D88552] text-white rounded ${
+            !user ? "cursor-not-allowed opacity-70" : ""
+          }`}
         >
           Check out
         </button>

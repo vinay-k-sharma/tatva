@@ -33,9 +33,14 @@ export const generalLinks = [
     path : '/register-seller'
   },
   {
-    icon: <FaShop className="text-xl"/>,
+    icon: <FaProductHunt className="text-xl"/>,
     label:"All-Products",
     path : '/all-products'
+  },
+  {
+    label: "Cart",
+    icon: <CartIconWithBadge />,
+    path: "/cart"
   },
 ];    
 
@@ -97,7 +102,7 @@ export const userLinks = [
     path: '/'
   },
   {
-    icon: <FaShop className="text-xl"/>,
+    icon: <FaProductHunt className="text-xl"/>,
     label:"All-Products",
     path : '/all-products'
   },
