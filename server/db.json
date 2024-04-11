@@ -375,7 +375,8 @@
         "4",
         "9",
         "14",
-        "13"
+        "13",
+        "15"
       ]
     }
   ],
@@ -385,7 +386,10 @@
       "name": "Ishaan",
       "email": "ishaan@example.com",
       "password": "ishaanpassword",
-      "favouriteProducts": []
+      "favouriteProducts": [],
+      "country": "America",
+      "address": "99 Shyam Park, America",
+      "phone": "9427352034"
     },
     {
       "id": "2",
@@ -451,35 +455,40 @@
       "name": "raju",
       "email": "raju@gmail.com",
       "password": "raju123",
-      "favouriteProducts": []
+      "favouriteProducts": [],
+      "country": "Australia",
+      "address": "99 Shilpa Society, Australia",
+      "phone": "9427352067"
     },
     {
       "id": "4",
       "name": "shyam",
       "email": "shyam@gmail.com",
       "password": "shyam123",
-      "favouriteProducts": []
+      "favouriteProducts": [],
+      "country": "Japan",
+      "address": "78 japan street",
+      "phone": "9427352089"
     },
     {
       "id": "6",
       "name": "kishangopal",
       "email": "vandna@gmail.com",
       "password": "raju123",
-      "favouriteProducts": []
-    },
-    {
-      "id": "7",
-      "name": "fenil",
-      "email": "fenil@gmail.com",
-      "password": "fenilpass",
-      "favouriteProducts": []
+      "favouriteProducts": [],
+      "country": "India",
+      "address": "9bhagwan park India",
+      "phone": "9427389044"
     },
     {
       "id": "8",
       "name": "sujal mandalia",
       "email": "sujal@gmail.com",
       "password": "sujalpass",
-      "favouriteProducts": []
+      "favouriteProducts": [],
+      "country": "India",
+      "address": "shyam nagar India",
+      "phone": "9427389044"
     }
   ],
   "orders": [
@@ -503,9 +512,9 @@
       "ordered_at": "4/8/2024, 7:23:43 PM",
       "expected_delivery": "",
       "status": "Accepted",
-      "dispatched": "Pending",
-      "accepted_by_id": "admin",
-      "accepted_by_name": "admin",
+      "dispatched": "Dispatched",
+      "accepted_by_id": "1",
+      "accepted_by_name": "Vinay Sharma",
       "quantity": 3,
       "payment_id": ""
     },
@@ -542,10 +551,10 @@
       "product_id": "4",
       "ordered_at": "4/10/2024, 7:41:32 PM",
       "expected_delivery": "",
-      "status": "Pending",
-      "dispatched": "Pending",
-      "accepted_by_id": "",
-      "accepted_by_name": "",
+      "status": "Accepted",
+      "dispatched": "Dispatched",
+      "accepted_by_id": "1",
+      "accepted_by_name": "Vinay Sharma",
       "quantity": 1,
       "payment_id": ""
     },
@@ -581,10 +590,10 @@
       "product_id": "3",
       "ordered_at": "4/11/2024, 12:42:16 PM",
       "expected_delivery": "",
-      "status": "Pending",
-      "dispatched": "Pending",
-      "accepted_by_id": "",
-      "accepted_by_name": "",
+      "status": "Accepted",
+      "dispatched": "Dispatched",
+      "accepted_by_id": "admin",
+      "accepted_by_name": "admin",
       "quantity": 3,
       "payment_id": ""
     },
@@ -594,10 +603,10 @@
       "product_id": "1",
       "ordered_at": "4/11/2024, 12:42:16 PM",
       "expected_delivery": "",
-      "status": "Pending",
-      "dispatched": "Pending",
-      "accepted_by_id": "",
-      "accepted_by_name": "",
+      "status": "Accepted",
+      "dispatched": "Dispatched",
+      "accepted_by_id": "admin",
+      "accepted_by_name": "admin",
       "quantity": 2,
       "payment_id": ""
     },
@@ -607,10 +616,10 @@
       "product_id": "2",
       "ordered_at": "4/11/2024, 12:42:16 PM",
       "expected_delivery": "",
-      "status": "Pending",
-      "dispatched": "Pending",
-      "accepted_by_id": "",
-      "accepted_by_name": "",
+      "status": "Accepted",
+      "dispatched": "Dispatched",
+      "accepted_by_id": "admin",
+      "accepted_by_name": "admin",
       "quantity": 3,
       "payment_id": ""
     },
@@ -620,10 +629,10 @@
       "product_id": "4",
       "ordered_at": "4/11/2024, 12:42:16 PM",
       "expected_delivery": "",
-      "status": "Pending",
-      "dispatched": "Pending",
-      "accepted_by_id": "",
-      "accepted_by_name": "",
+      "status": "Accepted",
+      "dispatched": "Dispatched",
+      "accepted_by_id": "admin",
+      "accepted_by_name": "admin",
       "quantity": 1,
       "payment_id": ""
     },
@@ -646,10 +655,10 @@
       "product_id": "4",
       "ordered_at": "4/11/2024, 8:19:47 PM",
       "expected_delivery": "",
-      "status": "Pending",
-      "dispatched": "Pending",
-      "accepted_by_id": "",
-      "accepted_by_name": "",
+      "status": "Accepted",
+      "dispatched": "Dispatched",
+      "accepted_by_id": "1",
+      "accepted_by_name": "Vinay Sharma",
       "quantity": 1,
       "payment_id": ""
     },

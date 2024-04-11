@@ -7,7 +7,7 @@ import CategoryChart from '../Admin/CategoryChart';
 const index = () => {
   const {seller} = useSelector((state)=> state.role)
   const [products, setProducts] = useState([]);
-  const [productsCount,setProductsCount] = useState(0)
+  const [productsCount,setProductsCount] = useState(5)
   const [usersCount,setUsersCount] = useState(5)
   const[ordersCount,setOrdersCount ] = useState(6)
   const [categoriesCount,setCategoriesCount] = useState(3)
@@ -21,7 +21,7 @@ const index = () => {
       );
       console.log(filteredProducts)
       setProducts(filteredProducts);
-      setProductsCount(products.length)
+      setProductsCount(filteredProducts.length)
       console.log(productsCount)
     } catch (error) {
       console.error('Error fetching data:', error);

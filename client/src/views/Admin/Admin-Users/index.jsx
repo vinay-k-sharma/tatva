@@ -5,10 +5,15 @@ import CommonTable from "../../../components/common/CommonTable";
 import { setLoader } from "../../../redux/actions/appActions";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import ConfirmDeleteModal from '../../../components/common/ConfirmDeleteModal';
+
 const Admin_Users = () => {
   const [users, setUsers] = useState([]);
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const [showModal, setShowModal] = useState(false);
+const [userIdToDelete, setUserIdToDelete] = useState(null);
+
   const fetchData = async () => {
     const { data, error } = await getUsers();
     if (error) {
@@ -29,17 +34,24 @@ const Admin_Users = () => {
     { key: "delete", label: "Delete User", disableSorting: true },
   ];
 
-  const handleDelete = async (userId) => {
+  const deleteUserById = async () => {
     dispatch(setLoader(true));
-    const { success, error, data } = await deleteUser(userId);
+    const { success, error, data } = await deleteUser(userIdToDelete);
     if (success) {
-      setUsers((prevUsers) => prevUsers.filter((user) => user.id !== userId));
+      setUsers((prevUsers) => prevUsers.filter((user) => user.id !== userIdToDelete));
       toast.success("Deleted Successfully");
       dispatch(setLoader(false));
     } else {
       toast.error("Error in deleting");
     }
+    setShowModal(false);
   };
+
+  const handleDelete = (userId) => {
+    setUserIdToDelete(userId);
+    setShowModal(true);
+  };
+  
 
   const handleUpdate = async (userId) => {
     navigate(`/admin-update-user/${userId}`);
@@ -61,6 +73,12 @@ const Admin_Users = () => {
         handleDelete={handleDelete}
         handleUpdate={handleUpdate}
       />
+       <ConfirmDeleteModal
+      open={showModal}
+      handleClose={() => setShowModal(false)}
+      handleDelete={deleteUserById}
+      itemId={userIdToDelete}
+    />
     </div>
   );
 };
